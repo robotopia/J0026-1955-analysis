@@ -1,0 +1,396 @@
+%% Beginning of file 'sample631.tex'
+%%
+%% Modified 2021 March
+%%
+%% This is a sample manuscript marked up using the
+%% AASTeX v6.31 LaTeX 2e macros.
+%%
+%% AASTeX is now based on Alexey Vikhlinin's emulateapj.cls 
+%% (Copyright 2000-2015).  See the classfile for details.
+
+%% AASTeX requires revtex4-1.cls and other external packages such as
+%% latexsym, graphicx, amssymb, longtable, and epsf.  Note that as of 
+%% Oct 2020, APS now uses revtex4.2e for its journals but remember that 
+%% AASTeX v6+ still uses v4.1. All of these external packages should 
+%% already be present in the modern TeX distributions but not always.
+%% For example, revtex4.1 seems to be missing in the linux version of
+%% TexLive 2020. One should be able to get all packages from www.ctan.org.
+%% In particular, revtex v4.1 can be found at 
+%% https://www.ctan.org/pkg/revtex4-1.
+
+%% The first piece of markup in an AASTeX v6.x document is the \documentclass
+%% command. LaTeX will ignore any data that comes before this command. The 
+%% documentclass can take an optional argument to modify the output style.
+%% The command below calls the preprint style which will produce a tightly 
+%% typeset, one-column, single-spaced document.  It is the default and thus
+%% does not need to be explicitly stated.
+%%
+%% using aastex version 6.3
+\documentclass[linenumbers]{aastex631}
+
+%% The default is a single spaced, 10 point font, single spaced article.
+%% There are 5 other style options available via an optional argument. They
+%% can be invoked like this:
+%%
+%% \documentclass[arguments]{aastex631}
+%% 
+%% where the layout options are:
+%%
+%%  twocolumn   : two text columns, 10 point font, single spaced article.
+%%                This is the most compact and represent the final published
+%%                derived PDF copy of the accepted manuscript from the publisher
+%%  manuscript  : one text column, 12 point font, double spaced article.
+%%  preprint    : one text column, 12 point font, single spaced article.  
+%%  preprint2   : two text columns, 12 point font, single spaced article.
+%%  modern      : a stylish, single text column, 12 point font, article with
+%% 		  wider left and right margins. This uses the Daniel
+%% 		  Foreman-Mackey and David Hogg design.
+%%  RNAAS       : Supresses an abstract. Originally for RNAAS manuscripts 
+%%                but now that abstracts are required this is obsolete for
+%%                AAS Journals. Authors might need it for other reasons. DO NOT
+%%                use \begin{abstract} and \end{abstract} with this style.
+%%
+%% Note that you can submit to the AAS Journals in any of these 6 styles.
+%%
+%% There are other optional arguments one can invoke to allow other stylistic
+%% actions. The available options are:
+%%
+%%   astrosymb    : Loads Astrosymb font and define \astrocommands. 
+%%   tighten      : Makes baselineskip slightly smaller, only works with 
+%%                  the twocolumn substyle.
+%%   times        : uses times font instead of the default
+%%   linenumbers  : turn on lineno package.
+%%   trackchanges : required to see the revision mark up and print its output
+%%   longauthor   : Do not use the more compressed footnote style (default) for 
+%%                  the author/collaboration/affiliations. Instead print all
+%%                  affiliation information after each name. Creates a much 
+%%                  longer author list but may be desirable for short 
+%%                  author papers.
+%% twocolappendix : make 2 column appendix.
+%%   anonymous    : Do not show the authors, affiliations and acknowledgments 
+%%                  for dual anonymous review.
+%%
+%% these can be used in any combination, e.g.
+%%
+%% \documentclass[twocolumn,linenumbers,trackchanges]{aastex631}
+%%
+%% AASTeX v6.* now includes \hyperref support. While we have built in specific
+%% defaults into the classfile you can manually override them with the
+%% \hypersetup command. For example,
+%%
+%% \hypersetup{linkcolor=red,citecolor=green,filecolor=cyan,urlcolor=magenta}
+%%
+%% will change the color of the internal links to red, the links to the
+%% bibliography to green, the file links to cyan, and the external links to
+%% magenta. Additional information on \hyperref options can be found here:
+%% https://www.tug.org/applications/hyperref/manual.html#x1-40003
+%%
+%% Note that in v6.3 "bookmarks" has been changed to "true" in hyperref
+%% to improve the accessibility of the compiled pdf file.
+%%
+%% If you want to create your own macros, you can do so
+%% using \newcommand. Your macros should appear before
+%% the \begin{document} command.
+%%
+\newcommand{\psr}{J0024$-$1932}
+\newcommand{\psrnick}{J0036$-$1033}
+\newcommand{\dmunit}{pc$\,$cm$^{-3}$}
+\newcommand{\nullfraction}{70\%}
+\newcommand{\ExB}{\ensuremath{{\bf E}\times{\bf B}}}
+
+%% Reintroduced the \received and \accepted commands from AASTeX v5.2
+%\received{March 1, 2021}
+%\revised{April 1, 2021}
+%\accepted{\today}
+
+%% Command to document which AAS Journal the manuscript was submitted to.
+%% Adds "Submitted to " the argument.
+%\submitjournal{PSJ}
+
+%% For manuscript that include authors in collaborations, AASTeX v6.31
+%% builds on the \collaboration command to allow greater freedom to 
+%% keep the traditional author+affiliation information but only show
+%% subsets. The \collaboration command now must appear AFTER the group
+%% of authors in the collaboration and it takes TWO arguments. The last
+%% is still the collaboration identifier. The text given in this
+%% argument is what will be shown in the manuscript. The first argument
+%% is the number of author above the \collaboration command to show with
+%% the collaboration text. If there are authors that are not part of any
+%% collaboration the \nocollaboration command is used. This command takes
+%% one argument which is also the number of authors above to show. A
+%% dashed line is shown to indicate no collaboration. This example manuscript
+%% shows how these commands work to display specific set of authors 
+%% on the front page.
+%%
+%% For manuscript without any need to use \collaboration the 
+%% \AuthorCollaborationLimit command from v6.2 can still be used to 
+%% show a subset of authors.
+%
+%\AuthorCollaborationLimit=2
+%
+%% will only show Schwarz & Muench on the front page of the manuscript
+%% (assuming the \collaboration and \nocollaboration commands are
+%% commented out).
+%%
+%% Note that all of the author will be shown in the published article.
+%% This feature is meant to be used prior to acceptance to make the
+%% front end of a long author article more manageable. Please do not use
+%% this functionality for manuscripts with less than 20 authors. Conversely,
+%% please do use this when the number of authors exceeds 40.
+%%
+%% Use \allauthors at the manuscript end to show the full author list.
+%% This command should only be used with \AuthorCollaborationLimit is used.
+
+%% The following command can be used to set the latex table counters.  It
+%% is needed in this document because it uses a mix of latex tabular and
+%% AASTeX deluxetables.  In general it should not be needed.
+%\setcounter{table}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% The following section outlines numerous optional output that
+%% can be displayed in the front matter or as running meta-data.
+%%
+%% If you wish, you may supply running head information, although
+%% this information may be modified by the editorial offices.
+\shorttitle{Pulsar with unusual sub-pulse drifting}
+\shortauthors{McSweeney et al.}
+%%
+%% You can add a light gray and diagonal water-mark to the first page 
+%% with this command:
+%% \watermark{text}
+%% where "text", e.g. DRAFT, is the text to appear.  If the text is 
+%% long you can control the water-mark size with:
+%% \setwatermarkfontsize{dimension}
+%% where dimension is any recognized LaTeX dimension, e.g. pt, in, etc.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{{./}{figures/}}
+%% This is the end of the preamble.  Indicate the beginning of the
+%% manuscript itself with \begin{document}.
+
+\begin{document}
+
+\title{A slow pulsar with long nulls and unusual sub-pulse drifting behaviour}
+
+%% LaTeX will automatically break titles if they run longer than
+%% one line. However, you may use \\ to force a line break if
+%% you desire. In v6.31 you can include a footnote in the title.
+
+%% A significant change from earlier AASTEX versions is in the structure for 
+%% calling author and affiliations. The change was necessary to implement 
+%% auto-indexing of affiliations which prior was a manual process that could 
+%% easily be tedious in large author manuscripts.
+%%
+%% The \author command is the same as before except it now takes an optional
+%% argument which is the 16 digit ORCID. The syntax is:
+%% \author[xxxx-xxxx-xxxx-xxxx]{Author Name}
+%%
+%% This will hyperlink the author name to the author's ORCID page. Note that
+%% during compilation, LaTeX will do some limited checking of the format of
+%% the ID to make sure it is valid. If the "orcid-ID.png" image file is 
+%% present or in the LaTeX pathway, the OrcID icon will appear next to
+%% the authors name.
+%%
+%% Use \affiliation for affiliation information. The old \affil is now aliased
+%% to \affiliation. AASTeX v6.31 will automatically index these in the header.
+%% When a duplicate is found its index will be the same as its previous entry.
+%%
+%% Note that \altaffilmark and \altaffiltext have been removed and thus 
+%% can not be used to document secondary affiliations. If they are used latex
+%% will issue a specific error message and quit. Please use multiple 
+%% \affiliation calls for to document more than one affiliation.
+%%
+%% The new \altaffiliation can be used to indicate some secondary information
+%% such as fellowships. This command produces a non-numeric footnote that is
+%% set away from the numeric \affiliation footnotes.  NOTE that if an
+%% \altaffiliation command is used it must come BEFORE the \affiliation call,
+%% right after the \author command, in order to place the footnotes in
+%% the proper location.
+%%
+%% Use \email to set provide email addresses. Each \email will appear on its
+%% own line so you can put multiple email address in one \email call. A new
+%% \correspondingauthor command is available in V6.31 to identify the
+%% corresponding author of the manuscript. It is the author's responsibility
+%% to make sure this name is also in the author list.
+%%
+%% While authors can be grouped inside the same \author and \affiliation
+%% commands it is better to have a single author for each. This allows for
+%% one to exploit all the new benefits and should make book-keeping easier.
+%%
+%% If done correctly the peer review system will be able to
+%% automatically put the author and affiliation information from the manuscript
+%% and save the corresponding author the trouble of entering it by hand.
+
+%\correspondingauthor{August Muench}
+%\email{greg.schwarz@aas.org, gus.muench@aas.org}
+
+\author[0000-0002-0786-7307]{Samuel J. McSweeney}
+\affiliation{ICRAR, Curtin University}
+
+\author{Keegan Smith}
+\affiliation{ICRAR, Curtin University}
+
+\author{Ramesh Bhat}
+\affiliation{ICRAR, Curtin University}
+
+\author{Nick Swainston}
+\affiliation{ICRAR, Curtin University}
+
+%% Note that the \and command from previous versions of AASTeX is now
+%% depreciated in this version as it is no longer necessary. AASTeX 
+%% automatically takes care of all commas and "and"s between authors names.
+
+%% AASTeX 6.31 has the new \collaboration and \nocollaboration commands to
+%% provide the collaboration status of a group of authors. These commands 
+%% can be used either before or after the list of corresponding authors. The
+%% argument for \collaboration is the collaboration identifier. Authors are
+%% encouraged to surround collaboration identifiers with ()s. The 
+%% \nocollaboration command takes no argument and exists to indicate that
+%% the nearby authors are not part of surrounding collaborations.
+
+%% Mark off the abstract in the ``abstract'' environment. 
+\begin{abstract}
+
+We report the discovery of PSR \psr{} with the Murchison Widefield Array (MWA), the second to be discovered in the ongoing Southern-sky MWA Rapid Two-meter (SMART) pulsar survey.
+\psr{} has a period of $\sim1.306\,$s, a dispersion measure (DM) of $\sim20.86\,$\dmunit, and a nulling fraction of $\gtrsim\nullfraction$ (CHECK THIS NUMBER).
+The detection of this pulsar highlights the advantages of the survey's long dwell times ($\sim80\,$min), which is sensitive to the expected population of bright, intermittent pulsars with long nulls.
+A single-pulse analysis also reveals a complex sub-pulse drifting behaviour, including both rapid changes of the drift rate characteristic of mode switching pulsars, as well as a slow, consistent evolution of the drift rate within modes, occasionally interrupted by ``hiccups'' (MEMO TO SELF: find a better word later) that typically last a few pulses.
+\dots
+
+\end{abstract}
+
+%% Keywords should appear after the \end{abstract} command. 
+%% The AAS Journals now uses Unified Astronomy Thesaurus concepts:
+%% https://astrothesaurus.org
+%% You will be asked to selected these concepts during the submission process
+%% but this old "keyword" functionality is maintained in case authors want
+%% to include these concepts in their preprints.
+
+% SM: I've commented this out -- I will do it during submission as suggested above.
+%\keywords{Classical Novae (251) --- Ultraviolet astronomy(1736) --- History of astronomy(1868) --- Interdisciplinary astronomy(804)}
+
+%% From the front matter, we move on to the body of the paper.
+%% Sections are demarcated by \section and \subsection, respectively.
+%% Observe the use of the LaTeX \label
+%% command after the \subsection to give a symbolic KEY to the
+%% subsection for cross-referencing in a \ref command.
+%% You can use LaTeX's \ref and \label commands to keep track of
+%% cross-references to sections, equations, tables, and figures.
+%% That way, if you change the order of any elements, LaTeX will
+%% automatically renumber them.
+%%
+%% We recommend that authors also use the natbib \citep
+%% and \citet commands to identify citations.  The citations are
+%% tied to the reference list via symbolic KEYs. The KEY corresponds
+%% to the KEY in the \bibitem in the reference list below. 
+
+\section{Introduction} \label{sec:intro}
+
+The Murchison Widefield Array \citep[MWA;][]{Tingay2013} is a latest-generation aperture array telescope located in Western Australia.
+With its Voltage Capture System \citep[VCS;][]{Tremblay2015} and offline tied-array beamforming software \citep{Ord2019,McSweeney2020}, it has proven to be a powerful instrument for investigating a variety of pulsar phenomena such as single-pulse studies \citep{McSweeney2017}, spectral analysis \citep{Meyers2017}, and studies of interstellar medium (ISM) propagation effects and related timing applications \citep{Bhat2018,Kaur2019}.
+
+With the advent of the Phase II upgrade of the MWA \citep{Wayth2018} in its compact configuration\footnote{A subset of 128 centrally condensed tiles (i.e. antenna elements), designed for science cases that require large numbers of short baselines.}, a pulsar survey became computationally feasible, owing to the relatively large angular size of the tied-array beam.
+The Southern-Sky MWA Rapid Two-metre (SMART) pulsar survey (Bhat et al. \textit{in prep}) was conceived and began data collection in late 2018.
+At present, $\sim70\%$ of the data have been collected, with the initial, first-pass (``shallow'') processing being limited to the first ten minutes (out of the full 80 minutes) of each observation.
+This strategy quickly paid off with the discovery of PSR \psrnick{}, a high low-luminosity, Galactic latitude pulsar, reported in \citep{Swainston2021}.
+
+In this paper, we report the discovery of PSR \psr{}, also detected as part of the initial search strategy.
+Unlike \psrnick{}, \psr{} bright enough to see in single pulses, immediately begging the question of how it avoided detection in previous, more sensitive pulsar surveys covering the same sky (albeit at higher frequencies).
+Follow-up of the initial detection with the full 80 minutes, as well as in other serendipitous MWA observations, revealed that the pulsar has a very large nulling fraction ($\gtrsim\nullfraction$), with some nulling sequences exceeding $20\,$min (i.e. the longest archival MWA observation in which it was \textit{not} detected).
+\psr{} may therefore be the harbinger for a population of relatively bright, intermittent pulsars which the SMART survey, with its $80$-minute dwell times, is well-suited to detect.
+
+Inspection of \psr{}'s single pulses revealed that it belongs to the class of sub-pulse drifters, a phenomenon first noted in the earliest days of pulsar research \citep{Drake1968}, and which is has historically been strongly linked to magnetospheric phenomena, and thence, to the as-yet poorly understood radio emission mechanism \citep{Ruderman1975,Rankin1986,Deshpande1999}.
+``Sub-pulse'' signifies discrete bursts of emission, usually much narrower than the average pulse profile, and ``drifting'' refers to the systematic way that sub-pulses arrive earlier or later in time in successive rotations.
+Sub-pulse drifting is easily detected when viewing the pulses in a stack (Fig \ref{fig:pulsestack1}), in which associated sets of sub-pulses form diagonal ``drift bands'' that stretch across the on-pulse window.
+The drift \textit{rate} is defined as the reciprocal of the slope of the drift bands, often expressed in units of degrees (of rotation) per pulse period ($^\circ/P_1$).
+
+Many sub-pulse drifters, e.g. B0809$+$74 and B0943$+$10, are known to have very stable drift rates \citep[e.g.][]{Taylor1971,Deshpande1999}.
+This stability partly motivated the original carousel model, put forward by \citet{Ruderman1975}, which associates the sub-pulses with spatially discrete bursts of electrical discharges (``sparks'') in regions of charge depletion just above the stellar surface near the magnetic poles.
+According to this model, the sparks are driven by \ExB{} drift, with the observed stability of the drift rate being directly inherited from the theoretical stability of the electric and magnetic fields at the spark locations.
+
+Within this context, pulsars with either multiple stable drift rates, or with drift rates that change over time, deserve special consideration.
+The former type, \dots
+
+\begin{itemize}
+    \item Point out exceptions to stable drift rates
+    \begin{itemize}
+        \item Multiple drift modes: \citep{Hankins1987}, \dots
+        \item Changes near nulls: \citep{Lyne1983,VanLeeuwen2002,VanLeeuwen2003}
+    \end{itemize}
+    \item Ways to reconcile with carousel model:
+    \begin{itemize}
+        \item Aliasing to get around drift modes: \citep{Rankin2013,McSweeney2019a}
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\section{Observations} \label{sec:observations}
+
+% Example table
+\begin{deluxetable*}{ccccccc}
+%\tabletypesize{\scriptsize}
+\tablewidth{0pt}
+\tablecaption{Observations of \psr{} \label{tab:observations}}
+\tablehead{
+\colhead{MJD} & \colhead{Obs ID} & \colhead{Freq (MHz)} & \colhead{Seconds in beam} & \colhead{Number of pulses} & \colhead{Nulling fraction} & \colhead{Detected?}
+} 
+\startdata
+57933 & 1182803416 & 139.52 & 924 & & & Y \\
+58395 & 1222697776 & 154.24 & 2685 & & & Y \\
+58434 & 1226062160 & 154.24 & 3200 & 3762 & & Y \\
+58991 & 1274143152 & 154.24 & 1198 & 540 & & Y \\
+58991 & 1274226696 & 154.24 & 302 & & & N \\
+58995 & 1274565008 & 154.24 & 598 & & & N \\
+58996 & 1274573984 & 154.24 & 598 & & & Y \\
+58997 & 1274745312 & 154.24 & 302 & & & N \\
+59001 & 1275085816 & 154.24 & 1198 & & & N \\
+59002 & 1275092416 & 154.24 & 1198 & 918 & & Y \\
+59002 & 1275094456 & 154.24 & 1198 & & & N \\
+59002 & 1275172216 & 154.24 & 1198 & & & N \\
+59002 & 1275177136 & 154.24 & 1198 & & & Y \\
+59003 & 1275178816 & 154.24 & 1198 & 918 & & Y \\
+59003 & 1275258616 & 154.24 & 1198 & & & Y \\
+59005 & 1275431416 & 154.24 & 1798 & & & Y \\
+59010 & 1275863416 & 154.24 & 1195 & & & N \\
+59010 & 1275866536 & 154.24 & 1198 & & & Y \\
+59020 & 1276725752 & 154.24 & 1798 & & & Y \\
+59033 & 1277846336 & 154.24 & 301 & & & Pending \\
+59036 & 1278106408 & 154.24 & 1798 & & & Y \\
+59094 & 1283104232 & 154.24 & 1798 & & & Y \\
+59117 & 1285086000 & 154.24 & 1798 & & & Y \\
+59147 & 1287670032 & 154.24 & 2656 & & & Y \\
+59178 & 1290341112 & 154.24 & 3598 & & & Y \\
+59208 & 1292933216 & 154.24 & 2310 & & & Y
+\enddata
+\end{deluxetable*}
+
+\section{Analysis} \label{sec:analysis}
+
+Traditionally, sub-pulse drifting analyses begin with a determination of the time it takes for a drift band to reappear at the same rotation phase, the quantity known as $P_3$.
+Several pulsars exhibit multiple distinct drifting modes, characterised by sudden changes in $P_3$, 
+In the case of \psr{}, even a cursory look at its pulsestack reveals that $P_3$ is highly variable (Fig \ref{fig:pulsestack1})
+\begin{figure*}[!t]
+\plotone{1226062160_pulses_1750-2350.pdf}
+\caption{Pulse stack of observation on MJD 58434 with and without modelling\dots}
+\label{fig:pulsestack1}
+\end{figure*}
+
+\bibliography{main}{}
+\bibliographystyle{aasjournal}
+
+%% This command is needed to show the entire author+affiliation list when
+%% the collaboration and author truncation commands are used.  It has to
+%% go at the end of the manuscript.
+%\allauthors
+
+%% Include this line if you are using the \added, \replaced, \deleted
+%% commands to see a summary list of all changes at the end of the article.
+%\listofchanges
+
+\end{document}
+
+% End of file `sample631.tex'.
+

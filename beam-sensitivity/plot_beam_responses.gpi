@@ -1,0 +1,5 @@
+reset
+
+obsids = system('cat obsids.txt | head -8')
+
+plot for [i=1:words(obsids)] word(obsids,i)."_beam.txt" u 1:6 w l title word(obsids,i)

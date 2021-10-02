@@ -3,5 +3,5 @@ PDV_TARGETS = $(addsuffix .pdv,$(OBSIDS))
 
 all: $(PDV_TARGETS)
 
-%.pdv: ../fits/%.F
+%.pdv: ../archives/%.F
 	pdv -tK -B 2 $< > $@

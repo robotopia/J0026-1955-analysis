@@ -11,8 +11,8 @@ MJD(i) = word(MJDs, i)
 
 maxima_file(i) = sprintf("%s.json.maxima", obsid(i))
 
-my_ytics(i) = 1.5*i
-my_ytic_label_pos(i) = my_ytics(i) + 0.5
+my_ytics(i) = 1.5*i - 0.1
+my_ytic_label_pos(i) = my_ytics(i) + 0.6
 
 set ytics (0)
 do for [i=1:N] {

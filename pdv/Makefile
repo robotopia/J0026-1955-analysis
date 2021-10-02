@@ -4,4 +4,4 @@ PDV_TARGETS = $(addsuffix .pdv,$(OBSIDS))
 all: $(PDV_TARGETS)
 
 %.pdv: ../fits/%.F
-	pdv -tK $< > $@
+	pdv -tK -B 2 $< > $@

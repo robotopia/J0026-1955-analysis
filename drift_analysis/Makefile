@@ -6,6 +6,6 @@ MAXIMA_FILES = $(addsuffix .maxima,$(JSON_TARGETS))
 	if [ -f $@ ]; then python ~/src/drift_analysis/drift_analysis.py $@; else python ~/src/drift_analysis/drift_analysis.py ../pdv/$*.pdv I; fi
 
 maxima_plot.png: plot_maxima.gpi $(MAXIMA_FILES)
-	gnuplot -e "set terminal pngcairo enhanced size 1500,500; set output '$@'" $<
+	gnuplot -e "set terminal pngcairo enhanced size 1500,500 font ',16'; set output '$@'" $<
 
 force:

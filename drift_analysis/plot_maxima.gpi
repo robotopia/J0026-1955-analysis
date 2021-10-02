@@ -1,0 +1,29 @@
+reset
+
+P = 1.306150273284
+
+obsids = "1226062160 1274143152 1275178816 1283104232"
+obsid(i) = word(obsids, i)
+N = words(obsids)
+
+MJDs = "58434 58991 59003 59094"
+MJD(i) = word(MJDs, i)
+
+maxima_file(i) = sprintf("%s.json.maxima", obsid(i))
+
+my_ytics(i) = 1.5*i
+my_ytic_label_pos(i) = my_ytics(i) + 0.5
+
+set ytics (0)
+do for [i=1:N] {
+    set ytics add (MJD(i) my_ytic_label_pos(i))
+}
+set ytics out nomirror
+
+set xrange [*:*] noextend
+set yrange [1.3:7.5]
+
+set xlabel "Time (min)"
+set ylabel "Peak flux (a.u.)"
+
+plot for [i=1:N] maxima_file(i) using ($1*P/60.0):($2 + my_ytics(i)) w l lc rgb "black" notitle

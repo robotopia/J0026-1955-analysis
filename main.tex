@@ -5,47 +5,47 @@
 %% This is a sample manuscript marked up using the
 %% AASTeX v6.31 LaTeX 2e macros.
 %%
-%% AASTeX is now based on Alexey Vikhlinin's emulateapj.cls 
+%% AASTeX is now based on Alexey Vikhlinin's emulateapj.cls
 %% (Copyright 2000-2015).  See the classfile for details.
 
 %% AASTeX requires revtex4-1.cls and other external packages such as
-%% latexsym, graphicx, amssymb, longtable, and epsf.  Note that as of 
-%% Oct 2020, APS now uses revtex4.2e for its journals but remember that 
-%% AASTeX v6+ still uses v4.1. All of these external packages should 
+%% latexsym, graphicx, amssymb, longtable, and epsf.  Note that as of
+%% Oct 2020, APS now uses revtex4.2e for its journals but remember that
+%% AASTeX v6+ still uses v4.1. All of these external packages should
 %% already be present in the modern TeX distributions but not always.
 %% For example, revtex4.1 seems to be missing in the linux version of
 %% TexLive 2020. One should be able to get all packages from www.ctan.org.
-%% In particular, revtex v4.1 can be found at 
+%% In particular, revtex v4.1 can be found at
 %% https://www.ctan.org/pkg/revtex4-1.
 
 %% The first piece of markup in an AASTeX v6.x document is the \documentclass
-%% command. LaTeX will ignore any data that comes before this command. The 
+%% command. LaTeX will ignore any data that comes before this command. The
 %% documentclass can take an optional argument to modify the output style.
-%% The command below calls the preprint style which will produce a tightly 
+%% The command below calls the preprint style which will produce a tightly
 %% typeset, one-column, single-spaced document.  It is the default and thus
 %% does not need to be explicitly stated.
 %%
 %% using aastex version 6.3
-\documentclass[linenumbers]{aastex631}
+\documentclass[twocolumn]{aastex631}
 
 %% The default is a single spaced, 10 point font, single spaced article.
 %% There are 5 other style options available via an optional argument. They
 %% can be invoked like this:
 %%
 %% \documentclass[arguments]{aastex631}
-%% 
+%%
 %% where the layout options are:
 %%
 %%  twocolumn   : two text columns, 10 point font, single spaced article.
 %%                This is the most compact and represent the final published
 %%                derived PDF copy of the accepted manuscript from the publisher
 %%  manuscript  : one text column, 12 point font, double spaced article.
-%%  preprint    : one text column, 12 point font, single spaced article.  
+%%  preprint    : one text column, 12 point font, single spaced article.
 %%  preprint2   : two text columns, 12 point font, single spaced article.
 %%  modern      : a stylish, single text column, 12 point font, article with
 %% 		  wider left and right margins. This uses the Daniel
 %% 		  Foreman-Mackey and David Hogg design.
-%%  RNAAS       : Supresses an abstract. Originally for RNAAS manuscripts 
+%%  RNAAS       : Supresses an abstract. Originally for RNAAS manuscripts
 %%                but now that abstracts are required this is obsolete for
 %%                AAS Journals. Authors might need it for other reasons. DO NOT
 %%                use \begin{abstract} and \end{abstract} with this style.
@@ -55,19 +55,19 @@
 %% There are other optional arguments one can invoke to allow other stylistic
 %% actions. The available options are:
 %%
-%%   astrosymb    : Loads Astrosymb font and define \astrocommands. 
-%%   tighten      : Makes baselineskip slightly smaller, only works with 
+%%   astrosymb    : Loads Astrosymb font and define \astrocommands.
+%%   tighten      : Makes baselineskip slightly smaller, only works with
 %%                  the twocolumn substyle.
 %%   times        : uses times font instead of the default
 %%   linenumbers  : turn on lineno package.
 %%   trackchanges : required to see the revision mark up and print its output
-%%   longauthor   : Do not use the more compressed footnote style (default) for 
+%%   longauthor   : Do not use the more compressed footnote style (default) for
 %%                  the author/collaboration/affiliations. Instead print all
-%%                  affiliation information after each name. Creates a much 
-%%                  longer author list but may be desirable for short 
+%%                  affiliation information after each name. Creates a much
+%%                  longer author list but may be desirable for short
 %%                  author papers.
 %% twocolappendix : make 2 column appendix.
-%%   anonymous    : Do not show the authors, affiliations and acknowledgments 
+%%   anonymous    : Do not show the authors, affiliations and acknowledgments
 %%                  for dual anonymous review.
 %%
 %% these can be used in any combination, e.g.
@@ -92,10 +92,10 @@
 %% using \newcommand. Your macros should appear before
 %% the \begin{document} command.
 %%
-\newcommand{\psr}{J0024$-$1932}
+\newcommand{\psr}{J0026$-$1955}
 \newcommand{\psrnick}{J0036$-$1033}
 \newcommand{\dmunit}{pc$\,$cm$^{-3}$}
-\newcommand{\nullfraction}{70\%}
+\newcommand{\nullfraction}{77\%}
 \newcommand{\ExB}{\ensuremath{{\bf E}\times{\bf B}}}
 
 %% Reintroduced the \received and \accepted commands from AASTeX v5.2
@@ -108,7 +108,7 @@
 %\submitjournal{PSJ}
 
 %% For manuscript that include authors in collaborations, AASTeX v6.31
-%% builds on the \collaboration command to allow greater freedom to 
+%% builds on the \collaboration command to allow greater freedom to
 %% keep the traditional author+affiliation information but only show
 %% subsets. The \collaboration command now must appear AFTER the group
 %% of authors in the collaboration and it takes TWO arguments. The last
@@ -119,11 +119,11 @@
 %% collaboration the \nocollaboration command is used. This command takes
 %% one argument which is also the number of authors above to show. A
 %% dashed line is shown to indicate no collaboration. This example manuscript
-%% shows how these commands work to display specific set of authors 
+%% shows how these commands work to display specific set of authors
 %% on the front page.
 %%
-%% For manuscript without any need to use \collaboration the 
-%% \AuthorCollaborationLimit command from v6.2 can still be used to 
+%% For manuscript without any need to use \collaboration the
+%% \AuthorCollaborationLimit command from v6.2 can still be used to
 %% show a subset of authors.
 %
 %\AuthorCollaborationLimit=2
@@ -156,10 +156,10 @@
 \shorttitle{Pulsar with unusual sub-pulse drifting}
 \shortauthors{McSweeney et al.}
 %%
-%% You can add a light gray and diagonal water-mark to the first page 
+%% You can add a light gray and diagonal water-mark to the first page
 %% with this command:
 %% \watermark{text}
-%% where "text", e.g. DRAFT, is the text to appear.  If the text is 
+%% where "text", e.g. DRAFT, is the text to appear.  If the text is
 %% long you can control the water-mark size with:
 %% \setwatermarkfontsize{dimension}
 %% where dimension is any recognized LaTeX dimension, e.g. pt, in, etc.
@@ -171,15 +171,16 @@
 
 \begin{document}
 
-\title{A slow pulsar with long nulls and unusual sub-pulse drifting behaviour}
+\title{Discovery of a nulling pulsar with unusual sub-pulse
+drifting properties with the Murchison Widefield Array}
 
 %% LaTeX will automatically break titles if they run longer than
 %% one line. However, you may use \\ to force a line break if
 %% you desire. In v6.31 you can include a footnote in the title.
 
-%% A significant change from earlier AASTEX versions is in the structure for 
-%% calling author and affiliations. The change was necessary to implement 
-%% auto-indexing of affiliations which prior was a manual process that could 
+%% A significant change from earlier AASTEX versions is in the structure for
+%% calling author and affiliations. The change was necessary to implement
+%% auto-indexing of affiliations which prior was a manual process that could
 %% easily be tedious in large author manuscripts.
 %%
 %% The \author command is the same as before except it now takes an optional
@@ -188,7 +189,7 @@
 %%
 %% This will hyperlink the author name to the author's ORCID page. Note that
 %% during compilation, LaTeX will do some limited checking of the format of
-%% the ID to make sure it is valid. If the "orcid-ID.png" image file is 
+%% the ID to make sure it is valid. If the "orcid-ID.png" image file is
 %% present or in the LaTeX pathway, the OrcID icon will appear next to
 %% the authors name.
 %%
@@ -196,9 +197,9 @@
 %% to \affiliation. AASTeX v6.31 will automatically index these in the header.
 %% When a duplicate is found its index will be the same as its previous entry.
 %%
-%% Note that \altaffilmark and \altaffiltext have been removed and thus 
+%% Note that \altaffilmark and \altaffiltext have been removed and thus
 %% can not be used to document secondary affiliations. If they are used latex
-%% will issue a specific error message and quit. Please use multiple 
+%% will issue a specific error message and quit. Please use multiple
 %% \affiliation calls for to document more than one affiliation.
 %%
 %% The new \altaffiliation can be used to indicate some secondary information
@@ -228,39 +229,66 @@
 \author[0000-0002-0786-7307]{Samuel J. McSweeney}
 \affiliation{ICRAR, Curtin University}
 
-\author{Keegan Smith}
-\affiliation{ICRAR, Curtin University}
-
 \author{Ramesh Bhat}
 \affiliation{ICRAR, Curtin University}
 
 \author{Nick Swainston}
 \affiliation{ICRAR, Curtin University}
 
+\author{Keegan Smith}
+\affiliation{ICRAR, Curtin University}
+
+\author{Sanjay Kudale}
+%\affiliation{}
+
+\author{Willem van Straten}
+%\affilitation{}
+
+\author{Shi Dai}
+%\affilitation{}
+
+\author{Ryan M. Shannon}
+%\affilitation{}
+
+\author{Steven J Tingay}
+\affiliation{ICRAR, Curtin University}
+
+\author{Melanie Johnston-Hollitt}
+%\affilitation{}
+
+\author{David Kaplan}
+%\affilitation{}
+
+\author{Mia Walker}
+\affiliation{ICRAR, Curtin University}
+
 %% Note that the \and command from previous versions of AASTeX is now
-%% depreciated in this version as it is no longer necessary. AASTeX 
+%% depreciated in this version as it is no longer necessary. AASTeX
 %% automatically takes care of all commas and "and"s between authors names.
 
 %% AASTeX 6.31 has the new \collaboration and \nocollaboration commands to
-%% provide the collaboration status of a group of authors. These commands 
+%% provide the collaboration status of a group of authors. These commands
 %% can be used either before or after the list of corresponding authors. The
 %% argument for \collaboration is the collaboration identifier. Authors are
-%% encouraged to surround collaboration identifiers with ()s. The 
+%% encouraged to surround collaboration identifiers with ()s. The
 %% \nocollaboration command takes no argument and exists to indicate that
 %% the nearby authors are not part of surrounding collaborations.
 
-%% Mark off the abstract in the ``abstract'' environment. 
+%% Mark off the abstract in the ``abstract'' environment.
 \begin{abstract}
 
 We report the discovery of PSR \psr{} with the Murchison Widefield Array (MWA), the second to be discovered in the ongoing Southern-sky MWA Rapid Two-meter (SMART) pulsar survey.
-\psr{} has a period of $\sim1.306\,$s, a dispersion measure (DM) of $\sim20.86\,$\dmunit, and a nulling fraction of $\gtrsim\nullfraction$ (CHECK THIS NUMBER).
+\psr{} has a period of $\sim1.306\,$s, a dispersion measure (DM) of $\sim20.86\,$\dmunit, and a nulling fraction of $\sim$ \nullfraction{}.
 The detection of this pulsar highlights the advantages of the survey's long dwell times ($\sim80\,$min), which is sensitive to the expected population of bright, intermittent pulsars with long nulls.
 A single-pulse analysis also reveals a complex sub-pulse drifting behaviour, including both rapid changes of the drift rate characteristic of mode switching pulsars, as well as a slow, consistent evolution of the drift rate within modes, occasionally interrupted by ``hiccups'' (MEMO TO SELF: find a better word later) that typically last a few pulses.
 \dots
 
 \end{abstract}
 
-%% Keywords should appear after the \end{abstract} command. 
+% Abstract for SALF VIII:
+%The MWA's SMART survey is slated to discover many interesting new pulsars. We report the discovery of our second new pulsar, J0026-1955, which, although very bright at MWA frequencies, was likely missed by earlier surveys because of its large nulling fraction (~75%), highlighting the advantages of the survey's long dwell times. J0026-1955 exhibits clear subpulse drifting, but the drifting behaviour is highly unusual. Like some other subpulse drifters, it switches rapidly between a few different drifting states, or "modes"; however, unlike other similar pulsars, individual modes are not easily characterised by a steady drift rate. Instead, the drift rate changes gradually but consistently over time, a behaviour which is challenging for conventional models, such as the carousel model. Developing models to explain this behaviour will shed new light on the high-energy processes at play near the pulsar surface.
+
+%% Keywords should appear after the \end{abstract} command.
 %% The AAS Journals now uses Unified Astronomy Thesaurus concepts:
 %% https://astrothesaurus.org
 %% You will be asked to selected these concepts during the submission process
@@ -283,7 +311,7 @@ A single-pulse analysis also reveals a complex sub-pulse drifting behaviour, inc
 %% We recommend that authors also use the natbib \citep
 %% and \citet commands to identify citations.  The citations are
 %% tied to the reference list via symbolic KEYs. The KEY corresponds
-%% to the KEY in the \bibitem in the reference list below. 
+%% to the KEY in the \bibitem in the reference list below.
 
 \section{Introduction} \label{sec:intro}
 
@@ -297,7 +325,7 @@ This strategy quickly paid off with the discovery of PSR \psrnick{}, a high low-
 
 In this paper, we report the discovery of PSR \psr{}, also detected as part of the initial search strategy.
 Unlike \psrnick{}, \psr{} bright enough to see in single pulses, immediately begging the question of how it avoided detection in previous, more sensitive pulsar surveys covering the same sky (albeit at higher frequencies).
-Follow-up of the initial detection with the full 80 minutes, as well as in other serendipitous MWA observations, revealed that the pulsar has a very large nulling fraction ($\gtrsim\nullfraction$), with some nulling sequences exceeding $20\,$min (i.e. the longest archival MWA observation in which it was \textit{not} detected).
+Follow-up of the initial detection with the full 80 minutes, as well as in other serendipitous MWA observations, revealed that the pulsar has a very large nulling fraction ($\sim$ \nullfraction{}), with some nulling sequences exceeding $20\,$min (i.e. the longest archival MWA observation in which it was \textit{not} detected).
 \psr{} may therefore be the harbinger for a population of relatively bright, intermittent pulsars which the SMART survey, with its $80$-minute dwell times, is well-suited to detect.
 
 Inspection of \psr{}'s single pulses revealed that it belongs to the class of sub-pulse drifters, a phenomenon first noted in the earliest days of pulsar research \citep{Drake1968}, and which is has historically been strongly linked to magnetospheric phenomena, and thence, to the as-yet poorly understood radio emission mechanism \citep{Ruderman1975,Rankin1986,Deshpande1999}.
@@ -329,54 +357,104 @@ The former type, \dots
 
 \section{Observations} \label{sec:observations}
 
-% Example table
-\begin{deluxetable*}{ccccccc}
-%\tabletypesize{\scriptsize}
+% Beamformed data are found at
+% /astro/mwavcs/pulsar_search/psr2_J0024-1932/*/*fits
+
+\psr{} was discovered in one of the observations taken as part of the SMART survey (Obs ID 1226062160).
+A full description of the survey parameters and observational set up will be presented in an upcoming publication \citetext{Bhat et al. in prep}.
+Many details are also described in the paper reporting the first SMART pulsar discovery \citep{Swainston2021}, for which the setup was identical, but the essential details are summarised here.
+The VCS delivers Nyquist-sampled dual-polarisation voltages for 128 MWA tiles ($4\times4$ cross-dipoles) at a rate of $100\,\mu$s and an instantaneous bandwidth of $30.72\,$MHz, consisting of $3072\times10\,$kHz individual channels.
+Apart from the discovery observation, the other three observations presented in this work were taken as part of the follow-up timing campaign for \psrnick{} \citep{Swainston2021}.
+All four observations (summarised in Table \ref{tab:observations}) were made in the frequency range $138.88$ to $169.6\,$MHz.
+
+\begin{deluxetable}{cccc}
+\tabletypesize{\scriptsize}
 \tablewidth{0pt}
 \tablecaption{Observations of \psr{} \label{tab:observations}}
 \tablehead{
-\colhead{MJD} & \colhead{Obs ID} & \colhead{Freq (MHz)} & \colhead{Seconds in beam} & \colhead{Number of pulses} & \colhead{Nulling fraction} & \colhead{Detected?}
-} 
+\colhead{MJD} & \colhead{Obs ID} & \colhead{Number of pulses} & \colhead{Nulling fraction}
+}
 \startdata
-57933 & 1182803416 & 139.52 & 924 & & & Y \\
-58395 & 1222697776 & 154.24 & 2685 & & & Y \\
-58434 & 1226062160 & 154.24 & 3200 & 3762 & & Y \\
-58991 & 1274143152 & 154.24 & 1198 & 540 & & Y \\
-58991 & 1274226696 & 154.24 & 302 & & & N \\
-58995 & 1274565008 & 154.24 & 598 & & & N \\
-58996 & 1274573984 & 154.24 & 598 & & & Y \\
-58997 & 1274745312 & 154.24 & 302 & & & N \\
-59001 & 1275085816 & 154.24 & 1198 & & & N \\
-59002 & 1275092416 & 154.24 & 1198 & 918 & & Y \\
-59002 & 1275094456 & 154.24 & 1198 & & & N \\
-59002 & 1275172216 & 154.24 & 1198 & & & N \\
-59002 & 1275177136 & 154.24 & 1198 & & & Y \\
-59003 & 1275178816 & 154.24 & 1198 & 918 & & Y \\
-59003 & 1275258616 & 154.24 & 1198 & & & Y \\
-59005 & 1275431416 & 154.24 & 1798 & & & Y \\
-59010 & 1275863416 & 154.24 & 1195 & & & N \\
-59010 & 1275866536 & 154.24 & 1198 & & & Y \\
-59020 & 1276725752 & 154.24 & 1798 & & & Y \\
-59033 & 1277846336 & 154.24 & 301 & & & Pending \\
-59036 & 1278106408 & 154.24 & 1798 & & & Y \\
-59094 & 1283104232 & 154.24 & 1798 & & & Y \\
-59117 & 1285086000 & 154.24 & 1798 & & & Y \\
-59147 & 1287670032 & 154.24 & 2656 & & & Y \\
-59178 & 1290341112 & 154.24 & 3598 & & & Y \\
-59208 & 1292933216 & 154.24 & 2310 & & & Y
+58434 & 1226062160 & 3762 & \\
+58991 & 1274143152 & 540 & \\
+59003 & 1275178816 & 918 & \\
+59094 & 1283104232 & &
 \enddata
-\end{deluxetable*}
+\end{deluxetable}
 
-\section{Analysis} \label{sec:analysis}
+Each observation was individually calibrated using dedicated calibration observations of nearby bright sources, and the Real Time System \citep[RTS][]{Mitchell2008}.
+After calibration, the voltages are used to form a tied-array beam in the direction of the pulsar (the localization procedure is discussed in \S\ref{sec:localization}), using the bespoke beamforming software described in \citet{Ord2019}.
+After determining the best dispersion measure (DM) and period (see \S\ref{sec:period}), de-dispsersion and folding were performed with DSPSR \citep{VanStraten2011b} and PSRCHIVE \citep{Hotan2004} to form single pulse archives, from which Stokes I pulse stacks were created.
+Subsequent analysis of the pulse stacks is described in \S\ref{sec:analysis}.
 
-Traditionally, sub-pulse drifting analyses begin with a determination of the time it takes for a drift band to reappear at the same rotation phase, the quantity known as $P_3$.
-Several pulsars exhibit multiple distinct drifting modes, characterised by sudden changes in $P_3$, 
-In the case of \psr{}, even a cursory look at its pulsestack reveals that $P_3$ is highly variable (Fig \ref{fig:pulsestack1})
+\subsection{Localization}
+\label{sec:localization}
+
+The discovery observation (Obs ID 1226062160) was taken when the MWA was in its \textit{compact} configuration \citep[see][]{Wayth2018}, giving an effective tied-array beam size of $\sim$ 30$^\prime$ at $155\,$MHz [CHECK THIS].
+As per the SMART survey design, these beams are tiled across the field of view, each of which is searched for periodic candidates.
+Interestingly, because the compact configuration includes many redundant baselines, the tied-array beam for the compact configuration is complex, and the original detection was made in a grating lobe.
+Subsequent inspection of surrounding beams revealed the tied-array beam with the brightest detection.
+The ability to exploit grating lobe detections for fast-tracking candidate confirmation and localization will be discussed in the survey description paper \citetext{Bhat et al. in prep}.
+
+The other three observations in which the pulsar has been detected were taken when the MWA was in its extended configuration, giving a tied-array beam size of $\sim$ 3$^\prime$ at $155\,$MHz [CHECK THIS].
+Localization within each of these observations followed the identical procedure as used in \citet{Swainston2021}, i.e. gridding the candidate positions with overlapping tied-array beams and using S/N and the estimated beam shape to produce a likelihood map of the source position.
+Although it is known that the ionosphere is capable of shifting the apparent position of sources by an appreciable fraction of the tied-array beam---and that these offsets are not necessarily corrected by the calibration process when the calibration observations are separated from the target observation spatially and temporally \citetext{Swainston et al. 2021, under review}---the localization afforded by the extended array observations was sufficiently precise (a few arcminutes CHECK THIS) to warrant follow-up with a high-resolution imaging telescope.
+Accordingly, images made with Band 3 ($300$-$500\,$MHz) data from the upgraded Giant Metrewave Radio Telescope \citep[uGMRT;][]{Gupta2017} obtained as director discretionary time enabled us to confirm the pulsar's position to an accuracy of [TODO].
+The final position, consistent with both the GMRT imaging and the MWA extended configuration observations, is RA 00:26:37.50, Dec -19:56:15.04 [UPDATE THIS WITH GMRT NUMBERS].
+
+\subsection{Determination of Period and Dispersion Measure}
+\label{sec:period}
+
+The limited number of available detections make obtaining a timing solution impossible at this early stage.
+Further follow up observations with the uGMRT and the Parkes Radio Telescope, as well as continued processing of archival MWA observations, are currently underway. These observations, along with the full timing solution that they are expected to yield, will be reported in a future publication.
+
+Lacking a timing solution, we used PSRCHIVE's \texttt{pdmp} routine to determine the best period ($P$) and DM for each observation independently, and the weighted averages over the four observations were calculated (where the reported uncertainties were used to weight the individual measurements).
+The values thus derived were $P = 1.306150 \pm 0.000005\,$s and $\text{DM} = 20.869,$pc/cm$^{-3}$.
+This simple estimate does not take the period derivative into account (in fact, it implicitly assumes $\dot{P} = 0$), and we note that a sufficiently large $\dot{P}$ would cause the period to drift significantly over the time period spanned by our four MWA observations ($\sim$ 1.5\,yr).
+However, the pulse stacks (e.g. Fig. \ref{fig:pulsestack1}) folded on the above period showed no detectable slope, which we estimate would be discernible if the pulse window changed by more than $20\,$ms over the course of the observation.
+Given this, we place a conservative upper limit of $\dot{P} \le 10^{-13}$\,s/s.
+
+An inaccurate period also naturally translates into a systematic error in the sub-pulse drifting analysis presented below, e.g. the drift rate.
+However, the fractional uncertainty of the period is much smaller than those of the sub-pulse drifting analysis, which are dominated by the stochastic and bursty nature of the sub-pulses themselves.
+Hence, in the following analysis, we neglect this systematic error, which is not expected to affect the main results.
+
+\section{Analysis and Results}
+\label{sec:analysis}
+
+\subsection{Nulling properties}
+\label{sec:nulling}
+
+The emission from \psr{} appears either as long ($\gtrsim 10\,$min) burst sequences exhibiting phase-modulated sub-pulse drifting, or as short ($\lesssim 20\,$s) bursts interspersed throughout otherwise long (up to $25\,$min) nulling periods.
+Both types of emission are visible in Fig. \ref{fig:maxima}, in which the peak flux density within the pulse window of each pulse is plotted as a function of time for all four MWA observations.
+
 \begin{figure*}[!t]
-\plotone{1226062160_pulses_1750-2350.pdf}
-\caption{Pulse stack of observation on MJD 58434 with and without modelling\dots}
-\label{fig:pulsestack1}
+    \plotone{maxima_plot.png}
+    \caption{Peak flux density within the pulse window as a function of time for four MWA detections (MJDs given along the $y$-axis). The peak fluxes were measured after smoothing the time series with a Gaussian filter ($\sim$ 2\,ms wide, the approximate width of a sub-pulse) to suppress the noise contribution and accentuate the contrast between nulling and burst sequences. The two horizontal lines represent two other MWA observations (Obs IDs 1275094456 and 1275172216) for which \psr{} was in the MWA field of view, but not detected.}
+    \label{fig:maxima}
 \end{figure*}
+
+To estimate the nulling fraction, we first identified which pulses contained sub-pulses within the pulse window (this is a semi-automated procedure described in \S\ref{sec:single_pulse_analysis}).
+Any pulse without a sub-pulse is then counted as a null, even if it is nested within a burst sequence.
+This working definition of a null also may misclassify pulses with diffuse emission spread out over the pulse window, even if its integrated flux density is statistically significant.
+Nevertheless, the uncertainty in our estimate of the nulling fraction will still be dominated by the paucity and short duration of our observations, relative to the time scale over which nulling occurs.
+
+Apart from the four observations with positive detections, there are also two 20-min MWA observations in which no detection was made (Obs IDs 1275094456 and 1275172216), despite the pulsar being within the field of view.
+Assuming the pulsar was nulling during those entire observations, and combining these with the nulling fractions determined for the four observations with positive detections, we estimate the total nulling fraction to be $\sim$ \nullfraction{}.
+
+\subsection{Single pulse analysis}
+\label{sec:single_pulse_analysis}
+
+During burst sequences, the single pulses form distinct phase-modulated drift bands that are always oriented such that sub-pulses associated with the same drift band appear at earlier rotation phases over time \citep[`positive drifting' in the classification scheme of][]{Basu2019a}.
+
+\begin{figure*}[!t]
+    \plotone{1226062160_pulses_1750-2350.pdf}
+    \caption{Pulse stack of observation on MJD 58434 with and without modelling\dots}
+    \label{fig:pulsestack1}
+\end{figure*}
+
+\begin{itemize}
+    \item TODO: In OBSID 1275178816, investigate possibility of wandering pulse window. Click \href{https://docs.google.com/spreadsheets/d/16bHhlqrGllyq_PD3Fb717MJfGCB1JFrUt2Ra2vPpWQE/edit#gid=619235710}{HERE} for pulsestack.
+\end{itemize}
 
 \bibliography{main}{}
 \bibliographystyle{aasjournal}

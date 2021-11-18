@@ -1,0 +1,49 @@
+reset
+
+set terminal pngcairo size 800,800 font ',14'
+set output "profiles.png"
+
+mjds = "59094 59003 58991 58434"
+filenames = "1283104232.json.profile 1275178816.json.profile 1274143152.json.profile 1226062160.json.profile"
+
+set xrange [-59:62] noextend
+set xlabel "Pulse phase (deg)"
+set xtics nomirror out
+unset ytics
+
+colours = "black red #00cc00 blue"
+
+# Set up binning for combined profile
+binwidth = 360.0/1024.0
+bin(val) = binwidth * floor(val/binwidth + 0.5)
+
+set multiplot
+
+set rmargin at screen 0.98
+set lmargin at screen 0.07
+
+do for [i=1:words(filenames)+1] {
+
+set bmargin at screen 0.13+0.17*(i-1)
+set tmargin at screen 0.13+0.17*i
+
+if (i == 3) {
+    set ylabel "Flux density (a.u.)"
+} else {
+    unset ylabel
+}
+
+if (i < 5) {
+    set label 1 at graph 1, graph 0.85 "MJD ".word(mjds, i)." " right
+    plot word(filenames, i) u 1:2 w l lc rgb "black" lw 1.5 notitle
+} else {
+    plot "< cat ".filenames u (bin(column(1))):2 smooth frequency w l lc rgb "black" lw 1.5 notitle
+}
+
+# Turn off x-axis markings for the other plots
+unset xlabel
+unset xtics
+
+}
+
+unset multiplot

@@ -4,4 +4,4 @@ PDV_TARGETS = $(addsuffix .pdv,$(OBSIDS))
 all: $(PDV_TARGETS)
 
 %.pdv: ../archives/%.F
-	pdv -tK -B 2 $< > $@
+	pdv -tK $< > $@

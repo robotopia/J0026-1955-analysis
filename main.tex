@@ -93,7 +93,8 @@
 %% the \begin{document} command.
 %%
 \newcommand{\psr}{J0026$-$1955}
-\newcommand{\psrdm}{20.87}
+\newcommand{\psrdm}{20.869}
+\newcommand{\psrdmerr}{0.005}
 \newcommand{\psrnick}{J0036$-$1033}
 \newcommand{\dmunit}{pc$\,$cm$^{-3}$}
 \newcommand{\Sd}{S$_\rm{d}$}
@@ -254,8 +255,9 @@ drifting properties with the Murchison Widefield Array}
 \author{Shi Dai}
 %\affilitation{}
 
-\author{Ryan M. Shannon}
-%\affilitation{}
+\author[0000-0002-7285-6348]{Ryan M. Shannon}
+\affiliation{Centre for Astrophysics and Supercomputing, Swinburne University of Technology, Hawthorn, VIC, 3122, Australia}
+\affiliation{ARC Centre of Excellence for Gravitational Wave Discovery (OzGrav)}
 
 \author{Steven J Tingay}
 \affiliation{ICRAR, Curtin University}
@@ -287,13 +289,13 @@ drifting properties with the Murchison Widefield Array}
 We report the discovery of PSR \psr{} with the Murchison Widefield Array (MWA), the second to be discovered in the ongoing Southern-sky MWA Rapid Two-meter (SMART) pulsar survey.
 \psr{} has a period of $\sim1.306\,$s, a dispersion measure (DM) of $\sim\psrdm\,$\dmunit, and a nulling fraction of $\sim$ \nullfraction{}.
 The detection of this pulsar highlights the advantages of the survey's long dwell times ($\sim80\,$min), which is sensitive to the expected population of bright, intermittent pulsars with long nulls.
-A single-pulse analysis also reveals a complex sub-pulse drifting behaviour, including both rapid changes of the drift rate characteristic of mode switching pulsars, as well as a slow, consistent evolution of the drift rate within modes, with occasional interruptions that typically last a few pulses and which occur preferentially at a particular phase.
-These properties make this pulsar an ideal test bed for prevailing models of drifting behaviour such as the carousel model.
+A single-pulse analysis also reveals a complex sub-pulse drifting behavior, including both rapid changes of the drift rate characteristic of mode switching pulsars, as well as a slow, consistent evolution of the drift rate within modes. In some longer drift sequences, interruptions in the otherwise smooth drift rate evolution occur preferentially at a particular phase, typically lasting a few pulses.
+These properties make this pulsar an ideal test bed for prevailing models of drifting behavior such as the carousel model.
 
 \end{abstract}
 
 % Abstract for SALF VIII:
-%The MWA's SMART survey is slated to discover many interesting new pulsars. We report the discovery of our second new pulsar, J0026-1955, which, although very bright at MWA frequencies, was likely missed by earlier surveys because of its large nulling fraction (~75%), highlighting the advantages of the survey's long dwell times. J0026-1955 exhibits clear sub-pulse drifting, but the drifting behaviour is highly unusual. Like some other sub-pulse drifters, it switches rapidly between a few different drifting states, or "modes"; however, unlike other similar pulsars, individual modes are not easily characterised by a steady drift rate. Instead, the drift rate changes gradually but consistently over time, a behaviour which is challenging for conventional models, such as the carousel model. Developing models to explain this behaviour will shed new light on the high-energy processes at play near the pulsar surface.
+%The MWA's SMART survey is slated to discover many interesting new pulsars. We report the discovery of our second new pulsar, J0026-1955, which, although very bright at MWA frequencies, was likely missed by earlier surveys because of its large nulling fraction (~75%), highlighting the advantages of the survey's long dwell times. J0026-1955 exhibits clear sub-pulse drifting, but the drifting behavior is highly unusual. Like some other sub-pulse drifters, it switches rapidly between a few different drifting states, or "modes"; however, unlike other similar pulsars, individual modes are not easily characterised by a steady drift rate. Instead, the drift rate changes gradually but consistently over time, a behavior which is challenging for conventional models, such as the carousel model. Developing models to explain this behavior will shed new light on the high-energy processes at play near the pulsar surface.
 
 %% Keywords should appear after the \end{abstract} command.
 %% The AAS Journals now uses Unified Astronomy Thesaurus concepts:
@@ -322,20 +324,21 @@ These properties make this pulsar an ideal test bed for prevailing models of dri
 
 \section{Introduction} \label{sec:intro}
 
-The Murchison Widefield Array \citep[MWA;][]{Tingay2013} is a latest-generation aperture array telescope located in Western Australia.
-With its Voltage Capture System \citep[VCS;][]{Tremblay2015} and offline tied-array beamforming software \citep{Ord2019,McSweeney2020}, it has proven to be a powerful instrument for investigating a variety of pulsar phenomena such as single-pulse studies \citep{McSweeney2017}, spectral analysis \citep{Meyers2017}, and studies of interstellar medium (ISM) propagation effects and related timing applications \citep{Bhat2018,Kaur2019}.
+Pulsars, or rapidly rotating neutron stars, are the sites of some of the highest energy physical processes in the universe, owing to the intense gravitational and magnetic fields that surround them.
+Discovered first via their lighthouse-like beam of radio emission \citep{Hewish1968}, which we detect as a series of regularly spaced pulses, it was quickly realised that the physics governing the relativistic plasma that generates this beam was not well understood---a state of affairs that persists to the present day.
+The uniqueness of each pulsar's emission signature provides a wealth of data that can be used to test candidate emission mechanisms, and it has been proven again and again over the past several decades that in-depth studies of individual pulsars can be just as useful for uncovering vital clues for understanding the population as a whole.
+This, in part, motivates efforts to find new pulsars via large scale pulsar surveys, which continue to be conducted up to the present day.
 
-With the advent of the Phase II upgrade of the MWA \citep{Wayth2018} in its compact configuration\footnote{A subset of 128 centrally condensed tiles (i.e. antenna elements), designed for science cases that require large numbers of short baselines.}, a pulsar survey became computationally feasible, owing to the relatively large angular size of the tied-array beam.
+One of the most recent such surveys is currently under way at the Murchison Widefield Array \citep[MWA;][]{Tingay2013}, a latest-generation aperture array telescope located in Western Australia.
+With its Voltage Capture System \citep[VCS;][]{Tremblay2015} and offline tied-array beamforming software \citep{Ord2019,McSweeney2020}, it has proven to be a powerful instrument for investigating a variety of pulsar phenomena such as single-pulse studies \citep{McSweeney2017}, spectral analysis \citep{Meyers2017}, and studies of interstellar medium (ISM) propagation effects and related timing applications \citep{Bhat2018,Kaur2019}.
+With the advent of the Phase II upgrade of the MWA \citep{Wayth2018} in its compact configuration\footnote{A subset of 128 centrally condensed tiles (i.e. antenna elements), designed for science cases that require large numbers of short baselines.}, a pulsar survey became computationally feasible, owing to the relatively large angular size of the tied-array beam ($\sim30^\prime$).
 The Southern-Sky MWA Rapid Two-metre (SMART) pulsar survey (Bhat et al. \textit{in prep}) was conceived and began data collection in late 2018.
 At present, $\sim70\%$ of the data have been collected, with the initial, first-pass (``shallow'') processing being limited to the first ten minutes (out of the full 80 minutes) of each observation.
-This strategy quickly paid off with the discovery of PSR \psrnick{}, a high low-luminosity, Galactic latitude pulsar, reported in \citep{Swainston2021}.
+This strategy quickly paid off with the discovery of PSR \psrnick{}, a low-luminosity, high Galactic latitude pulsar, reported in \citep{Swainston2021}.
 
 In this paper, we report the discovery of PSR \psr{}, also detected as part of the initial search strategy.
-Unlike \psrnick{}, \psr{} bright enough to see in single pulses, immediately begging the question of how it avoided detection in previous, more sensitive pulsar surveys covering the same sky (albeit at higher frequencies).
-Follow-up of the initial detection with the full 80 minutes, as well as in other serendipitous MWA observations, revealed that the pulsar has a very large nulling fraction ($\sim$ \nullfraction{}), with some nulling sequences exceeding $20\,$min (i.e. the longest archival MWA observation in which it was \textit{not} detected).
-\psr{} may therefore be the harbinger for a population of relatively bright, intermittent pulsars which the SMART survey, with its $80$-minute dwell times, is well-suited to detect.
-
-Inspection of \psr{}'s single pulses revealed that it belongs to the class of sub-pulse drifters, a phenomenon first noted in the earliest days of pulsar research \citep{Drake1968}, and which is has historically been strongly linked to magnetospheric phenomena, and thence, to the as-yet poorly understood radio emission mechanism \citep{Ruderman1975,Rankin1986,Deshpande1999}.
+Unlike \psrnick{}, \psr{} is sufficiently bright to be detected in single pulses, and was found to have a large nulling fraction.
+Closer inspection of \psr{}'s single pulses revealed that it belongs to the class of sub-pulse drifters, a phenomenon first noted in the earliest days of pulsar research \citep{Drake1968}, and which has historically been strongly linked to magnetospheric phenomena, and thence, to the as-yet poorly understood radio emission mechanism \citep{Ruderman1975,Rankin1986,Deshpande1999}.
 ``Sub-pulse'' signifies discrete bursts of emission, usually much narrower than the average pulse profile, and ``drifting'' refers to the systematic way that sub-pulses arrive earlier or later in time in successive rotations.
 Sub-pulse drifting is easily detected when viewing the pulses in a stack (Fig \ref{fig:pulsestacks}), in which associated sets of sub-pulses form diagonal ``drift bands'' that stretch across the on-pulse window.
 The drift \textit{rate} is defined as the reciprocal of the slope of the drift bands, often expressed in units of degrees (of rotation) per pulse period ($^\circ/P$).
@@ -359,8 +362,8 @@ Nevertheless, many of the above effects can be successfully explained with the c
 In the presence of aliasing, multiple drift modes can be explained if the number of sparks in the carousel changes, even if the carousel speed itself doesn't change.
 This idea has been invoked to explain the multiple drift rates of B1918$+$19 \citep{Rankin2013}, B1819$-$22 \citep{Joshi2017}, and B0031$-$07 \citep{McSweeney2019a}.
 Aliasing can also ``amplify'' the variability of the drift rate if the ratio of stellar rotation and carousel rotation is very close to the ratio of small integers.
-That is, a small change in the magnetospheric conditions near the stellar surface (where the sparks reside) can appear to the observer as a relatively large of the drift rate.
-\citet{VanLeeuwen2012} elucidated the connection between the accelerating potential within the polar gap and the carousel behaviour, and found that the variability of B0826$-$34's drift rate can be explained in this way.
+That is, a small change in the magnetospheric conditions near the stellar surface (where the sparks reside) can appear to the observer as a relatively large change in the drift rate.
+\citet{VanLeeuwen2012} elucidated the connection between the accelerating potential within the polar gap and the carousel behavior, and found that the variability of B0826$-$34's drift rate can be explained in this way.
 
 Despite the continued success of the carousel model to explain the various observed counterexamples of stable drifting, there remain many open questions, such as what sets the number of sparks, and what drives the transition between different modes.
 Exploration of these questions is hampered by the relatively small number of pulsars amenable to this kind of analysis, and is compounded by the difficulty of deriving the carousel configuration from the observed drift rate, for which there are oftentimes many degenerate solutions.
@@ -375,7 +378,7 @@ We conclude with a short summary in Section \S\ref{sec:conclusions}.
 % Beamformed data are found at
 % /astro/mwavcs/pulsar_search/psr2_J0024-1932/*/*fits
 
-\psr{} was discovered in one of the observations taken as part of the SMART survey (Obs ID 1226062160).
+PSR \psr{} was discovered in one of the observations taken as part of the SMART survey (Obs ID 1226062160).
 A full description of the survey parameters and observational set up will be presented in an upcoming publication \citetext{Bhat et al. in prep}.
 Many details are also described in the paper reporting the first SMART pulsar discovery \citep{Swainston2021}, for which the setup was identical, but the essential details are summarised here.
 The VCS delivers Nyquist-sampled dual-polarisation voltages for 128 MWA tiles ($4\times4$ cross-dipoles) at a rate of $100\,\mu$s and an instantaneous bandwidth of $30.72\,$MHz, consisting of $3072\times10\,$kHz individual channels.
@@ -385,9 +388,9 @@ All four observations (summarised in Table \ref{tab:observations}) were made in 
 \begin{deluxetable}{ccc}
 \tabletypesize{\scriptsize}
 \tablewidth{0pt}
-\tablecaption{Observations of \psr{} \label{tab:observations}}
+\tablecaption{Observations of PSR \psr{} \label{tab:observations}}
 \tablehead{
-\colhead{MJD} & \colhead{Obs ID} & \colhead{Number of pulses}
+\colhead{MJD} & \colhead{Obs ID} & \colhead{Number of rotations}
 }
 \startdata
 58434 & 1226062160 & 3759 \\
@@ -408,6 +411,11 @@ Subsequent analysis of the pulse stacks is described in \S\ref{sec:analysis}.
     \caption{Mean profiles of the four observations with detections, and the total mean profile (top panel) including all four observations. The profiles show a barely resolved double peak structure.}
     \label{fig:profiles}
 \end{figure}
+
+The brightness of \psr{}'s single pulses begs the question of how it avoided detection in previous, more sensitive pulsar surveys covering the same sky (albeit at higher frequencies).
+Follow-up of the initial detection with the full 80 minutes, as well as in other serendipitous MWA observations, revealed that the pulsar has a very large nulling fraction ($\sim$ \nullfraction{}), with some nulling sequences exceeding $20\,$min (i.e. the longest archival MWA observation in which it was \textit{not} detected).
+A full analysis of the nulling properties is presented in Section \S\ref{sec:nulling} below.
+\psr{} may therefore be the harbinger for a population of relatively bright, intermittent pulsars which the SMART survey, with its $80$-minute dwell times, is well-suited to detect.
 
 \subsection{Localization}
 \label{sec:localization}
@@ -431,10 +439,10 @@ The limited number of available detections make obtaining a timing solution impo
 Further follow up observations with the uGMRT and the Parkes Radio Telescope, as well as continued processing of archival MWA observations, are currently underway. These observations, along with the full timing solution that they are expected to yield, will be reported in a future publication.
 
 Lacking a timing solution, we used PSRCHIVE's \texttt{pdmp} routine to determine the best period ($P$) and DM for each observation independently, and the weighted averages over the four observations were calculated (where the reported uncertainties were used to weight the individual measurements).
-The values thus derived were $P = 1.306150 \pm 0.000005\,$s and $\text{DM} = \psrdm\,$\dmunit.
+The values thus derived were $P = 1.306150 \pm 0.000005\,$s and $\text{DM} = \psrdm \pm \psrdmerr\,$\dmunit.
 This simple estimate does not take the period derivative into account (in fact, it implicitly assumes $\dot{P} = 0$), and we note that a sufficiently large $\dot{P}$ would cause the period to drift significantly over the time period spanned by our four MWA observations ($\sim$ 1.5\,yr).
 However, the pulse stacks (e.g. Fig. \ref{fig:pulsestacks}) folded on the above period showed no detectable slope, which we estimate would be discernible if the pulse window changed by more than $20\,$ms over the course of the observation.
-Given this, we place a conservative upper limit of $\dot{P} \le 10^{-13}$\,s/s.
+Given this, we place a conservative upper limit of $\dot{P} \le 10^{-13}$\,s\,s$^{-1}$.
 
 Any error in the folding period also naturally translates into a systematic error in the sub-pulse drifting analysis presented below, e.g. the drift rate.
 However, the fractional uncertainty of the period is much smaller than those of the sub-pulse drifting analysis, which are dominated by the stochastic and bursty nature of the sub-pulses themselves.
@@ -451,19 +459,19 @@ Both types of emission are visible in Fig. \ref{fig:maxima}, in which the peak f
 
 \begin{figure*}[t]
     \plotone{maxima_plot.png}
-    \caption{Peak flux density within the pulse window as a function of time for four MWA detections (MJDs given along the $y$-axis). The peak fluxes were measured after smoothing the time series with a Gaussian filter ($\sim$ 2\,ms wide, the approximate width of a sub-pulse) to suppress the noise contribution and accentuate the contrast between nulling and burst sequences. The two horizontal lines represent two other MWA observations (Obs IDs 1275094456 and 1275172216) for which \psr{} was in the MWA field of view, but not detected.}
+    \caption{Peak flux density within the pulse window as a function of time for four MWA detections (MJDs given along the $y$-axis). The peak fluxes were measured after smoothing the time series with a Gaussian filter ($\sim$ 2\,ms wide, the approximate width of a sub-pulse) to suppress the noise contribution and accentuate the contrast between nulling and burst sequences. The two horizontal lines represent two other MWA observations (Obs IDs 1275094456 and 1275172216) for which \psr{} was in the MWA field of view, but not detected. Note that the low-level peaks in the $\sim70$-$80\,$mins time range of the MJD 58434 observation are single pulses faintly visible in the pulse stack, but which are faint because the pulsar was moving out of the MWA's primary beam.}
     \label{fig:maxima}
 \end{figure*}
 
 To estimate the nulling fraction, we first identified which pulses contained sub-pulses within the pulse window (this is a semi-automated procedure described in \S\ref{sec:drifting_analysis}).
 Any pulse without a sub-pulse is then counted as a null, even if it is nested within a burst sequence.
-This working definition of a null also may misclassify pulses with diffuse emission spread out over the pulse window, even if its integrated flux density is statistically significant.
+This working definition of a null also may misclassify pulses with broad emission spread out over the pulse window, even if its integrated flux density is statistically significant.
 Nevertheless, the uncertainty in our estimate of the nulling fraction will still be dominated by the paucity and short duration of our observations, relative to the time scale over which nulling occurs.
 
 Apart from the four observations with positive detections, there are also two 20-min MWA observations in which no detection was made (Obs IDs 1275094456 and 1275172216), despite the pulsar being within the field of view.
 Assuming the pulsar was nulling during those entire observations, and combining these with the nulling fractions determined for the four observations with positive detections, we estimate the total nulling fraction to be $\sim$ \nullfraction{}.
 
-\subsection{Drifting behaviour}
+\subsection{Drifting behavior}
 \label{sec:drifting_analysis}
 
 During burst sequences, the single pulses form distinct phase-modulated drift bands that are always oriented such that sub-pulses associated with the same drift band appear at earlier rotation phases over time \citep[`positive drifting' in the classification scheme of][]{Basu2019a}.
@@ -482,7 +490,7 @@ The most dramatic examples of this slow evolution show a difference of more than
 \end{figure*}
 
 The manner in which the drift rate and $P_3$ evolve make the clean division of burst sequences into distinct drift modes difficult.
-Nevertheless, the most economical description of the observed drifting behaviour is that it consists primarily of two modes, which we label A and B.
+Nevertheless, the most economical description of the observed drifting behavior is that it consists primarily of two modes, which we label A and B.
 We further divide these into two subcategories (A1/A2 and B1/B2) which depend on qualitative properties of their appearance and context.
 This categorisation scheme is described below.
 
@@ -493,7 +501,7 @@ Most commonly, $P_3$ is seen to \textit{increase} over time, as the examples in 
 However, there is at least one clear instance in MJD 59094 observation where $P_3$ decreases from approximately $35$ to $24\,P$ over the course of 170 rotations.
 Mode A sequences can last anywhere from a a few tens to a few hundreds of pulses, although the identification of shorter sequences as Mode A sequences relies on measuring the drift rate, since in such cases the sequence is not long enough to measure $P_3$ directly.
 
-The distinction between the subcategories A1 and A2 is based primarily on the level of organisation of the drifting behaviour.
+The distinction between the subcategories A1 and A2 is based primarily on the level of organisation of the drifting behavior.
 Sequences whose drift bands follow smooth (albeit curved) tracks with little deviation are classified as A1.
 On the other hand, A2 sequences show frequent interruptions, both in terms of short-duration nulls as well as rapid, but temporary, deviations in the drift rate.
 These interruptions can last between $\sim$ 5-10 pulses, but afterwards the drift bands reappear at the rotation phase that one would expect if the interruptions had not occurred.
@@ -519,9 +527,9 @@ The beginning and ending pulses of a drift sequence were manually identified by 
 Sub-pulses were then identified by first smoothing the pulses with a Gaussian kernel of width $\sim3.6\,$ms (i.e. $1^\circ$ of pulsar rotation, the approximate width of a sub-pulse), and identifying peaks above a certain flux density threshold.
 The threshold is chosen to be the minimum pixel value for which no sub-pulses are identified in the off-pulse region.
 Each sub-pulse in the drift sequence is then assigned a drift band number, and fitted to the following functional form of the sub-pulse phases (using Python's \texttt{curve\_fit} method).
-This functions is obtained by considering the drift rate as the rate of change of sub-pulse phase with pulse number, and integrating Eq. \eqref{eqn:exp_dr}:
+This function is obtained by considering the drift rate as the rate of change of sub-pulse phase with pulse number, and integrating Eq. \eqref{eqn:exp_dr}:
 \begin{equation}
-    \varphi = \tau_r D_0 \left(1 - e^{-p/\tau_r}\right) + D_f p + (\varphi_0 + P_2 d).
+    \varphi = \tau_r D_0 \left(1 - e^{-p/\tau_r}\right) + D_f p + (\varphi_0 + P_2 d),
     \label{eqn:exp_phase}
 \end{equation}
 where $\varphi$ is the phase of a sub-pulse; $\varphi_0$ is an initial reference phase; and $d$ is the (integer) drift band number.
@@ -530,15 +538,16 @@ In total, this model has five free parameters, $D_0$, $D_f$, $\tau_r$, $\varphi_
 During the fitting, no restriction is placed on the sign of $\tau_r$.
 A positive value would mean that the drift rate eventually asymptotes to $D_f$, whereas a negative value would mean that the drift rate is increasing exponentially from an initial drift rate (i.e. $D\rightarrow D_f$ as $p\rightarrow -\infty$).
 Unless the relaxation time is much less than the duration of the drift sequence, $\tau_r$ is highly covariant with the other parameters, and the model is not capable of distinguishing between the two scenarios with any confidence.
-Given this, the primary utility of the empirical model is its ability to predict other measurable quantities such as $P_2$, $P_3$, and the drift rate, which are less sensitive to the the precise functional form used.
+Given this, the primary utility of the empirical model is its ability to predict other measurable quantities such as $P_2$, $P_3$, and the drift rate, which are less sensitive to the precise functional form used.
 
 \subsubsection{$P_2$, $P_3$, and drift rate}
 \label{sec:P2P3DR}
 
 The drift band fitting model defined in Eqs. \eqref{eqn:exp_dr} and \eqref{eqn:exp_phase} can be used to extract information about $P_2$, $P_3$, and the drift rate, $D$.
 $P_2$, which is assumed to be constant everywhere throughout a drift sequence, is fit independently for each drift sequence.
-$P_3$ and the the drift rate are defined continuously over all pulse numbers (even fractional ones) by virtue of the fact that the drift bands are modelled as continuous functions on the pulse stack, although it is understood that these quantities are only strictly only defined at integer pulse numbers.
-Eq. \eqref{eqn:exp_dr} gives the drift rate, and one can derive $P_3 = P_2/|D|$ directly therefrom.
+$P_3$ and the the drift rate are defined continuously over all pulse numbers (even fractional ones) by virtue of the fact that the drift bands are modelled as continuous functions on the pulse stack, although it is understood that these quantities are strictly only defined at integer pulse numbers.
+Eq. \eqref{eqn:exp_dr} gives the drift rate, and one can then derive $P_3 = P_2/|D|$ directly.
+The assumption of constant $P_2$ (for a given drift sequence) is justified by virtue of the goodness-of-fit of the models to the drift bands.
 
 Fig. \ref{fig:with_model} shows the result of the drift band fitting to the MJD 58991 observation, alongside the values of $P_2$, $P_3$, and the drift rate predicted by the model.
 \begin{figure*}[!tp]
@@ -550,6 +559,7 @@ Fig. \ref{fig:with_model} shows the result of the drift band fitting to the MJD 
 One can immediately note several interesting features.
 First, the modelling bears out the observation that $P_3$ can indeed change gradually over the course of the mode A drift sequences by a large amount, even by more than a factor of two (from $\sim20$ to $40\,P$ in one case).
 Second, $P_2$ appears to be generally smaller for mode B sequences ($\sim12^\circ$) than mode A ($\sim14^\circ$).
+Whether or not this is true generally, or whether a single value of $P_2$ could be used to model all drift sequences simultaneously has not been attempted here, but in any case would require a larger sample of drift sequences to test robustly.
 
 Third, the nature of the disorganization of A2 sequences can now be more closely examined.
 Fig. \ref{fig:A2_example} shows such an example A2 sequence to which the above model has been fitted.
@@ -576,19 +586,19 @@ Fig. \ref{fig:lrfs} shows the longitude-resolved fluctuation spectrum (LRFS) and
     \label{fig:lrfs}
 \end{figure}
 Despite the changing $P_3$ and the relative disorganization of the drift rate, the LRFS and 2DFS show surprisingly high-Q features at $P_3/P \approx 33 \pm 4$ and $P_2 \approx 16^\circ \pm 2^\circ$, which are consistent with the fitted model values of $P_3/P$ changing from $\sim50$ to $27$ throughout the sequence, and $P_2 = 13.8^\circ \pm 0.3^\circ$.
-The relative lack of power in the LRFS (bottom panel) near phase $\sim2^\circ$ is likely related to the interruptions to the organization of the drift bands that occurs at that phase, discussed in the previous section.
+The relative lack of power in the LRFS (bottom panel) near phase $\sim2^\circ$ is likely related to the interruptions in the organization of the drift bands that occur at that phase, discussed in the previous section.
 
 \section{Discussion}
 \label{sec:discussion}
 
-PSR \psr{} is a clear example of a pulsar that exhibits sub-pulse drifting, and that the drifting behaviour is qualitatively similar to other pulsars of the same class.
+PSR \psr{} is a clear example of a pulsar that exhibits sub-pulse drifting; its drifting behavior is qualitatively similar to other pulsars of the same class.
 The slope of the drift bands always has the same sign (later sub-pulses arrive at earlier rotation phases than their predecessors), and the drift bands are almost universally connected across the entire pulse window.
 
 These basic facts, when interpreted in the context of the hollow cone/carousel model \citep{Ruderman1975,Rankin1986,Deshpande1999}, suggest that \psr{} is a ``conal single'' pulsar, where the line of sight cuts tangentially through the cone of emission which plays host to a carousel of discrete beams rotating around the star's magnetic axis.
 The profiles (see Fig. \ref{fig:profiles}) show a barely-resolved double peak structure, which suggests that the line of sight is just on the poleward side of the emission cone at this frequency.
 
-The most remarkable feature of \psr{}'s drifting behaviour is how the drift rate evolves over time, exhibiting both rapid changes (indicating the presence of multiple, distinct drift modes) as well as gradual, ``intra-mode'' changes.
-The combination of these behaviours in one pulsar is rare, and a comparison of \psr{} with other pulsars showing similar behaviors is given in Table \ref{tab:comparison}.
+The most remarkable feature of \psr{}'s drifting behavior is how the drift rate evolves over time, exhibiting both rapid changes (indicating the presence of multiple, distinct drift modes) as well as gradual, ``intra-mode'' changes.
+The combination of these behaviors in one pulsar is rare, and a comparison of \psr{} with other pulsars showing similar behaviors is given in Table \ref{tab:comparison}.
 
 \begin{deluxetable*}{lcccl}
 \tabletypesize{\scriptsize}
@@ -599,8 +609,8 @@ The combination of these behaviours in one pulsar is rare, and a comparison of \
 & \colhead{fraction (\%)} & \colhead{($P$)} & time, $\tau_r$ ($P$) &
 }
 \startdata
-\psr{} & 77 & (A) 20-50 & Large & This work \\
-B0031$-$07 & 45 & $\sim[12,7,6]$ & Large & \citet{Joshi2000,McSweeney2017,McSweeney2019a} \\
+\psr{} & 77 & (A) 20-50 & $\gtrsim 100$ & This work \\
+B0031$-$07 & 45 & $\sim[12,7,6]$ & $\gtrsim 50$ & \citet{Joshi2000,McSweeney2017,McSweeney2019a} \\
 B0809$+$74 & 1.4 & $\sim$10.8 & $\sim$10-20 & \citet{Lyne1983,VanLeeuwen2002,VanLeeuwen2003} \\
 B0826$-$34 & (weak mode) 70  & Chaotic & - & \citet{Esamdin2005,Esamdin2012,VanLeeuwen2012} \\
 B0818$-$13 & 1 & 4.7 & Oscillatory & \citet{Lyne1983} \\
@@ -610,7 +620,7 @@ B2016$+$28 & $\sim1$ & $\sim3$-$12$ & - & \citet{Taylor1975,Naidu2017}
 \enddata
 \end{deluxetable*}
 
-Of the pulsars listed in the table, \psr{} is arguably most similar to B0031$-$07, with which it shares (1) the presence of more than one drift mode, (2) the fact that $P_3$ changes slowly throughout individual drift sequences \citep{McSweeney2017}, and (3) a relaxation time (if such a model is even applicable) that is longer than the typical duration of the drift sequences themselves (indicated by the word ``Large'' in the table).
+Of the pulsars listed in the table, \psr{} is arguably most similar to B0031$-$07, with which it shares (1) the presence of more than one drift mode, (2) the fact that $P_3$ changes slowly throughout individual drift sequences \citep{McSweeney2017}, and (3) a relaxation time (if such a model is even applicable) that is longer than the typical duration of the drift sequences themselves.
 This last point is what renders the particular drift band model used in this work unable to measure the relaxation time reliably; in this respect it is not significantly better than the ``quadratic'' model used in \citet{McSweeney2017}, which is equivalent to keeping only the lowest order terms in the Taylor expansion of Eq. \eqref{eqn:exp_phase}.
 Notably, \citet{Joshi2000} report that in B0031$-$07, drift phase is indeed remembered across nulls, as first reported for B0809$+$74 and B0818$-$13 by \citet{Lyne1983}, and a visual inspection of the \psr{} pulse stacks suggest that a similar phase memory is also present here, although a more careful analysis is required before this can be verified.
 
@@ -635,12 +645,12 @@ The verification and exploration of such claims require much larger data sets th
 \label{sec:conclusions}
 
 We have reported the first obesrvations of PSR \psr{}, the second pulsar discovered as part of the MWA's SMART pulsar survey.
-It is bright enough to see in single pulses at MWA frequencies, but it suspected to have been missed by previous Southern Hemisphere surveys by virtue of its long null sequences which can in some cases can exceed 10 minutes.
-Its slow period and intermittent nature mean that long duration observations are required to collect enough a sufficient number of complete burst sequences to do robust statistical analysis on their properties.
+It is bright enough to see in single pulses at MWA frequencies, but it is suspected to have been missed by previous Southern Hemisphere surveys by virtue of its long null sequences which can in some cases can exceed 20 minutes.
+Its slow period and intermittent nature mean that long duration observations are required to collect a sufficient number of complete burst sequences to do robust statistical analysis on their properties.
 
-However, even with the relatively few observations presently at our disposal, \psr{} clearly exhibits many interesting single pulse behaviours that are deserving of further study.
-Among these, the most prominent is the manner in which the drift rate changes slowly throughout drift sequences (a property observed in only a small number of other sub-pulse drifting pulsars), as well is the interplay between the two drift mode classes identified here (modes A and B) and the intervening null sequences.
-These properties make the interpretation of this pulsar's drifting behaviour particularly interesting in the context of the carousel model.
+However, even with the relatively few observations presently at our disposal, \psr{} clearly exhibits many interesting single pulse behaviors that are deserving of further study.
+Among these, the most prominent is the manner in which the drift rate changes slowly throughout drift sequences (a property observed in only a small number of other sub-pulse drifting pulsars), as well as the interplay between the two drift mode classes identified here (modes A and B) and the intervening null sequences.
+These properties make the interpretation of this pulsar's drifting behavior particularly interesting in the context of the carousel model.
 
 \bibliography{main}{}
 \bibliographystyle{aasjournal}

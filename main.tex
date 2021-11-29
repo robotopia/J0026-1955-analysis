@@ -92,7 +92,7 @@
 %% using \newcommand. Your macros should appear before
 %% the \begin{document} command.
 %%
-\newcommand{\psr}{J0026$-$1955}
+\newcommand{\psr}{J0026$-$1956}
 \newcommand{\psrdm}{20.869}
 \newcommand{\psrdmerr}{0.005}
 \newcommand{\psrnick}{J0036$-$1033}
@@ -340,16 +340,16 @@ This, in part, motivates efforts to find new pulsars via large scale pulsar surv
 
 One of the most recent such surveys is currently under way at the Murchison Widefield Array \citep[MWA;][]{Tingay2013}, a latest-generation aperture array telescope located in Western Australia.
 With its Voltage Capture System \citep[VCS;][]{Tremblay2015} and offline tied-array beamforming software \citep{Ord2019,McSweeney2020}, it has proven to be a powerful instrument for investigating a variety of pulsar phenomena such as single-pulse studies \citep{McSweeney2017}, spectral analyses \citep{Meyers2017}, and studies of interstellar medium (ISM) propagation effects and related timing applications \citep{Bhat2018,Kaur2019}.
-With the advent of the Phase II upgrade of the MWA \citep{Wayth2018} in its compact configuration\footnote{A subset of 128 centrally condensed tiles (i.e.\ antenna elements), designed for science cases that require large numbers of short baselines.}, a pulsar survey became computationally feasible, owing to the relatively large angular size of the tied-array beam ($\sim30^\prime$).
+With the advent of the Phase 2 upgrade of the MWA \citep{Wayth2018} in its compact configuration\footnote{A subset of 128 centrally condensed tiles (i.e.\ antenna elements), designed for science cases that require large numbers of short baselines.}, a pulsar survey became computationally feasible, owing to the relatively large angular size of the tied-array beam ($\sim23^\prime$).
 The Southern-Sky MWA Rapid Two-metre (SMART) pulsar survey (Bhat et al. \textit{in prep}) was conceived and began data collection in late 2018.
 At present, $\sim70\%$ of the data have been collected, with the initial, first-pass (``shallow'') processing being limited to the first ten minutes (out of the full 80 minutes) of each observation.
 This strategy quickly paid off with the discovery of PSR \psrnick{}, a low-luminosity, high Galactic latitude pulsar, reported in \citet{Swainston2021}.
 
-\textbf{In this paper, we report the MWA's detection and analysis of PSR \psr{}, which emerged as a candidate as part of the same initial search strategy.}
+In this paper, we report the MWA's independent discovery of PSR \psr{}, also detected in the shallow pass of the SMART survey.
 Unlike \psrnick{}, \psr{} is sufficiently bright to be detected in single pulses, and was found to have a large nulling fraction.
 Closer inspection of \psr{}'s single pulses revealed that it belongs to the class of sub-pulse drifters, a phenomenon first noted in the earliest days of pulsar research \citep{Drake1968}, and which has historically been strongly linked to magnetospheric phenomena, and thence, to the as-yet poorly understood radio emission mechanism \citep{Ruderman1975,Rankin1986,Deshpande1999}.
 ``Sub-pulse'' signifies discrete bursts of emission, usually much narrower than the average pulse profile, and ``drifting'' refers to the systematic way that sub-pulses arrive earlier or later in time in successive rotations.
-Sub-pulse drifting is easily detected when viewing the pulses in a stack (Fig \ref{fig:pulsestacks}), in which associated sets of sub-pulses form diagonal \textit{drift bands} that stretch across the on-pulse window.
+Sub-pulse drifting is easily detected when viewing the pulses in a stack (pulse number vs rotation phase), in which associated sets of sub-pulses form diagonal \textit{drift bands} that stretch across the on-pulse window.
 The \textit{drift rate} is defined as the reciprocal of the slope of the drift bands, often expressed in units of degrees (of rotation) per pulse period ($^\circ/P$).
 
 Many sub-pulse drifters, e.g., B0809$+$74 and B0943$+$10, are known to have very stable drift rates \citep[e.g.][]{Taylor1971,Deshpande1999}.
@@ -423,18 +423,19 @@ Subsequent analysis of the pulse stacks is described in \S\ref{sec:analysis}.
     \label{fig:profiles}
 \end{figure}
 
-\textbf{Although this pulsar emerged as a candidate in the shallow pass of SMART, it was subsequently noted to have been reported in 2018 as a candidate in the Green Bank Northern Celestial Cap (GBNCC) pulsar survey \citep{Stovall2014}.
+Although this pulsar was detected in the shallow pass of SMART, it was subsequently noted to have been reported in 2018 as a candidate in the Green Bank Northern Celestial Cap (GBNCC) pulsar survey \citep{Stovall2014}.
 Later re-processing of data from the 70-cm Parkes Southern Pulsar Survey  \citep{Manchester1996} also revealed a weak detection that was not previously reported.
-These detections confirm the candidate as a true pulsar.}
+These detections confirm the candidate as a true pulsar.
 
 Follow-up of the initial MWA detection with the full 80 minutes, as well as in other archival MWA observations, revealed that the pulsar has a very large nulling fraction ($\sim$ \nullfraction{})\footnote{The nulling fraction estimate comes only from analysis of the MWA data.}, with some nulling sequences potentially exceeding $20\,$min (i.e.\ the longest archival MWA observation in which it was \textit{not} detected with a periodicity search).
 A full analysis of the nulling properties is presented in Section \S\ref{sec:nulling} below.
-\textbf{Despite the fact that \psr{} was serendipitously discovered in the first ten minutes, it may well be} the harbinger for a population of relatively bright, intermittent pulsars which the SMART survey, with its $80$-minute dwell times, is well-suited to detect.
+Despite the fact that \psr{} was serendipitously discovered in the first ten minutes, it may well be the harbinger for a population of relatively bright, intermittent pulsars which the SMART survey, with its $80$-minute dwell times, is well-suited to detect.
+A similar strategy is employed in the Low Frequency Array (LOFAR) Tied-Array All-Sky Survey \citep[LOTAAS][]{Sanidas2019}, which uses dwell times of one hour.
 
 \subsection{Localization}
 \label{sec:localization}
 
-The discovery observation (Obs ID 1226062160) was taken when the MWA was in its \textit{compact} configuration \citep[see][]{Wayth2018}, giving an effective tied-array beam size of $\sim$ 30$^\prime$ at the central frequency of $155\,$MHz.
+The discovery observation (Obs ID 1226062160) was taken when the MWA was in its \textit{compact} configuration \citep[see][]{Wayth2018}, giving an effective tied-array beam size of $\sim$ 23$^\prime$ at the central frequency of $155\,$MHz.
 As per the SMART survey design, these beams are tiled across the field of view, each of which is searched for periodic candidates.
 The compact configuration includes many redundant baselines, and the tied-array beam for the compact configuration is complex.
 Consequently, the pulsar was detected in multiple adjacent beams, including a boresight beam that yielded the highest signal-to-noise, and several nearby grating lobes.
@@ -450,7 +451,7 @@ The right ascension and declination of the final best position, consistent with 
 \label{sec:period}
 
 The limited number of available detections make obtaining a timing solution impossible at this early stage.
-Further follow up observations with the uGMRT and the Murriyang Telescope (formerly, the Parkes Radio Telescope), as well as continued processing of archival MWA observations, are currently underway. These observations, along with the full timing solution that they are expected to yield, will be reported in a future publication.
+Further follow up observations with the uGMRT and the Parkes 64-m radio telescope (also known as \emph{Murriyang}), as well as continued processing of archival MWA observations, are currently underway. These observations, along with the full timing solution that they are expected to yield, will be reported in a future publication.
 
 Lacking a timing solution, we used PSRCHIVE's \texttt{pdmp} routine to determine the best period ($P$) and DM for each observation independently, and the weighted averages over the four observations were calculated (where the reported uncertainties were used to weight the individual measurements).
 The values thus derived were $P = 1.306150 \pm 0.000005\,$s and $\text{DM} = \psrdm \pm \psrdmerr\,$\dmunit.
@@ -482,14 +483,12 @@ Any pulse without a sub-pulse is then counted as a null, even if it is nested wi
 This working definition of a null also may misclassify pulses with broad emission spread out over the pulse window, even if its integrated flux density is statistically significant.
 Nevertheless, the uncertainty in our estimate of the nulling fraction will still be dominated by the paucity and short duration of our observations, relative to the time scale over which nulling occurs.
 
-\textbf{
 Apart from the four observations with positive detections, there are also two 20-min MWA observations (Obs IDs 1275094456 and 1275172216) in which no detection was made via a periodicity search, despite the pulsar being within the field of view.
 Because of the brightness of the pulsar's single pulses, we estimate that the pulsar cannot have been in a burst mode for more than 10\% of the time without it having been detected.
 If we allow that the fraction of detectable pulses is between 0-10\% for these two observations, then the total nulling fraction, as measured from these six MWA observations, is between 75-78\%.
 The error on this estimate, however, will be dominated by the small number of burst/null sequences captured in these six observations.
 Therefore, the true nulling fraction may ultimately prove to be much lower or higher than the $\sim$\nullfraction{} quoted here.
-Planned follow-up observations (and a more complete search through archival MWA data) will allow us to place much stronger constraints on the nulling fraction, and will be reported in a future publication.
-}
+Ongoing follow-up observations (and a more complete search through archival MWA data) will allow us to place much stronger constraints on the nulling fraction, and will be reported in a future publication.
 
 \subsection{Drifting behavior}
 \label{sec:drifting_analysis}
@@ -519,7 +518,7 @@ This categorisation scheme is described below.
 Mode A is characterised by slowly evolving $P_3$ values that can range between $\sim$ 20-55\,$P$, and drift rates in the range $-0.3$ to $-0.7^\circ/P$.
 Most commonly, $P_3$ is seen to \textit{increase} over time, as the examples in Fig. \ref{fig:pulsestacks} show.
 However, there is at least one clear instance in the (MJD 59094 observation where $P_3$ decreases from approximately $35$ to $24\,P$ over the course of 170 rotations.
-Mode A sequences can last anywhere from a a few tens to a few hundreds of pulses, although the identification of shorter sequences as Mode A sequences relies on measuring the drift rate, since in such cases the sequence is not long enough to measure $P_3$ directly.
+Mode A sequences can last anywhere from a few tens to a few hundreds of pulses, although the identification of shorter sequences as Mode A sequences relies on measuring the drift rate, since in such cases the sequence is not long enough to measure $P_3$ directly.
 
 The distinction between the subcategories A1 and A2 is based primarily on the level of organisation of the drifting behavior.
 Sequences whose drift bands follow smooth (albeit curved) tracks with little deviation are classified as A1.
@@ -666,8 +665,10 @@ The verification and exploration of such claims require much larger data sets th
 \section{Conclusions and summary}
 \label{sec:conclusions}
 
-\textbf{We have reported the independent discovery and first MWA observations of PSR \psr{} in the SMART pulsar survey.
-It is bright enough to see in single pulses at MWA frequencies, but contains long null sequences} which in some cases can exceed 20 minutes\footnote{The presence of intermittent, mode B2 pulses was not searched via, e.g.\ single pulse searches.}.
+We have reported the independent discovery and first MWA observations of PSR \psr{} in the SMART pulsar survey.
+It is bright enough to see in single pulses at MWA frequencies, but contains long null sequences which in some cases can apparently exceed 20 minutes.
+Such pulsars are inherently difficult to detect because of their intermittent nature, but are expected to be discovered in greater numbers in surveys like SMART and LOTAAS, which employ long $\ge 1\,$hr dwell times.
+
 Its slow period and intermittent nature mean that long duration observations are required to collect a sufficient number of complete burst sequences to undertake robust statistical analysis on their properties.
 Follow-up observations are currently under way at the uGMRT and at Murriyang, which will allow us to explore the drifting behaviour of \psr{} in much greater depth, as well as obtain a timing solution, refine the nulling fraction estimate, and perform a polarimetric analysis of its single pulses.
 
@@ -676,9 +677,18 @@ Among these, the most prominent is the manner in which the drift rate changes sl
 These properties make the interpretation of this pulsar's drifting behavior particularly interesting in the context of the carousel model.
 
 \begin{acknowledgements}
-This scientific work makes use of the Murchison Radio-astronomy Observatory, operated by CSIRO. We acknowledge the Wajarri Yamatji people as the traditional owners of the Observatory site. Support for the operation of the MWA is provided by the Australian Government (NCRIS), under a contract to Curtin University administered by Astronomy Australia Limited. We acknowledge the Pawsey Supercomputing Centre which is supported by the Western Australian and Australian Governments.
+% MWA
+This scientific work makes use of the Murchison Radio-astronomy Observatory, operated by CSIRO. We acknowledge the Wajarri Yamatji people as the traditional owners of the Observatory site. Support for the operation of the MWA is provided by the Australian Government (NCRIS), under a contract to Curtin University administered by Astronomy Australia Limited.
+% Pawsey
+We acknowledge the Pawsey Supercomputing Centre which is supported by the Western Australian and Australian Governments.
+% OzSTAR
+This work was supported by resources awarded under Astronomy Australia Ltd's ASTAC merit allocation scheme on the OzSTAR national facility at the Swinburne University of Technology. The OzSTAR program receives funding in part from the Astronomy National Collaborative Research Infrastructure Strategy (NCRIS) allocation provided by the Australian Government.
+% GMRT
+The GMRT is run by the National Centre for Radio Astrophysics
+of the Tata Institute of Fundamental Research, India.
+% DK + Alex McEwen
 DK was supported by NSF grant AST-1816492.
-We would also like to thank Alex McEwen for making the the original discovery of this pulsar in the GBNCC survey.
+We would also like to thank Alex McEwen for making the original discovery of this pulsar in the GBNCC survey.
 \end{acknowledgements}
 
 \bibliography{main}{}

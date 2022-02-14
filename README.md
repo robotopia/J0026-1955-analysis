@@ -18,3 +18,8 @@ where "stokes" is one of (I,Q,U,V)
 The program uses the JSON format to save out the analyses to file. If such a file has been saved, it can be loaded directly from the command line using
 
     python drift_analysis.py <json_file>
+
+## Update on review process
+
+* 2022-02-14: Started downloading 1275094456 (JobID: 560934)
+* 2022-02-14: Started downloading 1275172216 (JobID: 560954)

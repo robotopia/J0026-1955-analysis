@@ -22,4 +22,4 @@ The program uses the JSON format to save out the analyses to file. If such a fil
 ## Update on review process
 
 * 2022-02-14: Started downloading 1275094456 (JobID: 560934)
-* 2022-02-14: Started downloading 1275172216 (JobID: 560954)
+* 2022-02-14: Started downloading 1275172216 (JobID: 253238)

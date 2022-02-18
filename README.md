@@ -1,14 +1,9 @@
-# drift_analysis
-An interative Python/Matplotlib tool for analysing subpulse drifting in pulsars
+# Drifting analysis on J0024-1956
 
-## Install
-This needs the following Python packages to be installed on your system:
- - numpy
- - scipy
- - matplotlib
- - tk
+## Using Drift Analysis software
 
-## Run
+The software used for this analysis is [DriftAnalysis](https://github.com/robotopia/drift_analysis)
+
 If starting a new analysis, this can be run on a "pdv" file (i.e. a text file containing the output of PSRCHIVE's pdv utility) as follows:
 
     python drift_analysis.py <pdv_file> <stokes>
@@ -19,7 +14,7 @@ The program uses the JSON format to save out the analyses to file. If such a fil
 
     python drift_analysis.py <json_file>
 
-## Update on review process
+## Timeline
 
 * 2022-02-14: Started downloading 1275094456 (JobID: 560934)
 * 2022-02-14: Started downloading 1275172216 (JobID: 253238)

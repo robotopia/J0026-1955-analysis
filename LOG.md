@@ -7,9 +7,4 @@
 
 ## 2022-02-21
 
-* Tried to recombine using
-```
-module use /pawsey/mwa/software/python3/modulefiles
-module load vcstools
-process_vcs.py -m recombine -o 1275172216 -a
-```
+* Attempted to recombine 1275172216 (see [1275172216/LOG.md](1275172216/LOG.md))

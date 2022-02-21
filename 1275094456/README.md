@@ -5,16 +5,21 @@ This is in response to the referee, who queried whether or not we were possibly 
 See also the parallel [README for 1275172216](../1275172216/README.md).
 
 * [x] Download data
-* [ ] Manually recombine
+* [x] Manually recombine
+* [x] Get calibration solution (1275085696, according to [Nick's spreadsheet](https://docs.google.com/spreadsheets/d/16bHhlqrGllyq_PD3Fb717MJfGCB1JFrUt2Ra2vPpWQE/edit#gid=0))
 * [ ] Beamform
 
 ## Log
 
 ### 2022-02-22
 
-* Recombined:
+1. Recombine:
 ```
 module use /pawsey/mwa/software/python3/modulefiles
 module load vcstools
 process_vcs.py -m recombine -o 1275094456 -a
+```
+2. Beamform
+```
+process_vcs.py -m beamform -a -o 1275094456 -O 1275085696 -p "00:26:37.30_-19:56:27.63"
 ```

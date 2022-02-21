@@ -8,6 +8,7 @@ See also the parallel [README for 1275094456](../1275094456/README.md).
 
 * [x] Download data
 * [x] Manually recombine
+* [x] Get calibration solution (1275172096, according to [Nick's spreadsheet](https://docs.google.com/spreadsheets/d/16bHhlqrGllyq_PD3Fb717MJfGCB1JFrUt2Ra2vPpWQE/edit#gid=0))
 * [ ] Beamform
 
 ## Log
@@ -25,3 +26,8 @@ process_vcs.py -m recombine -o 1275172216 -a
 Tracing down the error in the log files, it appears that cfitsio was not being found. Sure enough, nothing in the modules that *were* being loaded included cfitsio.
 Thus, I added (back?) the line `load("cfitsio/3450")` in the file `/pawsey/mwa/software/python3/modulefiles/mwa-voltage/master.lua`.
 I'm re-running now, and it appears to be working.
+
+2. Beamform
+```
+process_vcs.py -m beamform -a -o 1275172216 -O 1275172096 -p "00:26:37.30_-19:56:27.63"
+```

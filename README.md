@@ -16,4 +16,4 @@ The program uses the JSON format to save out the analyses to file. If such a fil
 
 ## Log
 
-The highest level log for this project can be found in [LOG.md](log.md).
+The highest level log for this project can be found in [LOG.md](LOG.md).

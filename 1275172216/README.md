@@ -1,6 +1,14 @@
 # Processing 1275172216 in response to referee report
 
+This is in response to the referee, who queried whether or not we were possibly getting an inaccurate nulling fraction by not looking for single pulses in 1275172216.
+
+See also the parallel [README for 1275094456](../1275094456/README.md).
+
 ## Tasks
+
+* [x] Download data
+* [x] Manually recombine
+* [ ] Beamform
 
 ## Log
 

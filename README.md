@@ -14,7 +14,6 @@ The program uses the JSON format to save out the analyses to file. If such a fil
 
     python drift_analysis.py <json_file>
 
-## Timeline
+## Log
 
-* 2022-02-14: Started downloading 1275094456 (JobID: 560934)
-* 2022-02-14: Started downloading 1275172216 (JobID: 253238)
+The highest level log for this project can be found in [LOG.md](log.md).

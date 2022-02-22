@@ -1,0 +1,29 @@
+PSRJ           J0026-1956
+RAJ            00:26:37.30                 
+DECJ           -19:56:27.63                
+F0             0.76560777754637588158    1  0.00000006392666330450   
+F1             3.3036945171334541931e-18   
+PEPOCH         59003.013888888891          
+POSEPOCH       59003.013888888891          
+DMEPOCH        59003.013888888891          
+DM             20.868600000000000001       
+START          59002.003276818555332     1 
+FINISH         59004.941306997817495     1 
+TZRMJD         59003.025444791744128       
+TZRFRQ         154.24000000000000909    
+TZRSITE        mwa   
+TRES           6279.230     
+EPHVER         5                           
+NE_SW          4                           
+CLK            TT(TAI)
+UNITS          TCB
+TIMEEPH        IF99
+DILATEFREQ     Y
+PLANET_SHAPIRO Y
+T2CMETHOD      IAU2000B
+NE_SW          4.000
+CORRECT_TROPOSPHERE  Y
+EPHEM          DE405
+NITS           1
+NTOA           6
+CHI2R          0.0000 4

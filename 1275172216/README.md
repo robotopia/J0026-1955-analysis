@@ -13,6 +13,7 @@ See also the parallel [README for 1275094456](../1275094456/README.md).
 * [ ] Fold (DSPSR)
 * [ ] Make pulsestack
 * [ ] Look for pulses
+* [ ] Remove raw data
 
 ## Log
 

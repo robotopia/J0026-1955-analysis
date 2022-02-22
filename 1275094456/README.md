@@ -7,7 +7,11 @@ See also the parallel [README for 1275172216](../1275172216/README.md).
 * [x] Download data
 * [x] Manually recombine
 * [x] Get calibration solution (1275085696, according to [Nick's spreadsheet](https://docs.google.com/spreadsheets/d/16bHhlqrGllyq_PD3Fb717MJfGCB1JFrUt2Ra2vPpWQE/edit#gid=0))
-* [ ] Beamform
+* [x] Beamform
+* [ ] Splice channels
+* [ ] Fold (DSPSR)
+* [ ] Make pulsestack
+* [ ] Look for pulses
 
 ## Log
 
@@ -23,3 +27,15 @@ process_vcs.py -m recombine -o 1275094456 -a
 ```
 process_vcs.py -m beamform -a -o 1275094456 -O 1275085696 -p "00:26:37.30_-19:56:27.63"
 ```
+3. Splice channels
+```
+cd /astro/mwavcs/vcs/1275094456/pointings/00:26:37.30_-19:56:27.63
+splice.sh
+> Project ID [G0024]: D0029
+> Observation ID: 1275094456
+> Pointing [None]: 00:26:37.30_-19:56:27.63
+> Number of 200-second chunks [2]: 6
+> Lowest coarse channel number [133]: 109
+> Highest coarse channel number [156]: 132
+```
+4. Fold (DSPSR)

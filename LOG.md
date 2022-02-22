@@ -12,3 +12,4 @@
 ## 2022-02-22
 
 * Finished recombining, beamforming, splicing, and folding both 1275094456 and 1275172216
+* Grafted the previously separate [paper repo (Bitbucket)](https://bitbucket.org/smcsweeney/paper-keegans-pulsar/src/master/) into this repo (subfolder `paper`)

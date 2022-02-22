@@ -10,6 +10,7 @@ See also the parallel [README for 1275094456](../1275094456/README.md).
 * [x] Manually recombine
 * [x] Get calibration solution (1275172096, according to [Nick's spreadsheet](https://docs.google.com/spreadsheets/d/16bHhlqrGllyq_PD3Fb717MJfGCB1JFrUt2Ra2vPpWQE/edit#gid=0))
 * [x] Beamform
+* [x] Splice channels
 * [ ] Fold (DSPSR)
 * [ ] Make pulsestack
 * [ ] Look for pulses
@@ -47,4 +48,9 @@ splice.sh
 > Number of 200-second chunks [2]: 6
 > Lowest coarse channel number [133]: 109
 > Highest coarse channel number [156]: 132
+```
+3. Fold (DSPSR)
+Copy the par file (0024.par, from the root directory of this repo) to Garrawarla, as well as the dspsr.batch script in this directory. Then,
+```
+sbatch dspsr.batch
 ```

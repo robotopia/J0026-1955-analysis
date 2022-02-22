@@ -1,0 +1,59 @@
+Dear Dr. McSweeney,
+
+Your manuscript was sent for review to an expert reviewer who has returned the comments below. The reviewer has some concerns about your work and makes several recommendations for improvements in the manuscript. The reviewer also recommends that this manuscript should only be reconsidered for publication in one of the main AAS journals, instead of ApJ Letters. 
+
+The report appears reasonable to me and I urge you to take the reviewer's comments fully into account in preparing a revised (and, if needed, expanded) version of your manuscript for possible publication in one of the main AAS Journals. Please note that resubmissions to one of the main AAS Journals are due within 6 months.
+
+When you resubmit, please outline the revisions you have made in response to each of the reviewer's comments using plain text in the field provided when you upload the revised manuscript. Citing each of the reviewer's comments immediately followed by your response would be particularly helpful.
+
+<strong>Please confirm as soon as possible by replying to this email</strong> that we can transfer your manuscript (including the reviewer's report and with no change in original submission date) to one of the main AAS Journals. 
+
+Sincerely,
+Steinn Sigurdsson
+AAS Scientific Editor
+Pennsylvania State University
+steinn.sigurdsson@aas.org
+
+=========================================================
+Reviewer's Comments:
+The authors present a study of the low frequency emission from a a newly discovered normal pulsar J0026-1956, which shows the interesting phenomena of nulling and sub-pulse drifting in the single pulses. The independent discovery of this pulsar with the MWA in the ﻿SMART pulsar survey indicates that the SMART survey may be well suitable for detecting a population of relatively bright, intermittent pulsars. This pulsar was observed at a low frequency band 140-170 MHz from the MWA. The complex sub-pulse drifting behavior was investigated. Although the star reported here is a newly discovered pulsar, some pulsars with nulling and subpulse drifting behaviors have been extensively studied.
+
+[Reviewer commends article and recommends transfer to ApJ or AJ.  EDITOR Concurs.]
+... I suggest that you instead submit an expanded version to one of the other AAS journals, such as The Astrophysical Journal (main ApJ).
+
+
+The specific comments are presented here to help the authors for improving the manuscript.
+
+1. The observation, theory and scientific application of pulsars are not fully introduced and need to be expanded. For example, This, along with tests of general relativity (e.g. Kramer et al. 2006; Miao et al. 2021, ApJ, 921, 114), pulsar timing arrays for gravitational wave detection (e.g. Manchester et al. 2013), pulsar braking and magnetospheric dynamics (e.g. Gao et al. 2017, 849,19, Wang et al. 2020, Universe, 6, 63) the neutron star equation of state (e.g. Antoniadis et al. 2013 Science 340 448, Pang, et al. 2021, ApJ, 922,14), and other pulsar science applications, motivates efforts to find new pulsars via large scale pulsar surveys, which continue to be conducted up to the present day. 
+
+2. There are some peculiar but interesting subpulse drifting pulsars, such as J1727−2739， J1822-2256 and the Vela pulsar, which could be missed in this paper. Please refer to articles: Wen et al. 2016, A&A 592, A127; Wen et al. 2021,ApJ,900,168; Janagal, Parul et al. 2022, MNRAS, 509, 4573.
+
+3. The authors referred to the RS model (Ruderman & Sutherland 1975). Although the RS model successfully explains the formation mechanism of drift subpulse, it is difficult to explain the complex drift subpulse phenomena, such as the erratic drift rate, the change of drift direction, and the transition between various drift states. For this reason, many researchers have developed the RS model to explain various special subpulse drifting phenomena (e.g. Gil & Sendyk 2000,ApJ, 541,351; Qiao et al. 2004, ApJ,616, L127).
+
+4. Which bright source was used for phase or amplitude calibration? Is it possible to convert the flux into absolute amplitude in the figures instead of arbitrary unit?
+
+5. Please clarify the technical principle of the PSRCHIVE's pdmp to determine period and DM.
+
+6. In single-pulse study, the radio frequency interference can act to reduce the signal-to-noise ratio. Considering the weak nature of single pulses, it is necessary to subtract away or mask undesirable signals from the data before single-pulse analysis. Please describe the RFI mitigation technique you used.
+
+7. Please indicate the flux value in the ordinates of Figure 1 for each averaged pulse profiles.
+
+8. It is difficult to determine whether nulling or just weak emission exists in this pulsar only from Figures 2 and 3. The pulse energy distribution is a statistical way to characterize the nulling behavior (Wen et al. 2020, ApJ, 904, 72).
+
+9. Is there any temporal evolution of nulling fraction from follow-up observations and archival MWA data? Is it possible that the constraints on the nulling fraction might be reported in this paper?
+
+10. The nulls from a few pulsars does not seem to be random, but show well-defined periodicity (e.g. Herfindal & Rankin 2007, MNRAS, 380, 430; Wang et al. 2021, ApJ, 923, 259). Try to examine whether the periodicity in the transitions between null and burst states is present in this pulsar.
+
+11. The pulsar switches between null and burst states with short and long timescales, which provides an important clue to scrutinize various nulling mechanism models. The null and burst length histograms are required.
+
+12. Whether the observed nulls are true or just weak emission below the detection threshold of the telescope? To answer this question, the analysis of integrated pulse profile obtained from all classified nulls is necessary.
+
+13. There was no detection in the two 20-min MWA observations made via periodicity search. A few pulsars were reported to exhibit sporadic, strong single pulses coexisting with a periodic weak emission in the duration of weak mode (e.g. PSR B0826-34). Does J0026-1956 has the similar emission behavior? You'd better try single-pulse search technique on the two observations.
+
+14. The LRFS in Figure 6 clearly presents the drifting feature at a frequency of ~0.03 cycles/period in the on-pulse window. In addition, a wide modulation feature with frequency ranging from 0.05-0.1 cycles/period is detected in the leading emission component. The corresponding feature with weak power in the 2DFS is also discernible.
+
+15. The polarized pulse profiles for different drift modes provide an important clue to reveal the triggering mechanism of mode changing. Is there any difference between averaged pulse profiles by integrating pulses for different drift modes?
+
+16. The observed different subpulse drift modes and the slowly changing in drift rate may be an indication of a local change in the electromagnetic field configuration in the gap. A lot of theoretical modes have been proposed, such as van Leeuwen et al. 2003, A&A, 399, 223; Smith et al. 2005, A&A, 440, 683; Yuen, 2019, MNRAS, 486, 2011.
+
+17. To our knowledge, no model can satisfactorily explain the observed subpulse drift characteristics for different pulsars. In the future, the multi-frequency study will be required.

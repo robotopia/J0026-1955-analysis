@@ -11,7 +11,7 @@ See also the parallel [README for 1275094456](../1275094456/README.md).
 * [x] Get calibration solution (1275172096, according to [Nick's spreadsheet](https://docs.google.com/spreadsheets/d/16bHhlqrGllyq_PD3Fb717MJfGCB1JFrUt2Ra2vPpWQE/edit#gid=0))
 * [x] Beamform
 * [x] Splice channels
-* [ ] Fold (DSPSR)
+* [x] Fold (DSPSR)
 * [ ] Make pulsestack
 * [ ] Look for pulses
 * [ ] Remove raw data

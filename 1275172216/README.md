@@ -30,7 +30,20 @@ Tracing down the error in the log files, it appears that cfitsio was not being f
 Thus, I added (back?) the line `load("cfitsio/3450")` in the file `/pawsey/mwa/software/python3/modulefiles/mwa-voltage/master.lua`.
 I'm re-running now, and it appears to be working.
 
-2. Beamform
+### 2022-02-22
+
+1. Beamform
 ```
 process_vcs.py -m beamform -a -o 1275172216 -O 1275172096 -p "00:26:37.30_-19:56:27.63"
+```
+2. Splice channels
+```
+cd /astro/mwavcs/vcs/1275172216/pointings/00:26:37.30_-19:56:27.63
+splice.sh
+> Project ID [G0024]: D0029
+> Observation ID: 1275172216
+> Pointing [None]: 00:26:37.30_-19:56:27.63
+> Number of 200-second chunks [2]: 6
+> Lowest coarse channel number [133]: 109
+> Highest coarse channel number [156]: 132
 ```

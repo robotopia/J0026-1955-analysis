@@ -2,7 +2,7 @@ TARGETS = main.pdf
 
 all: $(TARGETS)
 
-%.pdf: %.tex
+%.pdf: %.tex %.bib
 	pdflatex $*
 	bibtex $*
 	pdflatex $*

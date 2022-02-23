@@ -9,26 +9,28 @@ See also the parallel [README for 1275172216](../1275172216/README.md).
 * [x] Get calibration solution (1275085696, according to [Nick's spreadsheet](https://docs.google.com/spreadsheets/d/16bHhlqrGllyq_PD3Fb717MJfGCB1JFrUt2Ra2vPpWQE/edit#gid=0))
 * [x] Beamform
 * [x] Splice channels
-* [ ] Fold (DSPSR)
+* [x] Fold (DSPSR)
 * [ ] Make pulsestack
 * [ ] Look for pulses
-* [ ] Remove raw data
+* [x] Remove raw data
 
 ## Log
 
 ### 2022-02-22
 
-1. Recombine:
+#### Recombine:
 ```
 module use /pawsey/mwa/software/python3/modulefiles
 module load vcstools
 process_vcs.py -m recombine -o 1275094456 -a
 ```
-2. Beamform
+
+#### Beamform
 ```
 process_vcs.py -m beamform -a -o 1275094456 -O 1275085696 -p "00:26:37.30_-19:56:27.63"
 ```
-3. Splice channels
+
+#### Splice channels
 ```
 cd /astro/mwavcs/vcs/1275094456/pointings/00:26:37.30_-19:56:27.63
 splice.sh
@@ -42,9 +44,19 @@ splice.sh
 
 ### 2022-02-23
 
-1. Fold (DSPSR)
+#### Fold (DSPSR)
 Copy the par file (`0024.par`, from the root directory of this repo) to Garrawarla, as well as the `dspsr.batch` script in this directory.
 Then,
 ```
 sbatch dspsr.batch
+```
+#### Make pulsestack
+```
+# Set up
+cd /astro/mwavcs/vcs/1275094456/pointings/00:26:37.30_-19:56:27.63/single
+module load singularity
+
+# Frequency scrunch and combine archives
+singularity run -B ~/.Xauthority /pawsey/mwa/singularity/psrchive_tempo2/psrchive_tempo2.sif pam -e F -D -F pu*.ar
+singularity run -B ~/.Xauthority /pawsey/mwa/singularity/psrchive_tempo2/psrchive_tempo2.sif psradd -o 1275094456.F pu*.F
 ```

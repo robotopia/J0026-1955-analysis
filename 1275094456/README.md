@@ -11,7 +11,7 @@ See also the parallel [README for 1275172216](../1275172216/README.md).
 * [x] Splice channels
 * [x] Fold (DSPSR)
 * [x] Make pulsestack
-* [ ] Look for pulses
+* [x] Look for pulses
 * [x] Remove raw data
 
 ## Log
@@ -83,3 +83,4 @@ I can only make out one section of the pulsestack where there might be some fain
 | Total | |  43 |
 
 This pulsestack contains 917 pulses, giving a nulling fraction of 95.3%.
+However, using the same method as I used for the other observations (finding and counting subpulses), I get a nulling fraction of 907/916 = 99%.

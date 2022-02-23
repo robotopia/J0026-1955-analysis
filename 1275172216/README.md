@@ -12,9 +12,9 @@ See also the parallel [README for 1275094456](../1275094456/README.md).
 * [x] Beamform
 * [x] Splice channels
 * [x] Fold (DSPSR)
-* [ ] Make pulsestack
-* [ ] Look for pulses
-* [ ] Remove raw data
+* [x] Make pulsestack
+* [x] Look for pulses
+* [x] Remove raw data
 
 ## Log
 
@@ -34,11 +34,12 @@ I'm re-running now, and it appears to be working.
 
 ### 2022-02-22
 
-1. Beamform
+#### Beamform
 ```
 process_vcs.py -m beamform -a -o 1275172216 -O 1275172096 -p "00:26:37.30_-19:56:27.63"
 ```
-2. Splice channels
+
+#### Splice channels
 ```
 cd /astro/mwavcs/vcs/1275172216/pointings/00:26:37.30_-19:56:27.63
 splice.sh
@@ -49,7 +50,8 @@ splice.sh
 > Lowest coarse channel number [133]: 109
 > Highest coarse channel number [156]: 132
 ```
-3. Fold (DSPSR)
+
+#### Fold (DSPSR)
 Copy the par file (0024.par, from the root directory of this repo) to Garrawarla, as well as the dspsr.batch script in this directory. Then,
 ```
 sbatch dspsr.batch
@@ -57,7 +59,7 @@ sbatch dspsr.batch
 
 ### 2022-02-23
 
-1. Make pulsestack
+#### Make pulsestack
 ```
 # Set up
 cd /astro/mwavcs/vcs/1275172216/pointings/00:26:37.30_-19:56:27.63/single
@@ -69,3 +71,14 @@ singularity run -B ~/.Xauthority /pawsey/mwa/singularity/psrchive_tempo2/psrchiv
 # 
 ```
 The resulting file (1275172216.F) is added to this repo.
+
+#### Look for pulses
+Make a `pdv` file (on my local machine):
+```
+pdv -tK 1275172216.F > 1275172216.pdv
+```
+I then used [DriftAnalysis](https://github.com/robotopia/drift_analysis) to make the final pulsestack (image):
+```
+python ~/src/drift_analysis/drift_analysis.py 1275172216.pdv I
+```
+Using DriftAnalysis, the profile and pulsestack are shown here:

@@ -1,8 +1,20 @@
+# Images
 *.png
 *.ps
 
+# Analysis
 *.F
 *.pdv
 *.dat
 *.json
 *.maxima
+*.profile
+__pycache__
+
+# LaTeX
+*.pdf
+*.out
+*.log
+*.blg
+*.bbl
+*.aux

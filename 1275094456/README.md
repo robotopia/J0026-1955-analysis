@@ -10,7 +10,7 @@ See also the parallel [README for 1275172216](../1275172216/README.md).
 * [x] Beamform
 * [x] Splice channels
 * [x] Fold (DSPSR)
-* [ ] Make pulsestack
+* [x] Make pulsestack
 * [ ] Look for pulses
 * [x] Remove raw data
 
@@ -60,3 +60,4 @@ module load singularity
 singularity run -B ~/.Xauthority /pawsey/mwa/singularity/psrchive_tempo2/psrchive_tempo2.sif pam -e F -D -F pu*.ar
 singularity run -B ~/.Xauthority /pawsey/mwa/singularity/psrchive_tempo2/psrchive_tempo2.sif psradd -o 1275094456.F pu*.F
 ```
+The resulting file (1275094456.F) is added to this repo.

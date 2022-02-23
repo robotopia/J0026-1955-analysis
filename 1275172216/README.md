@@ -58,9 +58,14 @@ sbatch dspsr.batch
 ### 2022-02-23
 
 1. Make pulsestack
-Frequency scrunch:
 ```
+# Set up
 cd /astro/mwavcs/vcs/1275172216/pointings/00:26:37.30_-19:56:27.63/single
 module load singularity
-singularity run -B ~/.Xauthority /pawsey/mwa/singularity/psrchive_tempo2/psrchive_tempo2.sif pam -e F -F pu*.ar
+
+# Frequency scrunch and combine archives
+singularity run -B ~/.Xauthority /pawsey/mwa/singularity/psrchive_tempo2/psrchive_tempo2.sif pam -e F -D -F pu*.ar
+singularity run -B ~/.Xauthority /pawsey/mwa/singularity/psrchive_tempo2/psrchive_tempo2.sif psradd -o 1275172216.F pu*.F
+# 
 ```
+The resulting file (1275172216.F) is added to this repo.

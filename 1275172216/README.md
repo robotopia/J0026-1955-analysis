@@ -98,3 +98,4 @@ but by eye, I can make out maybe four distinct sequences, whose profiles are als
 | Total | | 199 |
 
 This pulsestack contains 917 pulses, giving a nulling fraction of 78.3%.
+However, using the same method as I used for the other observations (finding and counting subpulses), I get a nulling fraction of 900/916 = 98.3%.

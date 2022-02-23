@@ -14,13 +14,21 @@
 
   * Edited the text to read "Such pulsars exist, and several extensions have been proposed over the years to account for them. For example, Gil & Sendyk (2000) suggest that a quasi-central spark can account for (non-drifting) core components in profiles, and the well-known phenomenon of bi-drifting may be explained by presence of an inner annular gap (Qiao et al. 2004), an inner acceleration gap (Basu et al. 2020), or non-circular spark motions (Wright & Weltevrede 2017). Such extensions are typically developed to explain specific drifting behaviors that are observed in a relatively small subset of pulsars, and there still lacks a single, comprehensive theory that can describe all drifting behaviors. [newline] Pulsars that both show complicated drifting behavior and which are bright enough for single pulse analysis, are relatively rare."
 
-* [ ] Which bright source was used for phase or amplitude calibration? Is it possible to convert the flux into absolute amplitude in the figures instead of arbitrary unit?
+* [x] Which bright source was used for phase or amplitude calibration? Is it possible to convert the flux into absolute amplitude in the figures instead of arbitrary unit?
+
+  * On inspection, it turns out that all four of our observations were calibrated on 3C444. I have edited the text to read "Each observation was individually calibrated using observations of 3C444 taken within ∼2 hours of the respective target observations. The calibration solutions were obtained using the Real Time System software (Mitchell et al. 2008)."
+  * Getting reliable absolute flux calibration is challenging for the MWA because of its large, complex primary beam. A fuller investigation of the absolute brightness of the pulsar is intended for a follow-up paper, for which we have also recently acquired observations at higher frequencies (uGMRT), and which we will use for spectral analysis.
 
 * [ ] Please clarify the technical principle of the PSRCHIVE's pdmp to determine period and DM.
 
-* [ ] In single-pulse study, the radio frequency interference can act to reduce the signal-to-noise ratio. Considering the weak nature of single pulses, it is necessary to subtract away or mask undesirable signals from the data before single-pulse analysis. Please describe the RFI mitigation technique you used.
+* [x] In single-pulse study, the radio frequency interference can act to reduce the signal-to-noise ratio. Considering the weak nature of single pulses, it is necessary to subtract away or mask undesirable signals from the data before single-pulse analysis. Please describe the RFI mitigation technique you used.
 
-* [ ] Please indicate the flux value in the ordinates of Figure 1 for each averaged pulse profiles.
+  * Added the text: "The MWA is located in a very radio quiet location, and no significant RFI was found in the
+beamformed data."
+
+* [x] Please indicate the flux value in the ordinates of Figure 1 for each averaged pulse profiles.
+
+  * Since we do not have reliable absolute fluxes at this stage, Figure 1 shows normalised profiles. We have added "peak-normalised" to the caption of the figure.
 
 * [ ] It is difficult to determine whether nulling or just weak emission exists in this pulsar only from Figures 2 and 3. The pulse energy distribution is a statistical way to characterize the nulling behavior (Wen et al. 2020, ApJ, 904, 72).
 

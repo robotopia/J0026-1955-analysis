@@ -391,7 +391,7 @@ The VCS delivers Nyquist-sampled dual-polarisation voltages for 128 MWA tiles ($
 Apart from the discovery observation, the other three observations presented in this work were taken as part of the follow-up timing campaign for \psrnick{} \citep{Swainston2021}.
 All four observations (summarised in Table \ref{tab:observations}) were made in the frequency range $138.88$-$169.6\,$MHz.
 
-\begin{deluxetable}{cccc}
+\begin{deluxetable}{ccccc}
 \tabletypesize{\scriptsize}
 \tablewidth{0pt}
 \tablecaption{MWA Observations of PSR \psr{} \label{tab:observations}}
@@ -408,15 +408,17 @@ All four observations (summarised in Table \ref{tab:observations}) were made in 
 \tablecomments{All observations are in the $140$-$170\,$MHz band, with $100\,\mu$s/$10\,$kHz resolutions.}
 \end{deluxetable}
 
-Each observation was individually calibrated using dedicated calibration observations of nearby bright sources and the Real Time System \citep{Mitchell2008}.
+Each observation was individually calibrated using {\bf observations of 3C444 taken within $\sim 2$ hours of the respective target observations.
+The calibration solutions were obtained using} the Real Time System software \citep{Mitchell2008}.
 After calibration, the voltages were used to form a tied-array beam in the direction of the pulsar (the localization procedure is discussed in \S\ref{sec:localization}), using the bespoke beamforming software described in \citet{Ord2019}.
+{\bf The MWA is located in a very radio quiet location, and no significant RFI was found in the beamformed data.}
 After determining the best dispersion measure (DM) and period (see \S\ref{sec:period}), de-dispersion and folding were performed with {\tt DSPSR} \citep{VanStraten2011b} and {\tt PSRCHIVE} \citep{Hotan2004} to form single pulse archives, from which Stokes I pulse stacks were created.
 Profiles of each detection, as well as an integrated profile incorporating the data from all four observations, is shown in Fig \ref{fig:profiles}.
 Subsequent analysis of the pulse stacks is described in \S\ref{sec:analysis}.
 \begin{figure}[!th]
     \centering
     \includegraphics[width=\linewidth]{profiles.png}
-    \caption{Mean profiles of the four observations with detections, and the total mean profile (top panel) including all four observations, with a time resolution of $\sim 1.3\,$ms. The profiles show a barely resolved double peak structure.}
+    \caption{{\bf Peak-normalised} mean profiles of the four observations with detections, and the total mean profile (top panel) including all four observations, with a time resolution of $\sim 1.3\,$ms. The profiles show a barely resolved double peak structure.}
     \label{fig:profiles}
 \end{figure}
 

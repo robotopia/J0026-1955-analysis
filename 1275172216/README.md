@@ -1,4 +1,4 @@
-# Processing 1275172216 in response to referee report
+# Processing observation 1275172216 to look for single pulses
 
 This is in response to the referee, who queried whether or not we were possibly getting an inaccurate nulling fraction by not looking for single pulses in 1275172216.
 

@@ -54,3 +54,13 @@ Copy the par file (0024.par, from the root directory of this repo) to Garrawarla
 ```
 sbatch dspsr.batch
 ```
+
+### 2022-02-23
+
+1. Make pulsestack
+Frequency scrunch:
+```
+cd /astro/mwavcs/vcs/1275172216/pointings/00:26:37.30_-19:56:27.63/single
+module load singularity
+singularity run -B ~/.Xauthority /pawsey/mwa/singularity/psrchive_tempo2/psrchive_tempo2.sif pam -e F -F pu*.ar
+```

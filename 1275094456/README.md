@@ -61,3 +61,25 @@ singularity run -B ~/.Xauthority /pawsey/mwa/singularity/psrchive_tempo2/psrchiv
 singularity run -B ~/.Xauthority /pawsey/mwa/singularity/psrchive_tempo2/psrchive_tempo2.sif psradd -o 1275094456.F pu*.F
 ```
 The resulting file (1275094456.F) is added to this repo.
+
+#### Look for pulses
+Make a `pdv` file (on my local machine):
+```
+pdv -tK 1275094456.F > 1275094456.pdv
+```
+I then used DriftAnalysis to make the final pulsestack (image):
+```
+python ~/src/drift_analysis/drift_analysis.py 1275094456.pdv I
+```
+Using DriftAnalysis, the profile and pulsestack (smoothed with a 1D gaussian, sigma = 1 deg) are shown here:
+![Profile](profile.png)
+![Pulsestack](pulsestack.png)
+
+I can only make out one section of the pulsestack where there might be some faint emission.
+
+| Start pulse | End pulse | Number of pulses |
+| :---------: | :-------: | :--------------: |
+| 170 | 212 |  43 |
+| Total | |  43 |
+
+This pulsestack contains 917 pulses, giving a nulling fraction of 95.3%.

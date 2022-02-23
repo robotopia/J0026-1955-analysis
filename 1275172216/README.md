@@ -81,6 +81,7 @@ I then used [DriftAnalysis](https://github.com/robotopia/drift_analysis) to make
 ```
 python ~/src/drift_analysis/drift_analysis.py 1275172216.pdv I
 ```
+(The json file is in the `drift_analysis` folder.)
 Using DriftAnalysis, the profile and pulsestack (smoothed with a 1D gaussian, sigma = 1 deg) are shown here:
 ![Profile](profile.png)
 ![Pulsestack](pulsestack.png)

@@ -40,7 +40,7 @@ splice.sh
 > Highest coarse channel number [156]: 132
 ```
 
-### 2022-02-23 (planned)
+### 2022-02-23
 
 1. Fold (DSPSR)
 Copy the par file (`0024.par`, from the root directory of this repo) to Garrawarla, as well as the `dspsr.batch` script in this directory.

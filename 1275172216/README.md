@@ -81,6 +81,20 @@ I then used [DriftAnalysis](https://github.com/robotopia/drift_analysis) to make
 ```
 python ~/src/drift_analysis/drift_analysis.py 1275172216.pdv I
 ```
-Using DriftAnalysis, the profile and pulsestack are shown here:
+Using DriftAnalysis, the profile and pulsestack (smoothed with a 1D gaussian, sigma = 1 deg) are shown here:
 ![Profile](profile.png)
 ![Pulsestack](pulsestack.png)
+
+Clearly, there is some emission there.
+The detection is faint, which will make it difficult to decide what the nulling fraction is for this observation,
+but by eye, I can make out maybe four distinct sequences, whose profiles are also included in this repo.
+
+| Start pulse | End pulse | Number of pulses |
+| :---------: | :-------: | :--------------: |
+|  69 | 138 |  70 |
+| 311 | 339 |  29 |
+| 685 | 696 |  12 |
+| 828 | 915 |  88 |
+| Total | | 199 |
+
+This pulsestack contains 917 pulses, giving a nulling fraction of 78.3%.

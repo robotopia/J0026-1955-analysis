@@ -16,7 +16,7 @@
 
 * [x] Which bright source was used for phase or amplitude calibration? Is it possible to convert the flux into absolute amplitude in the figures instead of arbitrary unit?
 
-  * On inspection, it turns out that all four of our observations were calibrated on 3C444. I have edited the text to read "Each observation was individually calibrated using observations of 3C444 taken within ∼2 hours of the respective target observations. The calibration solutions were obtained using the Real Time System software (Mitchell et al. 2008)."
+  * On inspection, it turns out that all of our observations were calibrated on 3C444. I have edited the text to read "Each observation was individually calibrated using observations of 3C444 taken within ∼2 hours of the respective target observations. The calibration solutions were obtained using the Real Time System software (Mitchell et al. 2008)."
   * Getting reliable absolute flux calibration is challenging for the MWA because of its large, complex primary beam. A fuller investigation of the absolute brightness of the pulsar is intended for a follow-up paper, for which we have also recently acquired observations at higher frequencies (uGMRT), and which we will use for spectral analysis.
 
 * [ ] Please clarify the technical principle of the PSRCHIVE's pdmp to determine period and DM.
@@ -40,7 +40,9 @@ beamformed data."
 
 * [ ] Whether the observed nulls are true or just weak emission below the detection threshold of the telescope? To answer this question, the analysis of integrated pulse profile obtained from all classified nulls is necessary.
 
-* [ ] There was no detection in the two 20-min MWA observations made via periodicity search. A few pulsars were reported to exhibit sporadic, strong single pulses coexisting with a periodic weak emission in the duration of weak mode (e.g. PSR B0826-34). Does J0026-1956 has the similar emission behavior? You'd better try single-pulse search technique on the two observations.
+* [x] There was no detection in the two 20-min MWA observations made via periodicity search. A few pulsars were reported to exhibit sporadic, strong single pulses coexisting with a periodic weak emission in the duration of weak mode (e.g. PSR B0826-34). Does J0026-1956 has the similar emission behavior? You'd better try single-pulse search technique on the two observations.
+
+  * We formed pulsestacks of the two 20-min observations and found a small amount of relatively faint emission in them that is just visible in the pulse stack. Accordingly, we have promoted these two observations to the same standing as the original four, included them in Table 1 and Figure 2, and performed all the same analyses on them. The lack of significant emission in these two observations means that the main conclusions of our nulling analysis are essentially unchanged. There are many places throughout the text that have been updated accordingly, which are marked in bold as usual.
 
 * [ ] The LRFS in Figure 6 clearly presents the drifting feature at a frequency of ~0.03 cycles/period in the on-pulse window. In addition, a wide modulation feature with frequency ranging from 0.05-0.1 cycles/period is detected in the leading emission component. The corresponding feature with weak power in the 2DFS is also discernible.
 

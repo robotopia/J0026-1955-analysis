@@ -98,7 +98,7 @@
 \newcommand{\psrnick}{J0036$-$1033}
 \newcommand{\dmunit}{pc$\,$cm$^{-3}$}
 \newcommand{\Sd}{S$_\rm{d}$}
-\newcommand{\nullfraction}{76\%}
+\newcommand{\nullfraction}{78\%}
 \newcommand{\ExB}{\ensuremath{{\bf E}\times{\bf B}}}
 
 \usepackage{amsmath}
@@ -441,8 +441,8 @@ The compact configuration includes many redundant baselines, and the tied-array 
 Consequently, the pulsar was detected in multiple adjacent beams, including a boresight beam that yielded the highest signal-to-noise, and several nearby grating lobes.
 The ability to exploit grating lobe detections for fast-tracking candidate confirmation and localization will be discussed in the survey description paper \citetext{Bhat et al. in prep}.
 
-The other three observations in which the pulsar has been detected were taken when the MWA was in its extended configuration, giving a tied-array beam size of $\sim$ 3$^\prime$ at $155\,$MHz.
-Localization within each of these observations followed the identical procedure as used in \citet{Swainston2021}, i.e.\ gridding the candidate positions with overlapping tied-array beams and using signal-to-noise and the estimated beam shape to produce a likelihood map of the source position.
+The other {\bf five observations} were taken when the MWA was in its extended configuration, giving a tied-array beam size of $\sim$ 3$^\prime$ at $155\,$MHz.
+Localization within {\bf the four observations in which the pulsar was bright enough} followed the identical procedure as used in \citet{Swainston2021}, i.e.\ gridding the candidate positions with overlapping tied-array beams and using signal-to-noise and the estimated beam shape to produce a likelihood map of the source position.
 It is known that the ionosphere is capable of shifting the apparent position of sources by an appreciable fraction ($\sim10$-$30\%$) of the tied-array beam, and that these offsets are not necessarily corrected by the calibration process when the calibration observations are separated from the target observation, both spatially and temporally \citetext{Swainston et al., submitted}.
 Nevertheless, the localization afforded by the extended array observations was sufficiently precise (a few arcminutes) to warrant follow-up with a high-resolution imaging telescope.
 Accordingly, images made with Band 3 ($300$-$500\,$MHz) data from the upgraded Giant Metrewave Radio Telescope \citep[uGMRT;][]{Gupta2017}, obtained under Director's Discretionary Time (DDTC185), enabled us to confirm the pulsar's position to an accuracy of $\sim1^\prime$.
@@ -481,12 +481,24 @@ Both types of emission are visible in Fig. \ref{fig:maxima}, in which the peak f
 
 To estimate the nulling fraction, we first identified which pulses contained sub-pulses within the pulse window (this is a semi-automated procedure described in \S\ref{sec:drifting_analysis}).
 Any pulse without a sub-pulse is then counted as a null, even if it is nested within a burst sequence.
-This working definition of a null also may misclassify pulses with broad emission spread out over the pulse window, even if its integrated flux density is statistically significant.
-Nevertheless, the uncertainty in our estimate of the nulling fraction will still be dominated by the lack of a statistically significant number of burst sequences.
+{\bf Under this definition, we report a nulling fraction of $\sim$\nullfraction{}.}
 
-Apart from the four observations with positive detections, there are also two 20-min MWA observations (Obs IDs 1275094456 and 1275172216) in which no detection was made via a periodicity search, despite the pulsar being within the field of view.
-Because of the brightness of the pulsar's single pulses, we estimate that the pulsar cannot have been in a burst mode for more than 10\% of the time without it having been detected.
-If we allow that the fraction of detectable pulses is between 0-10\% for these two observations, then the total nulling fraction, as measured from these six MWA observations, is between 75-78\%.
+This working definition of a null may misclassify pulses with broad emission spread out over the pulse window, even if its integrated flux density is statistically significant.
+{\bf For comparison, we present the pulse energy histograms of both on- and off-pulse regions of the pulse stacks for each of the six observations in Fig. \ref{fig:nullhist}.
+The similarity between the on- and off pulse distributions for observations 1275094456 and 1275172216 indicate that any broad emission that is present falls well below the MWA detection threshold, and therefore that the detection of single pulses as described above is in this case is a more robust method for measuring the nulling fraction.
+Despite this}, the uncertainty in our estimate of the nulling fraction will still be dominated by the lack of a statistically significant number of burst sequences.
+
+\begin{figure*}[t]
+    \includegraphics[width=0.32\textwidth]{1226062160_nullhist.png}
+    \includegraphics[width=0.32\textwidth]{1274143152_nullhist.png}
+    \includegraphics[width=0.32\textwidth]{1275094456_nullhist.png} \\
+    \includegraphics[width=0.32\textwidth]{1275172216_nullhist.png}
+    \includegraphics[width=0.32\textwidth]{1275178816_nullhist.png}
+    \includegraphics[width=0.32\textwidth]{1283104232_nullhist.png}
+    \caption{The pulse energy histograms for each of the six observations, for matched-size on- and off-pulse regions of the pulse stacks. The ObsIDs are given above each plot.}
+    \label{fig:nullhist}
+\end{figure*}
+
 The error on this estimate, however, will be dominated by the small number of burst/null sequences captured in these six observations.
 Therefore, the true nulling fraction may ultimately prove to be much lower or higher than the $\sim$\nullfraction{} quoted here.
 Ongoing follow-up observations (and a more complete search through archival MWA data) will allow us to place much stronger constraints on the nulling fraction, and will be reported in a future publication.

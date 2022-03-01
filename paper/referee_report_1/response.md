@@ -27,6 +27,8 @@
 
 8. It is difficult to determine whether nulling or just weak emission exists in this pulsar only from Figures 2 and 3. The pulse energy distribution is a statistical way to characterize the nulling behavior (Wen et al. 2020, ApJ, 904, 72).
 
+  * We have now included pulse energy distributions for all six observations (see also our response to points 12 & 13 below). From the distributions of the two 20-min observations in which the pulsar was not detected in a periodicity search, we conclude that if there is any weak emission, it must fall far below the MWA's detection threshold. The new text discussing the pulse energy histograms can be found in Section 3.1.
+
 9. Is there any temporal evolution of nulling fraction from follow-up observations and archival MWA data? Is it possible that the constraints on the nulling fraction might be reported in this paper?
 
 10. The nulls from a few pulsars does not seem to be random, but show well-defined periodicity (e.g. Herfindal & Rankin 2007, MNRAS, 380, 430; Wang et al. 2021, ApJ, 923, 259). Try to examine whether the periodicity in the transitions between null and burst states is present in this pulsar.

@@ -31,6 +31,8 @@
 
 9. Is there any temporal evolution of nulling fraction from follow-up observations and archival MWA data? Is it possible that the constraints on the nulling fraction might be reported in this paper?
 
+  * It still remains the case that only a limited number of archival MWA data sets have been processed and analysed (being those which are presented in this paper). We do expect to get better constraints of the nulling fraction once more data have been processed, but this remains outside the scope of the present initial analysis, and will be presented in the planned follo-up paper.
+
 10. The nulls from a few pulsars does not seem to be random, but show well-defined periodicity (e.g. Herfindal & Rankin 2007, MNRAS, 380, 430; Wang et al. 2021, ApJ, 923, 259). Try to examine whether the periodicity in the transitions between null and burst states is present in this pulsar.
 
 11. The pulsar switches between null and burst states with short and long timescales, which provides an important clue to scrutinize various nulling mechanism models. The null and burst length histograms are required.

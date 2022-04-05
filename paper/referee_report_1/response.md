@@ -35,6 +35,8 @@
 
 10. The nulls from a few pulsars does not seem to be random, but show well-defined periodicity (e.g. Herfindal & Rankin 2007, MNRAS, 380, 430; Wang et al. 2021, ApJ, 923, 259). Try to examine whether the periodicity in the transitions between null and burst states is present in this pulsar.
 
+  * We have examined the fluctuation spectra for each of our data sets, but find no evidence of periodicity in the null-burst transitions. To be clear, the observations which showed any discernible low-frequency features at all were 1226062160, 1274143152 and 1283104232. For the latter two, the low-frequency feature occurred in the first (non-DC) frequency bin, which is not surprising, as this only reflects the fact that only one (long) nulling sequence was present in both. Similarly, the low-frequency feature in 1226062160's spectrum occurs in the second (non-DC) bin, corresponding to the presence of two main (long) null sequences. In all cases, the ratio of observation length to null length is too small to make any assertions about whether the observed null lengths are typical, or whether they are periodic or quasi-periodic. This will be explored in the future once more (and longer) follow-up observations have been made.
+
 11. The pulsar switches between null and burst states with short and long timescales, which provides an important clue to scrutinize various nulling mechanism models. The null and burst length histograms are required.
 
 12. Whether the observed nulls are true or just weak emission below the detection threshold of the telescope? To answer this question, the analysis of integrated pulse profile obtained from all classified nulls is necessary.

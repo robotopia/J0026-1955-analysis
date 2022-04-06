@@ -39,6 +39,8 @@
 
 11. The pulsar switches between null and burst states with short and long timescales, which provides an important clue to scrutinize various nulling mechanism models. The null and burst length histograms are required.
 
+  * We completely agree that a deeper study of the state transitions has great potential to shed light on the nulling mechanism. However, at present, it is unclear how to treat 
+
 12. Whether the observed nulls are true or just weak emission below the detection threshold of the telescope? To answer this question, the analysis of integrated pulse profile obtained from all classified nulls is necessary.
 
 13. There was no detection in the two 20-min MWA observations made via periodicity search. A few pulsars were reported to exhibit sporadic, strong single pulses coexisting with a periodic weak emission in the duration of weak mode (e.g. PSR B0826-34). Does J0026-1956 has the similar emission behavior? You'd better try single-pulse search technique on the two observations.

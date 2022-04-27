@@ -39,7 +39,7 @@
 
 11. The pulsar switches between null and burst states with short and long timescales, which provides an important clue to scrutinize various nulling mechanism models. The null and burst length histograms are required.
 
-  * We completely agree that a deeper study of the state transitions has great potential to shed light on the nulling mechanism. However, at present, it is unclear how to treat 
+  * We completely agree that a deeper study of the state transitions has great potential to shed light on the nulling mechanism. However, the working definition of nulls used in this work makes the suggested null and burst length analysis problematic, because no distinction is made between "true" nulls and pseudo-nulls. Consequently, long burst sequences that are likely continuous under a stricter definition of nulls are, in this analysis, frequently interrupted by (likely) pseudo-nulls (as can be clearly seen in the new Figure 2). This effectively alters the null and burst length histograms dramatically. Therefore, we feel that histograms of the null/burst lengths under the current definition would not contain as much useful information about the nulling mechanism as hoped. A deeper analysis is certainly required, but, we feel, outside the scope of the present paper.
 
 12. Whether the observed nulls are true or just weak emission below the detection threshold of the telescope? To answer this question, the analysis of integrated pulse profile obtained from all classified nulls is necessary.
 

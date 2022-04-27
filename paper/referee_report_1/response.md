@@ -66,4 +66,4 @@
 
 17. To our knowledge, no model can satisfactorily explain the observed subpulse drift characteristics for different pulsars. In the future, the multi-frequency study will be required.
 
-  * We whole-heartedly agree! Our next study plans to include both GMRT and Parkes data, covering a wide frequency range.
+  * We wholeheartedly agree! Our next study plans to include both GMRT and Parkes data, covering a wide frequency range.

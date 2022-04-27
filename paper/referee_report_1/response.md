@@ -43,6 +43,8 @@
 
 12. Whether the observed nulls are true or just weak emission below the detection threshold of the telescope? To answer this question, the analysis of integrated pulse profile obtained from all classified nulls is necessary.
 
+  * These are now included with the profiles in Figure 1.
+
 13. There was no detection in the two 20-min MWA observations made via periodicity search. A few pulsars were reported to exhibit sporadic, strong single pulses coexisting with a periodic weak emission in the duration of weak mode (e.g. PSR B0826-34). Does J0026-1956 has the similar emission behavior? You'd better try single-pulse search technique on the two observations.
 
   * We formed pulsestacks of the two 20-min observations and found a small amount of relatively faint emission in them that is just visible in the pulse stack. Accordingly, we have promoted these two observations to the same standing as the original four, included them in Table 1 and Figure 2, and performed all the same analyses on them. The lack of significant emission in these two observations means that the main conclusions of our nulling analysis are essentially unchanged. There are many places throughout the text that have been updated accordingly, which are marked in bold as usual.

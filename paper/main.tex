@@ -454,7 +454,7 @@ The right ascension and declination of the final best position, consistent with 
 The limited number of available detections make obtaining a timing solution impossible at this early stage.
 Further follow up observations with the uGMRT and the Parkes 64-m radio telescope (also known as \emph{Murriyang}), as well as continued processing of archival MWA observations, are currently underway. These observations, along with the full timing solution that they are expected to yield, will be reported in a future publication.
 
-Lacking a timing solution, we used PSRCHIVE's \texttt{pdmp} routine to determine the best period ($P$) and DM for each observation independently, and the weighted averages over the four observations were calculated (where the reported uncertainties were used to weight the individual measurements).
+Lacking a timing solution, we used PSRCHIVE's \texttt{pdmp} routine to determine the best period ($P$) and DM for each observation independently. {\bf This routine performs a brute-force grid search in both period and DM parameter space, and returns the period and DM that yields the highest profile signal-to-noise}. The weighted averages {\bf of both period and DM (respectively)} over the four observations were calculated, {\bf with the uncertainties reported by \texttt{pdmp} being} used to weight the individual measurements.
 The values thus derived were $P = 1.306150 \pm 0.000005\,$s and $\text{DM} = \psrdm \pm \psrdmerr\,$\dmunit.
 This simple estimate does not take the period derivative into account (in fact, it implicitly assumes $\dot{P} = 0$), and we note that a sufficiently large $\dot{P}$ would cause the period to drift significantly over the time period spanned by our four MWA observations ($\sim$ 1.5\,yr).
 However, the pulse stacks (e.g.\ Fig. \ref{fig:pulsestacks}) folded on the above period showed no detectable slope, which we estimate would be discernible if the pulse window changed by more than $20\,$ms over the course of the observation.
@@ -682,8 +682,10 @@ Nevertheless, many of the above effects can be successfully explained with the c
 In the presence of aliasing, multiple drift modes can be explained if the number of sparks in the carousel changes, even if the carousel speed itself doesn't change.
 This idea has been invoked to explain the multiple drift rates of B1918$+$19 \citep{Rankin2013}, B1819$-$22 \citep{Joshi2017,Janagal2022}, and B0031$-$07 \citep{McSweeney2019a}.
 Aliasing can also ``amplify'' the variability of the drift rate if the ratio of stellar rotation and carousel rotation is very close to a ratio of small integers.
-That is, a small change in the magnetospheric conditions near the stellar surface (where the sparks reside) can appear to the observer as a relatively large change in the drift rate.
+That is, a small change in the magnetospheric conditions {\bf (e.g. the local electromagnetic configuration)} near the stellar surface ({\bf in the gap,} where the sparks reside) can appear to the observer as a relatively large change in the drift rate.
 \citet{VanLeeuwen2012} elucidated the connection between the accelerating potential within the polar gap and the carousel behavior, and found that the variability of B0826$-$34's drift rate can be explained in this way.
+{\bf In contrast, \citet{VanLeeuwen2003} argued that aliasing could \emph{not} be present during the post-null changing drift rate for B0809$+$74.
+Whether or not aliasing is included, models for changing drift rates are often discussed in terms of the local magnetospheric conditions changing over the relevant time scales \citep[e.g.][]{VanLeeuwen2003, Yuen2019}.}
 
 One must question whether or not these varied behaviors are all manifestations of the same underlying phenomenon, operating on different timescales.
 That is, the general rule that governs all these pulsars might be that the drift rate varies in a systematic way following (and sometimes preceding) a null sequence, and that given ample time before another interruption, all would settle into a stable drift rate.

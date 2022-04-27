@@ -17,6 +17,8 @@
 
 5. Please clarify the technical principle of the PSRCHIVE's pdmp to determine period and DM.
 
+  * The following text has been added to Section 2.2: "This routine performs a brute-force grid search in both period and DM parameter space, and returns the period and DM that yields the highest profile signal-to-noise."
+
 6. In single-pulse study, the radio frequency interference can act to reduce the signal-to-noise ratio. Considering the weak nature of single pulses, it is necessary to subtract away or mask undesirable signals from the data before single-pulse analysis. Please describe the RFI mitigation technique you used.
 
   * We have added the text: "The MWA is located in a very radio quiet location, and no significant RFI was found in the beamformed data."
@@ -55,6 +57,13 @@
 
 15. The polarized pulse profiles for different drift modes provide an important clue to reveal the triggering mechanism of mode changing. Is there any difference between averaged pulse profiles by integrating pulses for different drift modes?
 
+  * Unfortunately, we do not yet have reliable polarization for these data sets, but intend to include them in the planned followup paper.
+  * We plotted, but have not included, the modal profiles. Visually, there is no significant difference between the profiles of the different modes. The limiting factor here is the relative paucity of Mode B sequences, making the Mode B profiles too noisy to meaningfully compare with the Mode A profiles. However, to the extent we are able to say, they appear to have the same basic shape (two just-resolved components, with the leading component slightly brighter than the trailing component.
+
 16. The observed different subpulse drift modes and the slowly changing in drift rate may be an indication of a local change in the electromagnetic field configuration in the gap. A lot of theoretical modes have been proposed, such as van Leeuwen et al. 2003, A&A, 399, 223; Smith et al. 2005, A&A, 440, 683; Yuen, 2019, MNRAS, 486, 2011.
 
+  * This is indeed our current feeling, and we have amended the relevant paragraph in the Discussion slightly to include the wording suggested by the referee. We have included the van Leeuwen and Yuen references, but could not identify the Smith reference.
+
 17. To our knowledge, no model can satisfactorily explain the observed subpulse drift characteristics for different pulsars. In the future, the multi-frequency study will be required.
+
+  * We whole-heartedly agree! Our next study plans to include both GMRT and Parkes data, covering a wide frequency range.

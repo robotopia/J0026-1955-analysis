@@ -1,0 +1,69 @@
+reset
+
+set terminal pngcairo size 800,800 font ',14'
+set output "mode_profiles.png"
+
+mjds = "59094 59003 58991 58434"
+obsids = "1283104232 1275178816 1274143152 1226062160"
+filenames(obsid) = obsid.".json.profile"
+mode_filenames(obsid, m) = obsid."_".m."_profile.txt"
+npulses = "1374 914 914 3759"
+
+all_filenames = ""
+all_A_filenames = ""
+all_B_filenames = ""
+all_N_filenames = ""
+do for [i=1:words(obsids)] {
+    all_filenames = all_filenames." ".filenames(word(obsids, i))
+    all_A_filenames = all_A_filenames." ".mode_filenames(word(obsids, i), "A")
+    all_B_filenames = all_B_filenames." ".mode_filenames(word(obsids, i), "B")
+    all_N_filenames = all_N_filenames." ".mode_filenames(word(obsids, i), "N")
+}
+print all_filenames
+
+set xrange [-59:62] noextend
+set xlabel "Pulse phase (deg)"
+set xtics nomirror out
+unset ytics
+
+colours = "black red #00cc00 blue"
+
+# Set up binning for combined profile
+binwidth = 360.0/1024.0
+bin(val) = binwidth * floor(val/binwidth + 0.5)
+
+set multiplot
+
+set rmargin at screen 0.98
+set lmargin at screen 0.02
+
+do for [i=1:words(obsids)+1] {
+
+set bmargin at screen 0.13+0.17*(i-1)
+set tmargin at screen 0.13+0.17*i
+
+unset ylabel
+
+set border (i == 1 ? 1 : 0)
+
+if (i < 5) {
+    set label 1 at graph 0, graph 0.5 "MJD".word(mjds, i)." " left
+    plot mode_filenames(word(obsids, i), "N") u 1:($2/word(npulses, i)) w l lc rgb "gray" lw 1.5 notitle, \
+         mode_filenames(word(obsids, i), "A") u 1:($2/word(npulses, i)) w l lc rgb "blue" lw 1.5 notitle, \
+         mode_filenames(word(obsids, i), "B") u 1:($2/word(npulses, i)) w l lc rgb "#00c000" lw 1.5 notitle, \
+         filenames(word(obsids, i)) u 1:2 w l lc rgb "black" lw 1.5 notitle
+} else {
+    set label 1 at graph 0, graph 0.5 "Combined" left
+    plot "< cat ".all_N_filenames u (bin(column(1))):($2/word(npulses, i)) smooth frequency w l lc rgb "gray" lw 1.5 notitle, \
+         "< cat ".all_A_filenames u (bin(column(1))):($2/word(npulses, i)) smooth frequency w l lc rgb "blue" lw 1.5 notitle, \
+         "< cat ".all_B_filenames u (bin(column(1))):($2/word(npulses, i)) smooth frequency w l lc rgb "#00c000" lw 1.5 notitle, \
+         "< cat ".all_filenames u (bin(column(1))):2 smooth frequency w l lc rgb "black" lw 1.5 notitle
+}
+
+# Turn off x-axis markings for the other plots
+unset xlabel
+unset xtics
+
+}
+
+unset multiplot

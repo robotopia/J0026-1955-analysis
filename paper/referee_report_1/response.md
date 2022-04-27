@@ -51,6 +51,8 @@
 
 14. The LRFS in Figure 6 clearly presents the drifting feature at a frequency of ~0.03 cycles/period in the on-pulse window. In addition, a wide modulation feature with frequency ranging from 0.05-0.1 cycles/period is detected in the leading emission component. The corresponding feature with weak power in the 2DFS is also discernible.
 
+  * These extra details are now more explicitly spelled out in the caption to the LRFS/2DFS figure. We have also expanded slightly on the interpretation of the diffuse component (as a possible connection to Mode B) in the last part of Section 3.2.4.
+
 15. The polarized pulse profiles for different drift modes provide an important clue to reveal the triggering mechanism of mode changing. Is there any difference between averaged pulse profiles by integrating pulses for different drift modes?
 
 16. The observed different subpulse drift modes and the slowly changing in drift rate may be an indication of a local change in the electromagnetic field configuration in the gap. A lot of theoretical modes have been proposed, such as van Leeuwen et al. 2003, A&A, 399, 223; Smith et al. 2005, A&A, 440, 683; Yuen, 2019, MNRAS, 486, 2011.

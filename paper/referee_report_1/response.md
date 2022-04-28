@@ -1,3 +1,12 @@
+Dear editor,
+
+We thank the referee for the many detailed comments, which we have tried to address in this revised version. In many instances, the referee asked for a more thorough analysis, particularly surrounding the nulling phenomenon, which -- now that the paper is being submitted to the main journal (instead of Letters) there has been room to include, and we believe the paper is much better for it. In a few cases, however, we have deferred the suggested deeper analysis until the planned follow-up paper, which will benefit from an expanded data set and a wider frequency coverage. Please fine our detailed response to the referee's comments below.
+
+Sincerely,
+~/Sam
+
+-------------------------------------------------------
+
 1. The observation, theory and scientific application of pulsars are not fully introduced and need to be expanded. For example, This, along with tests of general relativity (e.g. Kramer et al. 2006; Miao et al. 2021, ApJ, 921, 114), pulsar timing arrays for gravitational wave detection (e.g. Manchester et al. 2013), pulsar braking and magnetospheric dynamics (e.g. Gao et al. 2017, 849,19, Wang et al. 2020, Universe, 6, 63) the neutron star equation of state (e.g. Antoniadis et al. 2013 Science 340 448, Pang, et al. 2021, ApJ, 922,14), and other pulsar science applications, motivates efforts to find new pulsars via large scale pulsar surveys, which continue to be conducted up to the present day.
 
   * We have added in the suggested text and references.

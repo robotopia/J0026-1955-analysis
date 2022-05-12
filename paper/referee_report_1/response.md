@@ -1,6 +1,6 @@
 Dear editor,
 
-We thank the referee for the many detailed comments, which we have tried to address in this revised version. In many instances, the referee asked for a more thorough analysis, particularly surrounding the nulling phenomenon, which -- now that the paper is being submitted to the main journal (instead of Letters) there has been room to include, and we believe the paper is much better for it. In a few cases, however, we have deferred the suggested deeper analysis until the planned follow-up paper, which will benefit from an expanded data set and a wider frequency coverage. Please fine our detailed response to the referee's comments below.
+We thank the referee for the many detailed comments, which we have tried to address in this revised version. In many instances, the referee asked for a more thorough analysis, particularly surrounding the nulling phenomenon, which -- now that the paper is being submitted to the main journal (instead of Letters) there has been room to include, and we believe the paper is much better for it. In a few cases, however, we have deferred the suggested deeper analysis until the planned follow-up paper, which will benefit from an expanded data set and a wider frequency coverage. Please find our detailed response to the referee's comments below.
 
 Sincerely,
 
@@ -43,7 +43,7 @@ Sincerely,
 
 9. Is there any temporal evolution of nulling fraction from follow-up observations and archival MWA data? Is it possible that the constraints on the nulling fraction might be reported in this paper?
 
-  * It still remains the case that only a limited number of archival MWA data sets have been processed and analysed (being those which are presented in this paper). We do expect to get better constraints of the nulling fraction once more data have been processed, but this remains outside the scope of the present initial analysis, and will be presented in the planned follo-up paper.
+  * It still remains the case that only a limited number of archival MWA data sets have been processed and analysed (being those which are presented in this paper). We do expect to get better constraints of the nulling fraction once more data have been processed, but this remains outside the scope of the present initial analysis, and will be presented in the planned follow-up paper.
 
 10. The nulls from a few pulsars does not seem to be random, but show well-defined periodicity (e.g. Herfindal & Rankin 2007, MNRAS, 380, 430; Wang et al. 2021, ApJ, 923, 259). Try to examine whether the periodicity in the transitions between null and burst states is present in this pulsar.
 
@@ -51,7 +51,7 @@ Sincerely,
 
 11. The pulsar switches between null and burst states with short and long timescales, which provides an important clue to scrutinize various nulling mechanism models. The null and burst length histograms are required.
 
-  * We completely agree that a deeper study of the state transitions has great potential to shed light on the nulling mechanism. However, the working definition of nulls used in this work makes the suggested null and burst length analysis problematic, because no distinction is made between "true" nulls and pseudo-nulls. Consequently, long burst sequences that are likely continuous under a stricter definition of nulls are, in this analysis, frequently interrupted by (likely) pseudo-nulls (as can be clearly seen in the new Figure 2). This effectively alters the null and burst length histograms dramatically. Therefore, we feel that histograms of the null/burst lengths under the current definition would not contain as much useful information about the nulling mechanism as hoped. A deeper analysis is certainly required, but, we feel, outside the scope of the present paper.
+  * We completely agree that a deeper study of the state transitions has great potential to shed light on the nulling mechanism. However, the working definition of nulls used in this work makes the suggested null and burst length analysis problematic, because no distinction is made between "true" nulls and pseudo-nulls. Consequently, long burst sequences that are likely continuous under a stricter definition of nulls are, in this analysis, frequently interrupted by (likely) pseudo-nulls (as can be clearly seen in the new Figure 2). This effectively alters the null and burst length histograms dramatically. Therefore, we feel that histograms of the null/burst lengths under the current definition would not contain as much useful information about the nulling mechanism as hoped. A deeper analysis is certainly required, but, we feel, outside the scope of the present paper and will be included in the follow-up paper.
 
 12. Whether the observed nulls are true or just weak emission below the detection threshold of the telescope? To answer this question, the analysis of integrated pulse profile obtained from all classified nulls is necessary.
 

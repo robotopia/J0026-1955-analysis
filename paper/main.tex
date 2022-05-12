@@ -92,7 +92,7 @@
 %% using \newcommand. Your macros should appear before
 %% the \begin{document} command.
 %%
-\newcommand{\psr}{J0026$-$1956}
+\newcommand{\psr}{J0027$-$1956}
 \newcommand{\psrdm}{20.869}
 \newcommand{\psrdmerr}{0.005}
 \newcommand{\psrnick}{J0036$-$1033}
@@ -370,7 +370,7 @@ Pulsars that both show complicated drifting behavior and are bright enough for s
 }
 Even a cursory glance at the drift bands of \psr{} show that its drifting behavior is indeed complex and bright, making it a welcome addition to this category of pulsar.
 {\bf 
-\psr{} is also found to contain null sequences, a phenomenon which is known to be connected to sub-pulse drifting, originally noticed by \citep{Lyne1983}, and further attested by recent studies of PSRs J1727$-$2739 \citep{Wen2016}, J1822$-$2256 \citep{Janagal2022}, and the Vela pulsar \citep{Wen2020}.
+\psr{} is also found to contain null sequences, a phenomenon which is known to be connected to sub-pulse drifting, originally noticed by \citet{Lyne1983}, and further attested by recent studies of PSRs J1727$-$2739 \citep{Wen2016}, B1819$-$22 \citep{Janagal2022}, and the Vela pulsar \citep{Wen2020}.
 }
 
 This paper presents an analysis of the nulling and drifting behavior of \psr{} observed with the MWA.
@@ -430,7 +430,7 @@ Later re-processing of data from the 70-cm Parkes Southern Pulsar Survey  \citep
 Follow-up of the initial MWA detection with the full 80 minutes, as well as in other archival MWA observations, revealed that the pulsar has a very large nulling fraction ($\sim$~\nullfraction{})\footnote{The nulling fraction estimate comes only from analysis of the MWA observations.}, with some nulling sequences {\bf (excluding occasional intermittent pulses) potentially exceeding $20\,$min (i.e. the length of the first observation on MJD 59002, which contained \textit{only} a few intermittent pulses, as shown in Fig. \ref{fig:maxima})}.
 A full analysis of the nulling properties is presented in Section \S\ref{sec:nulling} below.
 Despite the fact that \psr{} was serendipitously discovered in the first ten minutes, it may well be the harbinger for a population of relatively bright, intermittent pulsars which the SMART survey, with its $80$-minute dwell times, is well-suited to detect.
-A similar strategy is employed in the Low Frequency Array (LOFAR) Tied-Array All-Sky Survey \citep[LOTAAS][]{Sanidas2019} and the low latitude ($|b| \le 5^\circ$) segment of the High Time Resolution Universe survey \citep[HTRU][]{Keith2010}, which use dwell times of approximately one hour.
+A similar strategy is employed in the Low Frequency Array (LOFAR) Tied-Array All-Sky Survey \citep[LOTAAS;][]{Sanidas2019} and the low latitude ($|b| \le 5^\circ$) segment of the High Time Resolution Universe survey \citep[HTRU;][]{Keith2010}, which use dwell times of approximately one hour.
 
 \subsection{Localization}
 \label{sec:localization}
@@ -443,10 +443,10 @@ The ability to exploit grating lobe detections for fast-tracking candidate confi
 
 The other {\bf five observations} were taken when the MWA was in its extended configuration, giving a tied-array beam size of $\sim3^\prime$ at $155\,$MHz.
 Localization within {\bf the four observations in which the pulsar was bright enough} followed the identical procedure as used in \citet{Swainston2021}, i.e.\ gridding the candidate positions with overlapping tied-array beams and using signal-to-noise and the estimated beam shape to produce a likelihood map of the source position.
-It is known that the ionosphere is capable of shifting the apparent position of sources by an appreciable fraction ($\sim10$-$30\%$) of the tied-array beam, and that these offsets are not necessarily corrected by the calibration process when the calibration observations are separated from the target observation, both spatially and temporally \citetext{Swainston et al., submitted}.
+It is known that the ionosphere is capable of shifting the apparent position of sources by an appreciable fraction ($\sim10$-$30\%$) of the tied-array beam, and that these offsets are not necessarily corrected by the calibration process when the calibration observations are separated from the target observation, both spatially and temporally \citep{Swainston2022}.
 Nevertheless, the localization afforded by the extended array observations was sufficiently precise (a few arcminutes) to warrant follow-up with a high-resolution imaging telescope.
 Accordingly, images made with Band 3 ($300$-$500\,$MHz) data from the upgraded Giant Metrewave Radio Telescope \citep[uGMRT;][]{Gupta2017}, obtained under Director's Discretionary Time (DDTC185), enabled us to confirm the pulsar's position to an accuracy of $\sim1^\prime$.
-The right ascension and declination of the final best position, consistent with both the uGMRT imaging and the MWA extended configuration observations, are 00h26m37s and $-19^\circ$56'28''.
+The right ascension and declination of the final best position, consistent with both the uGMRT imaging and the MWA extended configuration observations, are {\bf 00h26m36s and $-$19$^\circ$55'59''}.
 
 \subsection{Determination of Period and Dispersion Measure}
 \label{sec:period}
@@ -488,13 +488,14 @@ This working definition of a null may misclassify pulses with broad emission spr
 The similarity between the on- and off pulse distributions for observations 1275094456 and 1275172216 indicate that any broad emission that is present falls well below the MWA detection threshold.
 Despite this}, the uncertainty in our estimate of the nulling fraction will still be dominated by the lack of a statistically significant number of burst sequences.
 
-\begin{figure*}[t]
-    \includegraphics[width=0.32\textwidth]{1226062160_nullhist.png}
-    \includegraphics[width=0.32\textwidth]{1274143152_nullhist.png}
-    \includegraphics[width=0.32\textwidth]{1275094456_nullhist.png} \\
-    \includegraphics[width=0.32\textwidth]{1275172216_nullhist.png}
-    \includegraphics[width=0.32\textwidth]{1275178816_nullhist.png}
-    \includegraphics[width=0.32\textwidth]{1283104232_nullhist.png}
+\begin{figure*}[p]
+    \centering
+    \includegraphics[width=0.48\textwidth]{1226062160_nullhist.png}
+    \includegraphics[width=0.48\textwidth]{1274143152_nullhist.png} \\
+    \includegraphics[width=0.48\textwidth]{1275094456_nullhist.png}
+    \includegraphics[width=0.48\textwidth]{1275172216_nullhist.png} \\
+    \includegraphics[width=0.48\textwidth]{1275178816_nullhist.png}
+    \includegraphics[width=0.48\textwidth]{1283104232_nullhist.png}
     \caption{{\bf The pulse energy histograms for each of the six observations, for matched-size on- and off-pulse regions of the pulse stacks. The ObsIDs are given above each plot. The on-pulse histograms include all pulses, regardless of whether they were classified as nulls by the method described in the text.}}
     \label{fig:nullhist}
 \end{figure*}

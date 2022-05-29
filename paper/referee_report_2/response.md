@@ -14,4 +14,4 @@ About 72%. We've made a note of this also in the same paragraph in 3.1.
 
 5. In Figure 3,the vertical coordinate are marked with "frequency".In my understanding,it should be "number" or other similar parameter,please cheak it.
 
-"Frequency" is the word they normally use in statistics, which in that context means the same thing as "number" or "count". But it's true that it can be ambiguous in a radio astronomy context!
+"Frequency" is the word they normally use in statistics, short for "frequency of occurrence", which means the same thing as "number". But it's true that it can be ambiguous in a radio astronomy context! We have changed it to "Number of pulses".

@@ -1,6 +1,6 @@
 Dear editor,
 
-Once again we thank the referee for their time in going through our revised version, and we're glad that there are only a few minor points remaining to address. Please find below our changes and response below.
+Once again we thank the referee for their time in going through our revised version, and we're pleased that there are only a few minor points remaining to address. Please find below our changes and response below.
 
 Kind regards,
 ~/Sam
@@ -21,8 +21,8 @@ About 72%. We've made a note of this also in the same paragraph in 3.1.
 
 4. In Figure 1,please plot the baseline of each mean profile in oder to compare the mean profiles for the four observation better.
 
-We have plotted the line corresponding to a flux density of zero in each plot.
+We have now plotted the line corresponding to a flux density of zero in each plot.
 
 5. In Figure 3,the vertical coordinate are marked with "frequency".In my understanding,it should be "number" or other similar parameter,please cheak it.
 
-"Frequency" is the word they normally use in statistics, short for "frequency of occurrence", which means the same thing as "number". But it's true that it can be ambiguous in a radio astronomy context! We have changed it to "Number of pulses".
+"Frequency" is the word they normally use in statistics, short for "frequency of occurrence". But it's true that it can be ambiguous in a radio astronomy context! We have changed it to "Number of pulses".

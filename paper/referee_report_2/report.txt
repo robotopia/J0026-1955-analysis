@@ -1,0 +1,31 @@
+Dear Dr. McSweeney,
+
+I have appended the reviewer's report on your revised manuscript. As you will see, the reviewer still makes a few minor suggestions for improving your manuscript. The report appears reasonable to me and I urge you to take the reviewer's last comments into account in preparing a final revision.
+
+When you resubmit, please outline the revisions you have made in response to each of the reviewer's comments using plain text in the field provided when you upload the revised manuscript. Citing each of the reviewer's comments immediately followed by your response would be particularly helpful.
+
+Reviewers find it helpful if the changes in the text of the manuscript are easily distinguishable from the rest of the text. We ask you to highlight the changes in bold. The highlighting can be removed easily after the review process.
+
+I normally expect a revision to be submitted within 6 months, but in this case I would think that no more than a few days should be needed.
+
+Sincerely,
+Steinn Sigurdsson
+AAS Scientific Editor
+Pennsylvania State University
+steinn.sigurdsson@aas.org
+
+========================================================
+Reviewer:
+Thanks to the author for the response to my comments. We are satisfied with most of the changes. However, some minor issues still need to be improved.
+
+1.What is the mean of the third column in Table 1? is it total length of each observation?Please clarify it and specify whether the unit of the value
+is second or minute?
+
+2.In the second paragraph of 3.1,the conclusion of nulling fraction of 78% is derived for all six observation or for
+only one observation?please clarity it in the paper.
+
+3.Could you calculate aproxamately the total numbers of nulls for the four observation(without the two observation on MJD 59002)?
+
+4.In Figure 1,please plot the baseline of each mean profile in oder to compare the mean profiles for the four observation better.
+
+5.In Figure 3,the vertical coordinate are marked with "frequency".In my understanding,it should be "number" or other similar parameter,please cheak it.

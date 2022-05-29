@@ -336,9 +336,7 @@ These properties make this pulsar an ideal test bed for prevailing models of dri
 Pulsars are rapidly rotating neutron stars, the sites of some of the highest energy physical processes in the universe, owing to the very strong gravitational and magnetic fields that surround them.
 Discovered first via their lighthouse-like beam of radio emission \citep{Hewish1968}, which we detect as a series of regularly spaced pulses, it was quickly realised that the physics governing the relativistic plasma that generates this beam was not well understood---a state of affairs that persists to the present day \citep[e.g.][]{Melrose2021}.
 The uniqueness of each pulsar's emission signature provides a wealth of information that can be used to test proposed emission mechanisms, and it has been proven again and again over the past several decades that in-depth studies of individual pulsars can provide valuable clues for understanding the population as a whole.
-{\bf
 This, along with tests of general relativity \citep[e.g.][]{Kramer2006,Miao2021}, pulsar timing arrays for gravitational wave detection \citep[e.g.][]{Manchester2013}, pulsar braking and magnetospheric dynamics \citep[e.g.][]{Gao2017,Wang2020}, the neutron star equation of state \citep[e.g.][]{Demorest2010,Antoniadis2013,Pang2021}, and other pulsar science applications, motivates efforts to find new pulsars via large scale pulsar surveys, which continue to be conducted up to the present day.
-}
 
 One of the most recent such surveys is currently under way at the Murchison Widefield Array (MWA), a latest-generation aperture array telescope located in Western Australia \citep{Tingay2013}.
 With its Voltage Capture System \citep[VCS;][]{Tremblay2015} and offline tied-array beamforming software \citep{Ord2019,McSweeney2020}, it has proven to be a powerful instrument for investigating a variety of pulsar phenomena such as single-pulse studies \citep{McSweeney2017}, spectral analyses \citep{Meyers2017}, studies of interstellar medium (ISM) propagation effects, and related timing applications \citep{Bhat2018,Kaur2019}.
@@ -359,19 +357,13 @@ Many sub-pulse drifters, e.g., B0809$+$74 and B0943$+$10, are known to have very
 This stability partly motivated the original carousel model, put forward by \citet{Ruderman1975}, which associates the sub-pulses with spatially discrete bursts of electrical discharges (``sparks'') in regions of charge depletion just above the stellar surface near the magnetic poles.
 According to this model, the sparks are driven by \ExB{} drift, with the observed stability of the drift rate being directly inherited from the theoretical stability of the electric and magnetic fields at the spark locations.
 Therefore, pulsars that exhibit anything more complicated than a single, stable drift rate deserve special attention, since they require modifications of, or at least extensions to, the basic carousel model.
-{\bf
 Such pulsars exist, and several extensions have been proposed over the years to account for them.
 For example, \citet{Gil2000} suggest that a quasi-central spark can account for (non-drifting) core components in profiles, and the well-known phenomenon of bi-drifting may be explained by presence of an inner annular gap \citep{Qiao2004}, an inner acceleration gap \citep{Basu2020}, or non-circular spark motions \citep{Wright2017}.
 Such extensions are typically developed to explain specific drifting behaviors that are observed in a relatively small subset of pulsars, and there still lacks a single, comprehensive theory that can describe all drifting behaviors.
-}
 
-{\bf
 Pulsars that both show complicated drifting behavior and are bright enough for single pulse analysis, are relatively rare.
-}
 Even a cursory glance at the drift bands of \psr{} show that its drifting behavior is indeed complex and bright, making it a welcome addition to this category of pulsar.
-{\bf 
 \psr{} is also found to contain null sequences, a phenomenon which is known to be connected to sub-pulse drifting, originally noticed by \citet{Lyne1983}, and further attested by recent studies of PSRs J1727$-$2739 \citep{Wen2016}, B1819$-$22 \citep{Janagal2022}, and the Vela pulsar \citep{Wen2020}.
-}
 
 This paper presents an analysis of the nulling and drifting behavior of \psr{} observed with the MWA.
 Section \S\ref{sec:observations} describes the MWA observation in which the pulsar was originally found and the small number of archival MWA observations in which it was subsequently detected during follow up of the original candidate.
@@ -402,32 +394,32 @@ All six observations (summarised in Table \ref{tab:observations}) were made in t
 \startdata
 58434 & 1226062160 & 3759 & 788 \\
 58991 & 1274143152 & 914  & 358 \\
-{\bf 59002} & 1275094456 & 917  &  10 \\
-{\bf 59002} & 1275172216 & 917  &  16 \\
+59002 & 1275094456 & 917  &  10 \\
+59002 & 1275172216 & 917  &  16 \\
 59003 & 1275178816 & 914  & 281 \\
 59094 & 1283104232 & 1374 & 545
 \enddata
 \tablecomments{All observations are in the $140$-$170\,$MHz band, with $100\,\mu$s/$10\,$kHz resolutions.}
 \end{deluxetable}
 
-Each observation was individually calibrated using {\bf observations of 3C444 taken within $\sim2$ hours of the respective target observations.
-The calibration solutions were obtained using} the Real Time System software \citep{Mitchell2008}.
+Each observation was individually calibrated using observations of 3C444 taken within $\sim2$ hours of the respective target observations.
+The calibration solutions were obtained using the Real Time System software \citep{Mitchell2008}.
 After calibration, the voltages were used to form a tied-array beam in the direction of the pulsar (the localization procedure is discussed in \S\ref{sec:localization}), using the bespoke beamforming software described in \citet{Ord2019}.
-{\bf The MWA is located in a very radio quiet location, and no significant radio frequency interference was found in the beamformed data.}
+The MWA is located in a very radio quiet location, and no significant radio frequency interference was found in the beamformed data.
 After determining the best dispersion measure (DM) and period (see \S\ref{sec:period}), de-dispersion and folding were performed with {\tt DSPSR} \citep{VanStraten2011b} and {\tt PSRCHIVE} \citep{Hotan2004} to form single pulse archives, from which Stokes I pulse stacks were created.
 Profiles of each detection, as well as an integrated profile incorporating the data from all four observations, is shown in Fig \ref{fig:profiles}.
 Subsequent analysis of the pulse stacks is described in \S\ref{sec:analysis}.
 \begin{figure}[!th]
     \centering
     \includegraphics[width=\linewidth]{profiles.png}
-    \caption{{\bf Peak-normalised mean profiles (black) of four of the observations}, and the total mean profile (top panel) including all four observations, with a time resolution of $\sim1.3\,$ms. {\bf The two observations on MJD 59002 are not included here as they consist almost entirely of noise.} The profiles show a barely resolved double peak structure. {\bf The gray lines show the profiles made up only of pulses classified as nulls.}}
+    \caption{Peak-normalised mean profiles (black) of four of the observations, and the total mean profile (top panel) including all four observations, with a time resolution of $\sim1.3\,$ms. The two observations on MJD 59002 are not included here as they consist almost entirely of noise. The profiles show a barely resolved double peak structure. The gray lines show the profiles made up only of pulses classified as nulls.}
     \label{fig:profiles}
 \end{figure}
 
 Although this pulsar was detected in the shallow pass of SMART, it was subsequently noted to have been reported in 2018 as a candidate in the GBNCC pulsar survey \citep{Stovall2014}.
 Later re-processing of data from the 70-cm Parkes Southern Pulsar Survey  \citep{Manchester1996} also revealed a weak detection that was not previously reported.
 
-Follow-up of the initial MWA detection with the full 80 minutes, as well as in other archival MWA observations, revealed that the pulsar has a very large nulling fraction ($\sim$~\nullfraction{})\footnote{The nulling fraction estimate comes only from analysis of the MWA observations.}, with some nulling sequences {\bf (excluding occasional intermittent pulses) potentially exceeding $20\,$min (i.e. the length of the first observation on MJD 59002, which contained \textit{only} a few intermittent pulses, as shown in Fig. \ref{fig:maxima})}.
+Follow-up of the initial MWA detection with the full 80 minutes, as well as in other archival MWA observations, revealed that the pulsar has a very large nulling fraction ($\sim$~\nullfraction{})\footnote{The nulling fraction estimate comes only from analysis of the MWA observations.}, with some nulling sequences (excluding occasional intermittent pulses) potentially exceeding $20\,$min (i.e. the length of the first observation on MJD 59002, which contained \textit{only} a few intermittent pulses, as shown in Fig. \ref{fig:maxima}).
 A full analysis of the nulling properties is presented in Section \S\ref{sec:nulling} below.
 Despite the fact that \psr{} was serendipitously discovered in the first ten minutes, it may well be the harbinger for a population of relatively bright, intermittent pulsars which the SMART survey, with its $80$-minute dwell times, is well-suited to detect.
 A similar strategy is employed in the Low Frequency Array (LOFAR) Tied-Array All-Sky Survey \citep[LOTAAS;][]{Sanidas2019} and the low latitude ($|b| \le 5^\circ$) segment of the High Time Resolution Universe survey \citep[HTRU;][]{Keith2010}, which use dwell times of approximately one hour.
@@ -441,12 +433,12 @@ The compact configuration includes many redundant baselines, and the tied-array 
 Consequently, the pulsar was detected in multiple adjacent beams, including a boresight beam that yielded the highest signal-to-noise, and several nearby grating lobes.
 The ability to exploit grating lobe detections for fast-tracking candidate confirmation and localization will be discussed in the survey description paper \citetext{Bhat et al. in prep}.
 
-The other {\bf five observations} were taken when the MWA was in its extended configuration, giving a tied-array beam size of $\sim3^\prime$ at $155\,$MHz.
-Localization within {\bf the four observations in which the pulsar was bright enough} followed the identical procedure as used in \citet{Swainston2021}, i.e.\ gridding the candidate positions with overlapping tied-array beams and using signal-to-noise and the estimated beam shape to produce a likelihood map of the source position.
+The other five observations were taken when the MWA was in its extended configuration, giving a tied-array beam size of $\sim3^\prime$ at $155\,$MHz.
+Localization within the four observations in which the pulsar was bright enough followed the identical procedure as used in \citet{Swainston2021}, i.e.\ gridding the candidate positions with overlapping tied-array beams and using signal-to-noise and the estimated beam shape to produce a likelihood map of the source position.
 It is known that the ionosphere is capable of shifting the apparent position of sources by an appreciable fraction ($\sim10$-$30\%$) of the tied-array beam, and that these offsets are not necessarily corrected by the calibration process when the calibration observations are separated from the target observation, both spatially and temporally \citep{Swainston2022}.
 Nevertheless, the localization afforded by the extended array observations was sufficiently precise (a few arcminutes) to warrant follow-up with a high-resolution imaging telescope.
 Accordingly, images made with Band 3 ($300$-$500\,$MHz) data from the upgraded Giant Metrewave Radio Telescope \citep[uGMRT;][]{Gupta2017}, obtained under Director's Discretionary Time (DDTC185), enabled us to confirm the pulsar's position to an accuracy of $\sim1^\prime$.
-The right ascension and declination of the final best position, consistent with both the uGMRT imaging and the MWA extended configuration observations, are {\bf 00h26m36s and $-$19$^\circ$55'59''}.
+The right ascension and declination of the final best position, consistent with both the uGMRT imaging and the MWA extended configuration observations, are 00h26m36s and $-$19$^\circ$55'59''.
 
 \subsection{Determination of Period and Dispersion Measure}
 \label{sec:period}
@@ -454,7 +446,7 @@ The right ascension and declination of the final best position, consistent with 
 The limited number of available detections make obtaining a timing solution impossible at this early stage.
 Further follow up observations with the uGMRT and the Parkes 64-m radio telescope (also known as \emph{Murriyang}), as well as continued processing of archival MWA observations, are currently underway. These observations, along with the full timing solution that they are expected to yield, will be reported in a future publication.
 
-Lacking a timing solution, we used PSRCHIVE's \texttt{pdmp} routine to determine the best period ($P$) and DM for each observation independently. {\bf This routine performs a brute-force grid search in both period and DM parameter space, and returns the period and DM that yields the highest profile signal-to-noise}. The weighted averages {\bf of both period and DM (respectively)} over the four observations were calculated, {\bf with the uncertainties reported by \texttt{pdmp} being} used to weight the individual measurements.
+Lacking a timing solution, we used PSRCHIVE's \texttt{pdmp} routine to determine the best period ($P$) and DM for each observation independently. This routine performs a brute-force grid search in both period and DM parameter space, and returns the period and DM that yields the highest profile signal-to-noise. The weighted averages of both period and DM (respectively) over the four observations were calculated, with the uncertainties reported by \texttt{pdmp} being used to weight the individual measurements.
 The values thus derived were $P = 1.306150 \pm 0.000005\,$s and $\text{DM} = \psrdm \pm \psrdmerr\,$\dmunit.
 This simple estimate does not take the period derivative into account (in fact, it implicitly assumes $\dot{P} = 0$), and we note that a sufficiently large $\dot{P}$ would cause the period to drift significantly over the time period spanned by our four MWA observations ($\sim1.5\,$yr).
 However, the pulse stacks (e.g.\ Fig. \ref{fig:pulsestacks}) folded on the above period showed no detectable slope, which we estimate would be discernible if the pulse window changed by more than $20\,$ms over the course of the observation.
@@ -475,18 +467,18 @@ Both types of emission are visible in Fig. \ref{fig:maxima}, in which the peak f
 
 \begin{figure*}[t]
     \includegraphics[width=\textwidth]{maxima_plot.png}
-    \caption{Peak flux density within the pulse window as a function of time for six MWA observations (MJDs given along the $y$-axis). {\bf The shaded gray regions show detected subpulses that are included in the nulling fraction estimation, as explained in the text.} The peak fluxes were measured after smoothing the time series with a Gaussian filter ($\sim2\,$ms wide, the approximate width of a sub-pulse) to suppress the noise contribution and accentuate the contrast between nulling and burst sequences. {\bf Note that the low-level peaks in the $\sim70$-$80\,$mins time range of the MJD 58434 and in the second MJD 59002 observation} are single pulses faintly visible in the pulse stack, but which are faint because the pulsar was moving out of the MWA's primary beam.}
+    \caption{Peak flux density within the pulse window as a function of time for six MWA observations (MJDs given along the $y$-axis). The shaded gray regions show detected subpulses that are included in the nulling fraction estimation, as explained in the text. The peak fluxes were measured after smoothing the time series with a Gaussian filter ($\sim2\,$ms wide, the approximate width of a sub-pulse) to suppress the noise contribution and accentuate the contrast between nulling and burst sequences. Note that the low-level peaks in the $\sim70$-$80\,$mins time range of the MJD 58434 and in the second MJD 59002 observation are single pulses faintly visible in the pulse stack, but which are faint because the pulsar was moving out of the MWA's primary beam.}
     \label{fig:maxima}
 \end{figure*}
 
 To estimate the nulling fraction, we first identified which pulses contained sub-pulses within the pulse window (this is a semi-automated procedure described in \S\ref{sec:drifting_analysis}).
 Any pulse without a sub-pulse is then counted as a null, even if it is nested within a burst sequence.
-{\bf Under this definition, we report a nulling fraction of $\sim$~\nullfraction{}.}
+Under this definition, we report a nulling fraction of $\sim$~\nullfraction{}.
 
 This working definition of a null may misclassify pulses with broad emission spread out over the pulse window, even if its integrated flux density is statistically significant.
-{\bf For comparison, we present the pulse energy histograms of both on- and off-pulse regions of the pulse stacks for each of the six observations in Fig. \ref{fig:nullhist}.
+For comparison, we present the pulse energy histograms of both on- and off-pulse regions of the pulse stacks for each of the six observations in Fig. \ref{fig:nullhist}.
 The similarity between the on- and off pulse distributions for observations 1275094456 and 1275172216 indicate that any broad emission that is present falls well below the MWA detection threshold.
-Despite this}, the uncertainty in our estimate of the nulling fraction will still be dominated by the lack of a statistically significant number of burst sequences.
+Despite this, the uncertainty in our estimate of the nulling fraction will still be dominated by the lack of a statistically significant number of burst sequences.
 
 \begin{figure*}[p]
     \centering
@@ -496,7 +488,7 @@ Despite this}, the uncertainty in our estimate of the nulling fraction will stil
     \includegraphics[width=0.48\textwidth]{1275172216_nullhist.png} \\
     \includegraphics[width=0.48\textwidth]{1275178816_nullhist.png}
     \includegraphics[width=0.48\textwidth]{1283104232_nullhist.png}
-    \caption{{\bf The pulse energy histograms for each of the six observations, for matched-size on- and off-pulse regions of the pulse stacks. The ObsIDs are given above each plot. The on-pulse histograms include all pulses, regardless of whether they were classified as nulls by the method described in the text.}}
+    \caption{The pulse energy histograms for each of the six observations, for matched-size on- and off-pulse regions of the pulse stacks. The ObsIDs are given above each plot. The on-pulse histograms include all pulses, regardless of whether they were classified as nulls by the method described in the text.}
     \label{fig:nullhist}
 \end{figure*}
 
@@ -589,7 +581,7 @@ Fig. \ref{fig:with_model} shows the result of the drift band fitting to the MJD 
 \begin{figure*}[!tp]
     \centering
     \includegraphics[width=\textwidth]{1274143152_with_model.png}
-    \caption{\textbf{Left:} The pulse stack of MJD 58991 (right panel of Fig \ref{fig:pulsestacks}), with the drift bands modelled with an exponentially decaying drift rate. \textbf{Right:} The $P_2$, instantaneous $P_3$, and instantaneous drift rates derived from the model. In the $P_2$ panel, the vertical error bars indicate the error on the fitted $P_2$ value, and the horizontal error bars only indicate the extent of the associated drift sequence.}
+    \caption{\textit{Left:} The pulse stack of MJD 58991 (right panel of Fig \ref{fig:pulsestacks}), with the drift bands modelled with an exponentially decaying drift rate. \textit{Right:} The $P_2$, instantaneous $P_3$, and instantaneous drift rates derived from the model. In the $P_2$ panel, the vertical error bars indicate the error on the fitted $P_2$ value, and the horizontal error bars only indicate the extent of the associated drift sequence.}
     \label{fig:with_model}
 \end{figure*}
 One can immediately note several interesting features.
@@ -620,12 +612,12 @@ Fig. \ref{fig:lrfs} shows the longitude-resolved fluctuation spectrum (LRFS) and
     \centering
     \includegraphics[width=0.45\textwidth]{A2_lrfs.png} \\
     \includegraphics[width=0.45\textwidth]{A2_tdfs.png}
-    \caption{\textit{Top:} The LRFS computed on the section of the pulsestack shown in Fig. \ref{fig:A2_example}. \textit{Bottom:} A zoomed section of the 2DFS of the same pulse stack section. {\bf The feature at $\sim0.03\,$cycles/$P$ corresponds to $P_3 \approx 33 \pm 4\,P$, consistent with the average $P_3$ of this sequence determined from the pulse stack directly. The more diffuse power in the range $0.05$-$0.1\,$cycles/$P$ in the leading component (and the corresponding feature visible in the 2DFS) are indicative of the relative disorganization of the drift bands that occurs there.}}
+    \caption{\textit{Top:} The LRFS computed on the section of the pulsestack shown in Fig. \ref{fig:A2_example}. \textit{Bottom:} A zoomed section of the 2DFS of the same pulse stack section. The feature at $\sim0.03\,$cycles/$P$ corresponds to $P_3 \approx 33 \pm 4\,P$, consistent with the average $P_3$ of this sequence determined from the pulse stack directly. The more diffuse power in the range $0.05$-$0.1\,$cycles/$P$ in the leading component (and the corresponding feature visible in the 2DFS) are indicative of the relative disorganization of the drift bands that occurs there.}
     \label{fig:lrfs}
 \end{figure}
 Despite the changing $P_3$ and the relative disorganization of the drift rate, the LRFS and 2DFS show surprisingly high-Q features at $P_3 \approx 33 \pm 4\,P$ and $P_2 \approx 16^\circ \pm 2^\circ$, which are consistent with the fitted model values of $P_3$ changing from $\sim50\,P$ to $27\,P$ throughout the sequence, and $P_2 = 13.8^\circ \pm 0.3^\circ$.
-The relative lack of power in the {\bf bottom panel of the LRFS} near phase $\sim2^\circ$ is likely related to the interruptions in the organization of the drift bands that occur at that phase, discussed in the previous section.
-{\bf Interestingly, the presence of extra power in the LRFS in the leading component between $0.05$-$0.1\,$cycles/$P$ is suggestive of a connection to Mode B, which (with its $P_3 \approx 10\,P$) would be expected to contribute power in the LRFS near this range.}
+The relative lack of power in the bottom panel of the LRFS near phase $\sim2^\circ$ is likely related to the interruptions in the organization of the drift bands that occur at that phase, discussed in the previous section.
+Interestingly, the presence of extra power in the LRFS in the leading component between $0.05$-$0.1\,$cycles/$P$ is suggestive of a connection to Mode B, which (with its $P_3 \approx 10\,P$) would be expected to contribute power in the LRFS near this range.
 
 \section{Discussion}
 \label{sec:discussion}
@@ -683,10 +675,10 @@ Nevertheless, many of the above effects can be successfully explained with the c
 In the presence of aliasing, multiple drift modes can be explained if the number of sparks in the carousel changes, even if the carousel speed itself doesn't change.
 This idea has been invoked to explain the multiple drift rates of B1918$+$19 \citep{Rankin2013}, B1819$-$22 \citep{Joshi2017,Janagal2022}, and B0031$-$07 \citep{McSweeney2019a}.
 Aliasing can also ``amplify'' the variability of the drift rate if the ratio of stellar rotation and carousel rotation is very close to a ratio of small integers.
-That is, a small change in the magnetospheric conditions {\bf (e.g. the local electromagnetic configuration)} near the stellar surface ({\bf in the gap,} where the sparks reside) can appear to the observer as a relatively large change in the drift rate.
+That is, a small change in the magnetospheric conditions (e.g. the local electromagnetic configuration) near the stellar surface (in the gap, where the sparks reside) can appear to the observer as a relatively large change in the drift rate.
 \citet{VanLeeuwen2012} elucidated the connection between the accelerating potential within the polar gap and the carousel behavior, and found that the variability of B0826$-$34's drift rate can be explained in this way.
-{\bf In contrast, \citet{VanLeeuwen2003} argued that aliasing could \emph{not} be present during the post-null changing drift rate for B0809$+$74.
-Whether or not aliasing is included, models for changing drift rates are often discussed in terms of the local magnetospheric conditions changing over the relevant time scales \citep[e.g.][]{VanLeeuwen2003, Yuen2019}.}
+In contrast, \citet{VanLeeuwen2003} argued that aliasing could \emph{not} be present during the post-null changing drift rate for B0809$+$74.
+Whether or not aliasing is included, models for changing drift rates are often discussed in terms of the local magnetospheric conditions changing over the relevant time scales \citep[e.g.][]{VanLeeuwen2003, Yuen2019}.
 
 One must question whether or not these varied behaviors are all manifestations of the same underlying phenomenon, operating on different timescales.
 That is, the general rule that governs all these pulsars might be that the drift rate varies in a systematic way following (and sometimes preceding) a null sequence, and that given ample time before another interruption, all would settle into a stable drift rate.

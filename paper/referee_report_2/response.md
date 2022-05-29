@@ -1,3 +1,12 @@
+Dear editor,
+
+Once again we thank the referee for their time in going through our revised version, and we're glad that there are only a few minor points remaining to address. Please find below our changes and response below.
+
+Kind regards,
+~/Sam
+
+--------------------------------------
+
 1. What is the mean of the third column in Table 1? is it total length of each observation?Please clarify it and specify whether the unit of the value is second or minute?
 
 The third column was the total number of pulsar rotations. But to make it clearer, we've now put in a column of length (in minutes), and changed the other columns to be the number of null and not-null pulses.

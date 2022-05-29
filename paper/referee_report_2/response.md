@@ -13,11 +13,11 @@ The third column was the total number of pulsar rotations. But to make it cleare
 
 2. In the second paragraph of 3.1,the conclusion of nulling fraction of 78% is derived for all six observation or for only one observation?please clarity it in the paper.
 
-The nulling fraction was derived from all six observations. Notice that it has now dropped down to 77% -- we were rounding it incorrectly in the previous version! Apart from adding a few words to clarify this in Section 3.1, we've also add a "Total" line to Table 1 that should make this also a bit clearer.
+The nulling fraction was derived from all six observations. Notice that it has now dropped down to 77% -- we were rounding it incorrectly in the previous version! Apart from adding a few words to clarify this in Section 3.1 (in bold text), we've also add a "Total" line to Table 1 that should make this also a bit clearer.
 
 3. Could you calculate aproxamately the total numbers of nulls for the four observation(without the two observation on MJD 59002)?
 
-About 72%. We've made a note of this also in the same paragraph in 3.1.
+About 72%. We've made a note of this also in the same paragraph in 3.1 (in bold text).
 
 4. In Figure 1,please plot the baseline of each mean profile in oder to compare the mean profiles for the four observation better.
 

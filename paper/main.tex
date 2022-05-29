@@ -98,7 +98,7 @@
 \newcommand{\psrnick}{J0036$-$1033}
 \newcommand{\dmunit}{pc$\,$cm$^{-3}$}
 \newcommand{\Sd}{S$_\rm{d}$}
-\newcommand{\nullfraction}{78\%}
+\newcommand{\nullfraction}{77\%}
 \newcommand{\ExB}{\ensuremath{{\bf E}\times{\bf B}}}
 
 \usepackage{amsmath}
@@ -383,21 +383,22 @@ The VCS delivers Nyquist-sampled dual-polarisation voltages for 128 MWA tiles ($
 Apart from the discovery observation, the other five observations presented in this work were taken as part of the follow-up timing campaign for \psrnick{} \citep{Swainston2021}.
 All six observations (summarised in Table \ref{tab:observations}) were made in the frequency range $138.88$-$169.6\,$MHz.
 
-\begin{deluxetable}{ccccc}
+\begin{deluxetable}{cccccc}
 \tabletypesize{\scriptsize}
 \tablewidth{0pt}
     \tablecaption{MWA Observations of PSR \psr{} \label{tab:observations}}
 \tablehead{
-\colhead{MJD} & \colhead{Obs ID} & \multicolumn{2}{c}{Number of rotations} \\
-& & Total & With detectable emission
+    \colhead{MJD} & \colhead{Obs ID} & Length & \multicolumn{2}{c}{Number of pulses} \\
+    & & (mins) & Null & Not null
 }
 \startdata
-58434 & 1226062160 & 3759 & 788 \\
-58991 & 1274143152 & 914  & 358 \\
-59002 & 1275094456 & 917  &  10 \\
-59002 & 1275172216 & 917  &  16 \\
-59003 & 1275178816 & 914  & 281 \\
-59094 & 1283104232 & 1374 & 545
+    58434 & 1226062160 & 82 & 2971 & 788 \\
+    58991 & 1274143152 & 20 & 556  & 358 \\
+    59002 & 1275094456 & 20 & 907  &  10 \\
+    59002 & 1275172216 & 20 & 901  &  16 \\
+    59003 & 1275178816 & 20 & 633  & 281 \\
+    59094 & 1283104232 & 30 & 829  & 545 \\
+    Total &           & 192 & 6797 & 1998
 \enddata
 \tablecomments{All observations are in the $140$-$170\,$MHz band, with $100\,\mu$s/$10\,$kHz resolutions.}
 \end{deluxetable}
@@ -473,7 +474,11 @@ Both types of emission are visible in Fig. \ref{fig:maxima}, in which the peak f
 
 To estimate the nulling fraction, we first identified which pulses contained sub-pulses within the pulse window (this is a semi-automated procedure described in \S\ref{sec:drifting_analysis}).
 Any pulse without a sub-pulse is then counted as a null, even if it is nested within a burst sequence.
-Under this definition, we report a nulling fraction of $\sim$~\nullfraction{}.
+Under this definition, we report a nulling fraction of $\sim$~\nullfraction{},
+{\bf
+calculated using all six MWA observations (refer to Table \ref{tab:observations}).
+Note that if the two observations taken on MJD 59002 are excluded, the nulling fraction would be $\sim$~72\%.
+}
 
 This working definition of a null may misclassify pulses with broad emission spread out over the pulse window, even if its integrated flux density is statistically significant.
 For comparison, we present the pulse energy histograms of both on- and off-pulse regions of the pulse stacks for each of the six observations in Fig. \ref{fig:nullhist}.

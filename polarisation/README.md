@@ -43,4 +43,4 @@ It uses standard weighted least squares, and is implemented in Octave:
 octave measure_PA_slope.m
 ```
 
-which gives the result: 2.4°/°.
+which gives the result: **2.4°/°**.

@@ -1,0 +1,84 @@
+file             Name of the file                                  /home/smcsweeney/downloads/1226062160_psr2.cut1.ar.drm
+nbin             Number of pulse phase bins                        128
+nchan            Number of frequency channels                      3072
+npol             Number of polarizations                           4
+nsubint          Number of sub-integrations                        77
+type             Observation type                                  Pulsar
+site             Telescope name                                    MWA
+name             Source name                                       J0026-1956
+coord            Source coordinates                                00:26:35.600-19:55:06.86
+freq             Centre frequency (MHz)                            154.24
+bw               Bandwidth (MHz)                                   30.72
+dm               Dispersion measure (pc/cm^3)                      20.8686
+rm               Rotation measure (rad/m^2)                        3.563
+dmc              Dispersion corrected                              1
+rmc              Faraday Rotation corrected                        1
+polc             Polarization calibrated                           0
+scale            Data units                                        FluxDensity
+state            Data state                                        Stokes
+length           Observation duration (s)                          770
+int*:@           int:help for attribute list                       
+ext:obs_mode     Observation Mode                                  PSR
+ext:obsfreq      Centre frequency                                  154.24
+ext:obsbw        Bandwidth                                         30.72
+ext:obsnchan     Number of channels                                128
+ext:hdrver       Header Version                                    6.2
+ext:date         File Creation Date                                2022-04-06T07:55:36
+ext:coord_md     Coordinate mode                                   J2000
+ext:equinox      Coordinate equinox                                2000
+ext:trk_mode     Tracking mode                                     TRACK
+ext:bpa          Beam position angle                               0
+ext:bmaj         Beam major axis                                   0.25
+ext:bmin         Beam minor axis                                   0.25
+ext:stt_date     Start UT date                                     2018-11-12
+ext:stt_time     Start UT                                          12:49:09
+ext:stt_imjd     Start MJD                                         58434
+ext:stt_smjd     Start second                                      46150
+ext:stt_offs     Start fractional second                           0.391770119927792
+ext:stt_lst      Start LST                                         35.4995727539062
+ext:stt_crd1     Start coord 1                                     00:26:35.60
+ext:stt_crd2     Start coord 2                                     -19:55:06.86
+ext:stp_crd1     Stop coord 1                                      00:26:35.60
+ext:stp_crd2     Stop coord 2                                      -19:55:06.86
+ext:ra           Right ascension                                   00:26:35.600
+ext:dec          Declination                                       -19:55:06.860
+obs:observer     Observer name(s)                                  MWA User
+obs:projid       Project name                                      G0057
+itrf:ant_x       ITRF X coordinate.                                882589.65
+itrf:ant_y       ITRF Y coordinate.                                -4924872.32
+itrf:ant_z       ITRF Z coordinate.                                3943729.348
+rcvr:name        Receiver name                                     MWA-RECVR
+rcvr:basis       Basis of receptors                                lin
+rcvr:hand        Hand of receptor basis                            +1
+rcvr:sa          Symmetry angle of receptor basis                  45deg
+rcvr:rph         Reference source phase                            0deg
+rcvr:fdc         Receptor basis corrected                          0
+rcvr:prc         Receptor projection corrected                     0
+rcvr:ta          Tracking angle of feed                            0deg
+be:name          Name of the backend instrument                    vcstools v2.5.3_ga2cf77
+be:phase         Phase convention of backend                       +0
+be:dcc           Downconversion conjugation corrected              0
+be:phc           Phase convention corrected                        0
+be:delay         Backend propn delay from digi. input.             0
+be:config        Configuration filename                            N/A
+be:nrcvr         Number of receiver channels                       2
+be:tcycle        Correlator cycle time                             0
+hist:nrow        Number of rows in history                         2
+hist:nbin_prd    Nr of bins per period                             128
+hist:tbin        Time per bin or sample                            0.0102050726610115
+hist:chan_bw     Channel bandwidth                                 0.01
+hist:cal_file    Calibrator filename                               NONE
+aux:dm_model     Auxiliary dispersion model                        NONE
+aux:dmc          Auxiliary dispersion corrected                    0
+aux:rm_model     Auxiliary birefringence model                     NONE
+aux:rmc          Auxiliary birefringence corrected                 1
+sub:int_type     Time axis (TIME, BINPHSPERI, BINLNGASC, etc)      TIME
+sub:int_unit     Unit of time axis (SEC, PHS (0-1), DEG)           SEC
+sub:tsamp        [s] Sample interval for SEARCH-mode data          0.0001
+sub:nbits        Nr of bits/datum (SEARCH mode 'X' data, else 1)   8
+sub:nch_strt     Start channel/sub-band number (0 to NCHAN-1)      -1
+sub:nsblk        Samples/row (SEARCH mode, else 1)                 10000
+sub:nrows        Nr of rows in subint table (search mode)          77
+sub:zero_off     Zero offset for SEARCH-mode data                  0
+sub:signint      1 for signed ints in SEARCH-mode data, else 0     0
+

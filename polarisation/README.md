@@ -32,3 +32,15 @@ pav -g 1226062160_psr2.cut2.pav.S.png/png -SFT -r 0.125 1226062160_psr2.cut2.ar.
 ![1226062160_psr2.cut2.pav.S.png](1226062160_psr2.cut2.pav.S.png)
 
 You can see 6 PA points in a nice, neat row across the profile.
+
+### Measuring the slope
+
+The code used to measure the slope of the six points visible above is given in [measure_PA_slope.m](measure_PA_slope.m).
+As of this writing, this code is specific to `1226062160_psr2.cut2.ar.drm.pdv`, and will not work out-of-the-box for a different data set, since it chooses the six points to fit "manually".
+It uses standard weighted least squares, and is implemented in Octave:
+
+```
+octave measure_PA_slope.m
+```
+
+which gives the result: 2.4°/°.

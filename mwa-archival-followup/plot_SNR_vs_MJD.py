@@ -24,7 +24,8 @@ data = {
          "durations_secs":   np.array([int(string_data[i][1]) for i in range(len(string_data))]),
          "freq_ctr_MHz":     np.array([float(string_data[i][2]) for i in range(len(string_data))]),
          "sigmas":           np.array([float(string_data[i][3]) if string_data[i][3] != '' else np.nan for i in range(len(string_data))]),
-         "notes":            np.array([string_data[i][4] for i in range(len(string_data))])
+         "notes":            np.array([string_data[i][4] for i in range(len(string_data))]),
+         "is_discovery":     np.array([string_data[i][0] == "1226062160" for i in range(len(string_data))]),
        }
 
 # Make a plot!
@@ -36,7 +37,14 @@ sscale = 0.05
 freq_colors = { 97.92: "r", 139.52: "y", 154.24: "g", 184.96: "b" }
 facecolors = [freq_colors[freq_MHz] for freq_MHz in data["freq_ctr_MHz"]]
 for ax in axs:
-    ax.scatter( data["MJDs_since_58500"], data["sigmas"], s=sscale*data["durations_secs"], facecolors=facecolors, edgecolors='k', zorder=2 )
+    ax.scatter(
+            data["MJDs_since_58500"],
+            data["sigmas"],
+            s=sscale*data["durations_secs"],
+            facecolors=facecolors,
+            edgecolors=['#cc0000' if is_discovery else 'k' for is_discovery in data["is_discovery"]],
+            zorder=2
+            )
 
 # Plot the upper limits for the non-detections
 nondetection_sigmas = np.array([uplim if note == 'No detection' else np.nan for note in data["notes"]])
@@ -75,6 +83,7 @@ legend_elements = [
         plt.scatter([], [], s=600*sscale, edgecolor='k', facecolor='w', label='10 mins'),
         plt.scatter([], [], s=1200*sscale, edgecolor='k', facecolor='w', label='20 mins'),
         plt.scatter([], [], s=3600*sscale, edgecolor='k', facecolor='w', label='1 hr'),
+        plt.scatter([], [], s=40, edgecolor='#cc0000', facecolor='w', label='Discovery'),
         ]
 axs[0].legend(handles=legend_elements)
 plt.tight_layout()

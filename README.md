@@ -1,4 +1,9 @@
-# Drifting analysis on J0024-1956
+# Drifting analysis on J0026-1955
+
+## Published information
+
+- The [paper on ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...933..210M/abstract)
+- The [paper on ApJ](https://iopscience.iop.org/article/10.3847/1538-4357/ac75bc)
 
 ## Using Drift Analysis software
 
